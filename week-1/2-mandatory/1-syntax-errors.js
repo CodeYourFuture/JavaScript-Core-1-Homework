@@ -7,11 +7,11 @@ function addNumbers(a b c) {
 function introduceMe(name, age)
 return "Hello, my name is " + name "and I am " age + "years old";
 
-function getRemainder(a, b) {
-    remainder = a %% b;
+function getAddition(a, b) {
+    total = a ++ b
 
     // Use string interpolation here
-    return "The remainder is %{remainder}"
+    return "The total is %{total}"
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
