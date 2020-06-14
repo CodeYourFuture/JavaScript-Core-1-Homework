@@ -20,7 +20,11 @@ function calculateSalesTax() {
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency() {
+  let tax = calculateSalesTax(Price);
+  lastPrice = Price + tax;
+  return("£"+lastPrice.toFixed(2))
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
