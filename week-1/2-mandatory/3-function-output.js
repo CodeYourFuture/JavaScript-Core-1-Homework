@@ -1,17 +1,13 @@
-// Add comments to explain what this function does. You're meant to use Google!
-
 /******************************************
- * This function return a positive 
+ * This function return a positive
  * random number less than 9 including 0
  * ****************************************/
 function getNumber() {
   return Math.random() * 10;
 }
 
-// Add comments to explain what this function does. You're meant to use Google!
-
 /******************************************
- * This function takes two strings and 
+ * This function takes two strings and
  * join (concatenate) them together
  * ****************************************/
 function s(w1, w2) {
@@ -19,16 +15,8 @@ function s(w1, w2) {
 }
 
 function concatenate(firstWord, secondWord, thirdWord) {
- return(firstWord+" ".concat(secondWord+" ",thirdWord))
-  // Write the body of this function to concatenate three words together
-  // Look at the test case below to understand what to expect in return
+  return firstWord + " ".concat(secondWord + " ", thirdWord);
 }
-
-/* ======= TESTS - DO NOT MODIFY ===== 
-There are some Tests in this file that will help you work out if your code is working.
-
-To run these tests type `node 3-function-output` into your terminal
-*/
 
 function test(test_name, expr) {
   let status;
