@@ -42,20 +42,76 @@ My sources say no.
 Outlook not so good.
 Very doubtful.
 */
-
+var result;
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+function shakeBall() {
+  console.log("The ball has shaken!");
+  let num = Math.floor(Math.random() * answer.length);
+  result = answer[num];
+  return result;
+}
 
 // The answer should come from shaking the ball
-let answer;
+let answer = ["very positive", "positive", "negative", "very negative"];
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer() {
+  switch (result) {
+    case "very positive": {
+      let vP = [
+        "It is certain",
+        "It is decidedly so",
+        "Without a doubt",
+        "Yes - definitely",
+        "You may rely on it",
+      ];
+      let num = Math.floor(Math.random() * vP.length);
+      return vP[num];
+    }
+
+    case "positive": {
+      let p = [
+        "It is certain",
+        "It is decidedly so",
+        "Without a doubt",
+        " Yes - definitely",
+        "You may rely on it",
+      ];
+      let num = Math.floor(Math.random() * p.length);
+      return p[num];
+    }
+    case "negative": {
+      let n = [
+        "Reply hazy",
+        "try again",
+        "Ask again later",
+        "Better not tell you now",
+        "Cannot predict now",
+        "Concentrate and ask again",
+      ];
+      let num = Math.floor(Math.random() * n.length);
+    }
+
+    case "very negative": {
+      let vN = [
+        "Dont count on it",
+        "My reply is no",
+        "My sources say no",
+        "Outlook not so good",
+        "Very doubtful",
+      ];
+      let num = Math.floor(Math.random() * vN.length);
+    }
+  }
+
+  let num = Math.floor(Math.random() * answer.length);
+  return answer[num];
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
