@@ -45,17 +45,44 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+
+function shakeBall() {
+  console.log('The ball has shaken!');
+  let answerArray = ['Without a doubt.', 'Most likely.','Better not tell you now.','Very doubtful.'];
+  let answer = Math.floor(Math.random() * answerArray.length );
+  return answerArray[answer];
+}
 
 // The answer should come from shaking the ball
-let answer;
+let answer = shakeBall();
+
+
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer) {
+  let checkedAnswer;
+  switch(answer){
+    case 'Without a doubt.': 
+      checkedAnswer = 'very positive';
+      break;
+    case 'Most likely.': 
+      checkedAnswer = 'positive';
+      break;
+    case 'Better not tell you now.': 
+      checkedAnswer = 'negative';
+      break;
+    case 'Very doubtful.': 
+      checkedAnswer = 'very negative';
+      break;
+    default: checkedAnswer = 'Sorry. No respose';
+  }
+
+  return checkedAnswer;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
@@ -89,7 +116,7 @@ function testAll() {
     `shakeBall logs "The ball has shaken!"`,
     logged === "The ball has shaken!"
   );
-  test(`shakeBall returns an string answer"`, typeof answer === "string");
+  test(`shakeBall return s an string answer"`, typeof answer === "string");
   test(
     `checkAnswer returns the level of positivity"`,
     ["very positive", "positive", "negative", "very negative"].includes(
