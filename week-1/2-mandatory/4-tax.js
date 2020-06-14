@@ -5,7 +5,11 @@
   Sales tax is 20% of the price of the product
 */
 
-function calculateSalesTax() {}
+function calculateSalesTax(price) {
+  let salesTax = 0.2
+
+  return price * salesTax + price
+}
 
 /*
   CURRENCY FORMATTING
@@ -13,15 +17,29 @@ function calculateSalesTax() {}
   The business has informed you that prices must have 2 decimal places
   They must also start with the currency symbol
   Write a function that transforms numbers into the format £0.00
-
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency(price) {
+  /* The code below was my 1st attempt at solving this...
+      but I peeked into the abyss and found myNum.toFixed(2)...
+
+  let priceWithTax = calculateSalesTax(price).toString()
+
+  if (priceWithTax.indexOf(".") === -1)
+    return `£${priceWithTax}.00`
+    // check if the number of decimal places is less than two
+  if ((priceWithTax.length - 1) - priceWithTax.indexOf(".") === 1)
+    return `£ ${priceWithTax}0`
+
+  return `£${priceWithTax}`
+  */
+  
+  return `£${calculateSalesTax(price).toFixed(2)}`
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
-
 To run these tests type `node 4-tax.js` into your terminal
 */
 
