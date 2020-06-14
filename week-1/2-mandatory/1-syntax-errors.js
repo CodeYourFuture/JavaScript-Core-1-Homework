@@ -18,6 +18,11 @@ function getAddition(a, b) {
     return `The total is ${total}`
 }
 
+function getRemainder(a,b)
+{
+    return("The remainder is "+a%b)
+}
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 // 
 // To run these tests type `node 1-syntax-errors.js` into your terminal
