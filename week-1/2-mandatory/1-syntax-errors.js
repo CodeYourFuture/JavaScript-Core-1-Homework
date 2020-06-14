@@ -1,3 +1,5 @@
+//  Syntax errors fixed
+
 function addNumbers(a, b, c) {
   return a + b + c;
 }
