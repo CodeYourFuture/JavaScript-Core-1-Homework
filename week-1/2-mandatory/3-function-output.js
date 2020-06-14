@@ -1,4 +1,9 @@
 // Add comments to explain what this function does. You're meant to use Google!
+
+/******************************************
+ * This function return a positive 
+ * random number less than 9 including 0
+ * ****************************************/
 function getNumber() {
   return Math.random() * 10;
 }
