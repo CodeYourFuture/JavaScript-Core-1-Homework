@@ -1,41 +1,18 @@
-/*
-  SALES TAX
-  =========
-  A business requires a program that calculates how much sales tax to charge
-  Sales tax is 20% of the price of the product
-*/
-function sTax(Price){
-  let salesTax = 0.2*Price
-return(salesTax)
+function sTax(Price) {
+  let salesTax = 0.2 * Price;
+  return salesTax;
 }
 
 function calculateSalesTax(Price) {
-  let tax= sTax(Price)
-  return(tax+Price)
+  let tax = sTax(Price);
+  return tax + Price;
 }
-
-
-/*
-  CURRENCY FORMATTING
-  ===================
-  The business has informed you that prices must have 2 decimal places
-  They must also start with the currency symbol
-  Write a function that transforms numbers into the format £0.00
-
-  Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
-*/
 
 function formatCurrency(Price) {
-  let tax = sTax(Price)
+  let tax = sTax(Price);
   lastPrice = Price + tax;
-  return("£"+lastPrice.toFixed(2))
+  return "£" + lastPrice.toFixed(2);
 }
-
-/* ======= TESTS - DO NOT MODIFY ===== 
-There are some Tests in this file that will help you work out if your code is working.
-
-To run these tests type `node 4-tax.js` into your terminal
-*/
 
 function test(test_name, expr) {
   let status;
