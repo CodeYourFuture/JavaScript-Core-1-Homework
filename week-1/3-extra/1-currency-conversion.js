@@ -5,8 +5,19 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
-function convertToUSD() {}
+function convertToUSD(pounds) {
+    let exchangeRateUSD = 1.4
 
+  return pounds * exchangeRateUSD
+}
+
+/*
+ * addTax(value, tax) accepts a price value and adds a tax value that is a percentage 
+ * of the price
+ */
+function addTax(value, tax){
+  return value + ( value *  tax / 100 )
+}
 /*
   CURRENCY FORMATTING
   ===================
@@ -16,7 +27,11 @@ function convertToUSD() {}
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToBRL() {}
+function convertToBRL(pounds) {
+    let exchangeRateBRL = 5.7
+
+  return addTax(pounds * exchangeRateBRL, 1)
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
