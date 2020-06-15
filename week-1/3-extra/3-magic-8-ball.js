@@ -43,19 +43,68 @@ Outlook not so good.
 Very doubtful.
 */
 
+const veryPositive = [
+  'It is certain.',
+  'It is decidedly so.',
+  'Without a doubt.',
+  'Yes - definitely.',
+  'You may rely on it.',
+];
+const positive = [
+  'As I see it, yes.',
+  'Most likely.',
+  'Outlook good.',
+  'Yes.',
+  'Signs point to yes.',
+];
+const negative = [
+  'Reply hazy, try again.',
+  'Ask again later.',
+  'Better not tell you now.',
+  'Cannot predict now.',
+  'Concentrate and ask again.',
+];
+const veryNegative = [
+  "Don't count on it.",
+  'My reply is no.',
+  'My sources say no.',
+  'Outlook not so good.',
+  'Very doubtful.',
+];
+
+const buckets = [veryPositive, positive, negative, veryNegative];
+
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+function shakeBall() {
+  const randomBucketNumber = Math.floor(Math.random() * buckets.length);
+  const randomAnswerNumber = Math.floor(
+    Math.random() * buckets[randomBucketNumber].length
+  );
+
+  console.log('The ball has shaken!');
+  return buckets[randomBucketNumber][randomAnswerNumber];
+}
 
 // The answer should come from shaking the ball
-let answer;
+let answer = shakeBall();
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer) {
+  if (veryPositive.includes(answer)) {
+    return 'very positive';
+  } else if (positive.includes(answer)) {
+    return 'positive';
+  } else if (negative.includes(answer)) {
+    return 'negative';
+  } else if (veryNegative.includes(answer)) {
+    return 'very negative';
+  }
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
@@ -73,9 +122,9 @@ console.log = function () {
 function test(test_name, expr) {
   let status;
   if (expr) {
-    status = "PASSED";
+    status = 'PASSED';
   } else {
-    status = "FAILED";
+    status = 'FAILED';
   }
 
   logged = undefined;
@@ -87,12 +136,12 @@ function testAll() {
   const answer = shakeBall();
   test(
     `shakeBall logs "The ball has shaken!"`,
-    logged === "The ball has shaken!"
+    logged === 'The ball has shaken!'
   );
-  test(`shakeBall returns an string answer"`, typeof answer === "string");
+  test(`shakeBall returns an string answer"`, typeof answer === 'string');
   test(
     `checkAnswer returns the level of positivity"`,
-    ["very positive", "positive", "negative", "very negative"].includes(
+    ['very positive', 'positive', 'negative', 'very negative'].includes(
       checkAnswer(answer)
     )
   );
