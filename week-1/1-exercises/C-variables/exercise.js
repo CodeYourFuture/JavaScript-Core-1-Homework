@@ -15,7 +15,7 @@ let fullMessage = greet + message;
 let fullMessage2 = fullMessage.length;
 let messageCase = fullMessage.toUpperCase();
 let nameLength = name.length;
-let combined = message + extra + fullMessage2;
+let combined = message + extra + nameLength;
 
 console.log(fullMessage);
 
