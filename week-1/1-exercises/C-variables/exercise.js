@@ -10,8 +10,8 @@ let greet = "Hello, ";
 let message = "my name is Osagie ";
 let name = "Osagie";
 let extra = "and the length of my name is ";
-
 let fullMessage = greet + message;
+
 let fullMessage2 = fullMessage.length;
 let messageCase = fullMessage.toUpperCase();
 let nameLength = name.length;
