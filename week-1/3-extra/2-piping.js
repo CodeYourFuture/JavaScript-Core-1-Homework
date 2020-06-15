@@ -12,7 +12,8 @@
   - multiply the result by 2
   - format it
   
-  3. Write a more readable version of what you wrote in step 2 under the BETTER PRACTICE comment. Assign
+  3. Write a more readable version of what you wrote 
+  in step 2 under the BETTER PRACTICE comment. Assign
   the final result to the variable goodCode
 */
 
@@ -32,6 +33,7 @@ return("£"+price)
 const startingValue = 2
 
 // Why can this code be seen as bad practice? Comment your answer.
+// The reader will take long time to understand whats going on
 let badCode = format(2*(add(startingValue,10)))
 
 /* BETTER PRACTICE */
