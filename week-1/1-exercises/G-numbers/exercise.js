@@ -1,18 +1,8 @@
-// Start by creating a variables `numberOfStudents` and `numberOfMentors`
-let name = "Osagie";
+let numberOfStudents = 15;
+let numberOfMentors = 8;
 
-let intro = "My name is ";
-let nameLength = name.length;
-let message =
-  "     My name is " +
-  name +
-  " and my name is " +
-  nameLength +
-  " characters long.";
-console.log(nameLength);
+let totalOfStudentsAndMentors = numberOfStudents + numberOfMentors;
+let message = "Total number of students and mentors: ";
 
-// console.log(
-//   " My name is " + name + " and my name is " + nameLength + " characters long."
-// );
-
-console.log(message.trim());
+console.log(message + totalOfStudentsAndMentors);
+console.log(`${message}${totalOfStudentsAndMentors}`);
