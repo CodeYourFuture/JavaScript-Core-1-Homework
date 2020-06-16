@@ -12,10 +12,23 @@ function percentage(students, mentors) {
   return `${percentageStudents}%, ${percentageMentors}%`;
 }
 
-function createMessage(stupercent, mentpercent) {
-  let percent = percentage(student, mentor);
-  let message = `Percentage students: ${stupercent}% and Percentage mentors: ${mentpercent}`;
-  return message;
+function createMessage() {
+  let result = percentage(15, 8);
+  console.log(`Percentage students: ${result}`);
+  console.log(`Percentage mentors: ${result}`);
 }
-let result = createMessage(15, 8);
-console.log(result);
+createMessage();
+//console.log(result);
+
+// ##Exercise 2
+
+function greetings(mentorName) {
+  let name = mentorName.toUpperCase();
+  return `HELLO ${name}`;
+}
+
+console.log(greetings(mentor1));
+console.log(greetings(mentor2));
+console.log(greetings(mentor3));
+console.log(greetings(mentor4));
+console.log(greetings(mentor5));

@@ -9,7 +9,6 @@ function calculateSalesTax(prodPrice) {
   let salesTax = 0.2 * prodPrice + prodPrice;
   return salesTax;
 }
-function formatCurrency(amount) {}
 
 /*
   CURRENCY FORMATTING
@@ -21,7 +20,11 @@ function formatCurrency(amount) {}
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency(number) {
+  let totalPrice = calculateSalesTax(number);
+  return `£${totalPrice}.00`;
+  // return "£" + number + ".00";
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
