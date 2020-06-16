@@ -5,7 +5,21 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
-function convertToUSD() {}
+function convertToUSD(pounds) {
+  //FORMULA FOR CONVERSION
+  let dollars = pounds * 1.4;
+
+  //COVERT TO DOLLARS OBJECT
+  let money = new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "USD"
+  });
+  //ADD CORRECT FORMAT TO CURRENCY
+  //let formattedDollar = money.format(dollars);
+  let formattedDollar = dollars;
+  return formattedDollar;
+
+}
 
 /*
   CURRENCY FORMATTING
@@ -16,7 +30,23 @@ function convertToUSD() {}
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToBRL() {}
+function convertToBRL(sterling) {
+
+  let brl = sterling * 5.7;
+
+  let money = new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "BRL"
+   });
+
+   let per = brl * (1/100);
+  // let formattedBrl = money.format(brl + per);
+  let formattedBrl = brl + per;
+   
+   return formattedBrl;
+
+
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
