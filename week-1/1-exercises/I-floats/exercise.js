@@ -7,7 +7,8 @@ let percentOfMentors = (numberOfMentors / totalofStudentsAndMentors) * 100;
 
 let approxPercent = Math.round(percentOfStudents);
 let approxPer = Math.round(percentOfMentors);
-let comment = "Percentage students :";
+let comment1 = "Percentage students:";
+let comment2 = "Percentage mentors:";
 
 console.log(percentOfStudents);
 console.log(percentOfMentors);
@@ -15,4 +16,5 @@ console.log(percentOfMentors);
 console.log(approxPercent);
 console.log(approxPer);
 
-console.log(`${comment} ${approxPercent}`);
+console.log(`${comment1} ${approxPercent}%`);
+console.log(`${comment2} ${approxPer}%`);
