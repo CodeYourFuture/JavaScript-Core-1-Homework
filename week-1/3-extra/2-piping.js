@@ -17,7 +17,12 @@
 */
 
 function add(a,b) {
-  return a+b;
+  console.log(a);
+  console.log(b);
+  sum=a+b;
+  value= sum.toFixed(1);
+  console.log(value);
+  return  value;
 
 }
 
