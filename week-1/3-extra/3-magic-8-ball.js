@@ -45,7 +45,9 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+function shakeBall() {
+  return "The ball has shaken!";
+}
 
 // The answer should come from shaking the ball
 let answer;
@@ -55,7 +57,36 @@ let answer;
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer) {
+  if (answer == "It is certain." ||
+                "It is decidedly so." ||
+                "Without a doubt." ||
+                "Yes - definitely." ||
+                "You may rely on it.") {
+                  return "very positive";
+                }
+  else if (answer == "As I see it, yes." ||
+                "Most likely." ||
+                "Outlook good." ||
+                "Yes." ||
+                "Signs point to yes.") {
+                  return "positive";
+                }
+  else if (answer == "Reply hazy, try again." ||
+                "Ask again later." ||
+                "Better not tell you now." ||
+                "Cannot predict now." ||
+                "Concentrate and ask again.") {
+                  return "negative";
+                }
+  else if (answer == "Don't count on it." ||
+                "My reply is no." ||
+                "My sources say no." ||
+                "Outlook not so good." ||
+                "Very doubtful.") {
+                  return "very negative";
+                }
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.

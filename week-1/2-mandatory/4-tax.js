@@ -5,7 +5,19 @@
   Sales tax is 20% of the price of the product
 */
 
-function calculateSalesTax() {}
+function calculateSalesTax(sales) {
+  var tax = .2;
+  var salesTax = sales * tax;
+  var twoDecimals = salesTax.toFixed(2); // to add 2 decimal places
+  var twoDecimalsNum = parseFloat(twoDecimals); // converts text to number
+  return sales + twoDecimalsNum;
+
+  // var salesaddedTax = sales * 1.2;
+  // var twoDecimals = salesaddedTax.toFixed(2);
+  // return twoDecimals;
+}
+console.log(calculateSalesTax(17.5));
+console.log(calculateSalesTax(34));
 
 /*
   CURRENCY FORMATTING
@@ -17,7 +29,31 @@ function calculateSalesTax() {}
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency(sales) {
+  function calculateSalesTax(sales) {
+    var tax = .2;
+    var salesTax = sales * tax;
+    var twoDecimals = salesTax.toFixed(2); // to add 2 decimal places
+    var twoDecimalsNum = parseFloat(twoDecimals); // converts text to number
+    return sales + twoDecimalsNum;
+  }
+  var number = calculateSalesTax(sales);
+  console.log(new Intl.NumberFormat('en-GB', {
+    style: 'currency',
+    currency: 'GBP'
+  })
+  .format(number)
+  );
+}
+
+// var number = calculateSalesTax(34);
+// console.log(new Intl.NumberFormat('en-GB', {
+//     style: 'currency',
+//     currency: 'GBP'
+//   })
+//   .format(number)
+// );
+
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
