@@ -58,10 +58,6 @@
 // console.log(`Percentage of students: ${Math.round(r)}%`);
 // console.log(`Percentage of mentors: ${Math.round(s)}%`);
 
-// const mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"]  
-// mentors.forEach ((v, i) => {
-//    mentors[i] = v.toUpperCase();      
-// });
 // mentors;
 // var mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"]
 // var mentor1 = "hello Daniel";
@@ -76,7 +72,18 @@
 
 // }
 
-var mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"]
-const mappedArray = mentors.map(mentors.toUpperCase());
-console.log('originalArray = ', originalArray)
-console.log('mappedArray = ', mappedArray)
+// const mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"];
+// console.log(mentors.map (a => a.toUpperCase()));
+
+// const mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"];  
+// mentors.forEach ((name, index) => {
+//    mentors[index] = name.toUpperCase();      
+// });
+// console.log(mentors);
+
+const mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"];
+mentors.forEach(function(value){
+    console.log(value);
+
+});
+console.log(mentors.map (a => a.toUpperCase()));
