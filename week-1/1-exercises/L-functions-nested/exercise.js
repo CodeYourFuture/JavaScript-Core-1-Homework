@@ -1,39 +1,82 @@
-function createStudent(student) {
-    var student = 15;
-    var mentor = 8;
-    var total = 23;
-    var percentage = (student/total) * 100;
-    var roundedNumber = Math.round(percentage);
-    var studentMessage = "The percentage of students:" + roundedNumber + "%";
+// function createStudent(student) {
+//     var student = 15;
+//     var mentor = 8;
+//     var total = 23;
+//     var percentage = (student/total) * 100;
+//     var roundedNumber = Math.round(percentage);
+//     var studentMessage = "The percentage of students:" + roundedNumber + "%";
 
-    return studentMessage;
-}
-console.log(createStudent());
+//     return studentMessage;
+// }
+// console.log(createStudent());
 
-function createMentor (mentor) {
-    var student = 15;
-    var mentor = 8;
-    var total = 23;
-    var percentage = (mentor/total) * 100;
-    var roundedNumber = Math.round(percentage);
-    var mentorMessage = "The percentage of students:" + roundedNumber + "%";
+// function createMentor (mentor) {
+//     var student = 15;
+//     var mentor = 8;
+//     var total = 23;
+//     var percentage = (mentor/total) * 100;
+//     var roundedNumber = Math.round(percentage);
+//     var mentorMessage = "The percentage of students:" + roundedNumber + "%";
 
-    return mentorMessage;
+//     return mentorMessage;
 
-} 
-console.log(createMentor());
-
-
+// } 
+// console.log(createMentor());
 
 
 
 
 
 
-var mentor1 = "Daniel";
-var mentor2 = "Irina";
-var mentor3 = "Mimi";
-var mentor4 = "Rob";
-var mentor5 = "Yohannes";
 
-console.log()
+
+// var mentor1 = "Daniel";
+// var mentor2 = "Irina";
+// var mentor3 = "Mimi";
+// var mentor4 = "Rob";
+// var mentor5 = "Yohannes";
+
+// console.log()
+
+
+// var mentors = ["Hello Daniel","Hello Daniel","Hello Daniel","Hello Daniel","Hello Daniel","Hello Daniel"]
+// var mentorsNum = mentors.Length;
+// function myMentors(mentors) { 
+//     for (var  i= 0; i< mentors.Length; i++) {
+//     }
+    
+// }
+// console.log(mentors);
+// function studentMentorPercentage(par1,par2,pa3){
+    
+//     var res = (par1/par2) * 100;
+//      return res;  
+    
+// }
+// var r = studentMentorPercentage(15,23);
+// var s = studentMentorPercentage(8,23);
+// console.log(`Percentage of students: ${Math.round(r)}%`);
+// console.log(`Percentage of mentors: ${Math.round(s)}%`);
+
+// const mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"]  
+// mentors.forEach ((v, i) => {
+//    mentors[i] = v.toUpperCase();      
+// });
+// mentors;
+// var mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"]
+// var mentor1 = "hello Daniel";
+// console.log(mentor1.toUpperCase());
+
+
+// var mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"]
+// function upper() {
+//     for (var i = 0, len = mentors.length; i <len; i++){
+//         upper(mentors[i]);
+//     }
+
+// }
+
+var mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"]
+const mappedArray = mentors.map(mentors.toUpperCase());
+console.log('originalArray = ', originalArray)
+console.log('mappedArray = ', mappedArray)
