@@ -21,7 +21,16 @@ function calculateSalesTax(price) {
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency(price) {
+  const totalPrice = calculateSalesTax(price);
+  const totalDecimalPrice = totalPrice.toFixed(2);
+  const currencyType = `£${totalDecimalPrice}`;
+  return currencyType ;
+ }
+
+const myTotal = formatCurrency(18.567) ;
+console.log(myTotal);
+
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
