@@ -1,10 +1,10 @@
 # Your Details
 
-Your Name:
-Your City:
-Your Slack Name:
+Your Name:Abdennour Hachemi 
+Your City:Birmingham
+Your Slack Name:nouri89
 
 # Homework Details
 
-Module:
-Week:
+Module:javaScript 
+Week:1
