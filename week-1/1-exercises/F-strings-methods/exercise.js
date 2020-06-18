@@ -1,5 +1,6 @@
 // Start by creating a variable `message`
-const name = 'Daniel';
+const name = "Daniel";
 const nameLength = name.length;
-
-console.log('My name is ' + name + ' and my name is ' + nameLength + 'characters long');
+const message =
+  "My name is " + name + " and my name is " + nameLength + "characters long";
+console.log(message);
