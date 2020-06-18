@@ -4,18 +4,17 @@ var mentor3 = "Mimi";
 var mentor4 = "Rob";
 var mentor5 = "Yohannes";
 
-function percentage(students, mentors) {
-  let total = students + mentors;
-  let percentageStudents = Math.round((students / total) * 100);
-  let percentageMentors = Math.round((mentors / total) * 100);
+function percentage(number, total) {
+  let percentageNum = Math.round((number / total) * 100);
 
-  return `${percentageStudents}%, ${percentageMentors}%`;
+  return `${percentageNum}% `;
 }
 
-function createMessage() {
-  let result = percentage(15, 8);
-  console.log(`Percentage students: ${result}`);
-  console.log(`Percentage mentors: ${result}`);
+function createMessage(num, total) {
+  let msg = percentage(15, 23);
+  let msg1 = percentage(8, 23);
+  console.log(`Percentage students: ${msg}`);
+  console.log(`Percentage mentors: ${msg1}`);
 }
 createMessage();
 //console.log(result);

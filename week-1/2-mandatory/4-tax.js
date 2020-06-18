@@ -22,7 +22,8 @@ function calculateSalesTax(prodPrice) {
 
 function formatCurrency(number) {
   let totalPrice = calculateSalesTax(number);
-  return `£${totalPrice}.00`;
+  let sum = totalPrice.toFixed(2);
+  return `£${sum}`;
   // return "£" + number + ".00";
 }
 

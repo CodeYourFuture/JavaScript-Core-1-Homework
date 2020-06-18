@@ -17,10 +17,12 @@
 */
 
 function add(num1, num2) {
-  let result = num1 + num2;
+  let sum = num1 + num2;
+  let result = Math.round(sum * 10) / 10;
   return result;
 }
 console.log(add(2.4, 5.3));
+
 function multiply(num1, num2) {
   let result = num1 * num2;
   return result;
