@@ -12,8 +12,6 @@ console.log(perOfMentors);
 
 
 
-    jnjhdhhchchcccc#
-    c
 
 
 
@@ -29,17 +27,7 @@ console.log(perOfMentors);
 
 
 
-
-
-
-
-
-    c
-
-    c
-    c
-
-    ;c  
+   
 
 
 
