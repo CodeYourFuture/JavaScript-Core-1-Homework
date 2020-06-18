@@ -15,4 +15,6 @@ Inside of `exercise.js` there's a line of code that will print "Hello world!".
 * Try to `console.log()` something different. For example, 'Hello World. I just started learning JavaScript!'.
 * Try to console.log() several things at once.
 * What happens when you get rid of the quote marks?
+    You get an error.
 * What happens when you console.log() just a number without quotes?
+    A number is printed (it has yellow color instead of white).
