@@ -1,16 +1,18 @@
 // Add comments to explain what this function does. You're meant to use Google!
-function getNumber() {
-  return Math.random() * 10;
+function letterSet() {
+  return Math.random() * 10; //Math.random syntax is a floating-point, pseudo-random number between 0 (inclusive) and 1 (exclusive).
 }
 
 // Add comments to explain what this function does. You're meant to use Google!
-function s(w1, w2) {
-  return w1.concat(w2);
+function words(w1, w2, w3) {
+  return w1.concat(w2, w3); // The concat() method is used to join two or more strings.
 }
 
 function concatenate(firstWord, secondWord, thirdWord) {
   // Write the body of this function to concatenate three words together
   // Look at the test case below to understand what to expect in return
+
+  return `${firstWord} ${secondWord} ${thirdWord}`;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== 
