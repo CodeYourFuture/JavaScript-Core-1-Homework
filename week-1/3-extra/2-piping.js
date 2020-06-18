@@ -20,7 +20,7 @@ function add(a,b) {
   console.log(a);
   console.log(b);
   sum=a+b;
-  value= sum.toFixed(1);
+  value= Math.round(sum*10)/10;
   console.log(value);
   return  value;
 
@@ -28,7 +28,6 @@ function add(a,b) {
 
 function multiply(a,b) {
   return a*b;
-
 }
 
 function format(number) 
