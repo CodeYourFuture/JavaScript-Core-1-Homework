@@ -1,3 +1,4 @@
-const name = " Daniel  ";
+var name = "Daniel";
+var nameLength = name.length;
 
-console.log(message);
+console.log(nameLength); // Logs 6
