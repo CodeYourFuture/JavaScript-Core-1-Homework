@@ -2,18 +2,18 @@
 
 // There are syntax errors in this code - can you fix it to pass the tests?
 
-function addNumbers(a b c) {
+function addNumbers(a ,b ,c) { // between the parameters should be comma
     return a + b + c;
 }
 
 function introduceMe(name, age)
-return "Hello, my name is " + name "and I am " age + "years old";
+return "Hello, my name is " + name + "and I am " + age + "years old"; // added plus sign
 
-function getAddition(a, b) {
-    total = a ++ b
+function getAddition(a, b) { // deleted plus sign
+    total = a + b
 
     // Use string interpolation here
-    return "The total is %{total}"
+    return `The total is % ${total}` // 
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
