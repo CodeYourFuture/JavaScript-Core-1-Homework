@@ -1,3 +1,6 @@
-const name = " Daniel  ";
+const name = " Mursel   ";
+const info = ' I am   living in    birmingham '
 
-console.log(message);
+const message = name + info ; 
+
+console.log(message.trim());
