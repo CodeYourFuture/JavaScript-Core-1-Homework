@@ -1,6 +1,4 @@
-You can find out how many characters there are in a string by using the `length` property of a string:
 
-```js
 var name = "Daniel";
 var nameLength = name.length;
 
@@ -20,7 +18,7 @@ You can find out more about string properties and methods by searching for "Java
 
 ## Exercise 1
 
-* Log a message that includes the length of your name
+- Log a message that includes the length of your name
 
 ## Expected result
 
@@ -30,8 +28,8 @@ My name is Daniel and my name is 6 characters long
 
 ## Exercise 2
 
-* Log the same message using the variable, `name` provided
-* Use the `.trim` method to remove the extra whitespace
+- Log the same message using the variable, `name` provided
+- Use the `.trim` method to remove the extra whitespace
 
 ## Expected result
 
