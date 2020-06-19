@@ -46,8 +46,6 @@ Very doubtful.
 // This should log "The ball has shaken!"
 // and return the answer.
 
-
-
 function shakeBall(answer){
   answer= "The ball has shaken!";
   return answer;
