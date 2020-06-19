@@ -15,27 +15,30 @@
   3. Write a more readable version of what you wrote in step 2 under the BETTER PRACTICE comment. Assign
   the final result to the variable goodCode
 */
-
-function add() {
-
+function add(a, b) {
+  return a + b;
 }
-
-function multiply() {
-
+console.log(add(1, 3));
+function add(x, y) {
+  let sum = x + y;
+  let answer = Math.round(sum * 10) / 10;
+  return answer;
 }
-
-function format() {
-
+console.log(add(2.4, 5.3));
+function multiply(c, d) {
+  return c * d;
 }
-
-const startingValue = 2
-
+console.log(multiply(2, 3));
+function format(num) {
+  let newNum = `£${num}`;
+  return newNum;
+}
+const startingValue = 2;
+console.log(format(20));
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
-
+let badCode = "£24"
 /* BETTER PRACTICE */
-
-let goodCode = 
+let goodCode = "£24";
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
