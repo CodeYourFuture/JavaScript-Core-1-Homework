@@ -21,3 +21,11 @@ var mentor2 = "Irina";
 var mentor3 = "Mimi";
 var mentor4 = "Rob";
 var mentor5 = "Yohannes";
+
+
+var mentorsNames= ["Daniel","Irina", "Mimi","Rob", "Yohannes"];
+
+    for (var i=0; i < mentorsNames.length; i++){
+        console.log("HELLO " + (mentorsNames[i].toUpperCase()));
+    }  
+
