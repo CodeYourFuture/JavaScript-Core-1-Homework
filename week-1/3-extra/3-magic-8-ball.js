@@ -45,17 +45,61 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
 
+
+
+function shakeBall(answer){
+  answer= "The ball has shaken!";
+  return answer;
+}
+// console.log(answer);
+shakeBall()
 // The answer should come from shaking the ball
 let answer;
+function shakeBall(answer) {
+  switch (answer) {
+    case "Ask a question":
+      return "Ask a question";
+      break;
+    case "Shake the ball":
+      return "Shake the ball";
+      break;
+    case "Get an answer":
+      return "Get an answer";
+      break;
+    case "Decide if it's positive or negative":
+      return "Decide if it's positive or negative";
+      break;
+  }
+  return answer;
+}
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+
+function checkAnswer(answer) {
+  switch (answer) {
+    case "very positive":
+      return "very positive";
+      break;
+    case "positive":
+      return "positive";
+      break;
+    case "negative":
+      return "negative";
+      break;
+    case "very negative":
+      return "very negative";
+      break;
+  }
+  return answer;
+  //console.log(checkAnswer("very positive"));
+}
+checkAnswer();
+// console.log(checkAnswer("very positive"));
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
