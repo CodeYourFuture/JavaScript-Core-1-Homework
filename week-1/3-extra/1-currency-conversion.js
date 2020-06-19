@@ -5,7 +5,10 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
-function convertToUSD() {}
+function convertToUSD(AmountToConvert) {
+	var usDollarEquivlent = AmountToConvert * 1.4;
+	return usDollarEquivlent; //.toFixed(2);
+}
 
 /*
   CURRENCY FORMATTING
@@ -16,7 +19,16 @@ function convertToUSD() {}
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToBRL() {}
+function convertToBRL(AmountToConvert) {
+	var realBrazilianEquivlent = AmountToConvert * 5.7;
+	realBrazilianEquivlent = addOnePercentFee(realBrazilianEquivlent);
+	return realBrazilianEquivlent; //.toFixed(2);
+}
+function addOnePercentFee(transactionAmount) {
+	var fee = transactionAmount * 0.01;
+	transactionPlusFee = transactionAmount + fee;
+	return transactionPlusFee;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
@@ -25,14 +37,14 @@ To run these tests type `node 1-currency-conversion` into your terminal
 */
 
 function test(test_name, expr) {
-  let status;
-  if (expr) {
-    status = "PASSED";
-  } else {
-    status = "FAILED";
-  }
+	let status;
+	if (expr) {
+		status = "PASSED";
+	} else {
+		status = "FAILED";
+	}
 
-  console.log(`${test_name}: ${status}`);
+	console.log(`${test_name}: ${status}`);
 }
 
 test("convertToUSD function works", convertToUSD(32) === 44.8);
