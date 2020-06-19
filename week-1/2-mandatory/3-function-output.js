@@ -5,8 +5,9 @@ function letterSet() {
 
 // Add comments to explain what this function does. You're meant to use Google!
 function words(w1, w2, w3) {
-  return w1.concat(w2, w3); // The concat() method is used to join two or more strings.
+  return str.concat(w1, w2, w3); // The concat() method is used to join two or more strings.
 }
+/*Option 2: return w1,concat(w2, w3);*/
 
 function concatenate(firstWord, secondWord, thirdWord) {
   // Write the body of this function to concatenate three words together
