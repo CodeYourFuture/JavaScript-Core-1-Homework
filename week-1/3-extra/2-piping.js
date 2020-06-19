@@ -16,26 +16,41 @@
   the final result to the variable goodCode
 */
 
-function add() {
+function add(a, b) {
+  let answer = a + b;
+  if(Number.isInteger(a)){
+    return answer;
+  }else {
+    return answer.toFixed(1);
+  }
 
 }
 
-function multiply() {
+function multiply(x, y) {
+  return x*y;
+}
+
+function format(num){
+  let formattedNum = `£${num}`;
+  return formattedNum;
 
 }
 
-function format() {
-
-}
 
 const startingValue = 2
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+let badCode = format(multiply(add(startingValue, 10),2));
+
 
 /* BETTER PRACTICE */
 
-let goodCode = 
+
+let addTotal = add(startingValue, 10);
+let multiTotal = multiply(addTotal, 2);
+let goodCode = format(multiTotal);
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.

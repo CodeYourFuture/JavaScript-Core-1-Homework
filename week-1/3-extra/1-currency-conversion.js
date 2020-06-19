@@ -6,13 +6,11 @@
 */
 
 function convertToUSD(pounds) {
-  //FORMULA FOR CONVERSION
-  let dollars = pounds * 1.4;
-
-  //COVERT TO DOLLARS OBJECT
-  let money = new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "USD"
+     
+      let dollars = pounds * 1.4;
+      let money = new Intl.NumberFormat("en-IN", {
+        style: "currency",
+        currency: "USD"
   });
   //ADD CORRECT FORMAT TO CURRENCY
   //let formattedDollar = money.format(dollars);
