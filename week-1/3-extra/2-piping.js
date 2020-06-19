@@ -17,38 +17,39 @@
 */
 
 function add (a, b) {
-  return a + b;
+  return (a + b);
 }
+add();
 //console.log(add (3.2, 6.5));
 
 function multiply(a, b) {
   return a * b;
 }
+multiply();
 //console.log(multiply(3,6));
 
 function format(number1) {
   //let formattedNumber = `£${number1}`;
   //console.log(`£ ${number1}`);
-  return `£ ${number1}`;
+  return `£${number1}`;
 }
 format ();
 
 
 const startingValue = 2;
 function allTogetherMath() {
-  let exitValue = (startingValue + 10) * 2;
-  //console.log("£" + allCalculateTogether);
-  return "£" + exitValue;
+  return "£" + ((startingValue + 10) * 2);
 }
-
 // Why can this code be seen as bad practice? Comment your answer.
+/* StartingValue has been declared as a const value and before the function, 
+however we can just declare as an argument in the function */
 let badCode = allTogetherMath()
 
 /* BETTER PRACTICE */
 function allTogetherGoodPractice (startValue){
   return "£ " +  ((startValue + 10) * 2);
 }
-let goodCode = allTogetherGoodPractice(4);
+let goodCode = allTogetherGoodPractice();
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.

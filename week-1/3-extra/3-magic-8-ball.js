@@ -54,8 +54,9 @@ function shakeBall(answer){
 }
 // console.log(answer);
 shakeBall()
+
 // The answer should come from shaking the ball
-let answer;
+let answer= "Shake the ball";
 function shakeBall(answer) {
   switch (answer) {
     case "Ask a question":
