@@ -45,7 +45,23 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+function shakeBall() {
+  console.log("The ball has shaken!");
+
+  var response = Math.random();
+  if (response < 0.25) {
+    return "very positive";
+  }
+  else if (response < 0.5) {
+    return "positive";
+  }
+  else if (response < 0.75) {
+    return "negative";
+  }
+  else {
+    return "very negative";
+  }
+}
 
 // The answer should come from shaking the ball
 let answer;
@@ -55,7 +71,9 @@ let answer;
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer) {
+  return answer = shakeBall();
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
