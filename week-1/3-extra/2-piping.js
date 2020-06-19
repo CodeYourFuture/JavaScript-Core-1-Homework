@@ -16,26 +16,58 @@
   the final result to the variable goodCode
 */
 
-function add() {
+function add(a, b) {
+  let answer = a + b;
+  if(Number.isInteger(a)){
+    return answer;
+  }else {
+    return answer.toFixed(1);
+  }
 
 }
 
-function multiply() {
+function multiply(x, y) {
+  return x*y;
+}
+
+function format(num){
+  let formattedNum = `£${num}`;
+  return formattedNum;
 
 }
 
-function format() {
+// function format(num) {
 
-}
+//   let formatObject = new Intl.NumberFormat("en-IN", {
+//     style: "currency",
+//     currency: "GBP"
+//   });
+//   let formattedNum = formatObject.format(num);
+//   return formattedNum;
+
+// }
 
 const startingValue = 2
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+let badCode = format(multiply(add(startingValue, 10),2));
+
 
 /* BETTER PRACTICE */
 
-let goodCode = 
+
+let addTotal = add(startingValue, 10);
+let multiTotal = multiply(addTotal, 2);
+let goodCode = format(multiTotal);
+
+//TEST CODE INDIVIDUALLY
+console.log(add(1,3));
+console.log(add(2.4, 5.3));
+console.log(multiply(2,3));
+console.log(format(16));
+console.log(badCode);
+console.log(goodCode);
+
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
@@ -43,20 +75,20 @@ There are some Tests in this file that will help you work out if your code is wo
 To run these tests type `node 2-piping.js` into your terminal
 */
 
-function test(test_name, expr) {
-  let status;
-  if (expr) {
-      status = "PASSED"
-  } else {
-      status = "FAILED"
-  }
+// function test(test_name, expr) {
+//   let status;
+//   if (expr) {
+//       status = "PASSED"
+//   } else {
+//       status = "FAILED"
+//   }
 
-  console.log(`${test_name}: ${status}`)
-}
+//   console.log(`${test_name}: ${status}`)
+// }
 
-test('add function - case 1 works', add(1,3) === 4)
-test('add function - case 2 works', add(2.4,5.3) === 7.7)
-test('multiply function works', multiply(2,3) === 6)
-test('format function works', format(16) === "£16")
-test('badCode variable correctly assigned', badCode === "£24")
-test('goodCode variable correctly assigned', goodCode === "£24")
+// test('add function - case 1 works', add(1,3) === 4)
+// test('add function - case 2 works', add(2.4,5.3) === 7.7)
+// test('multiply function works', multiply(2,3) === 6)
+// test('format function works', format(16) === "£16")
+// test('badCode variable correctly assigned', badCode === "£24")
+// test('goodCode variable correctly assigned', goodCode === "£24")

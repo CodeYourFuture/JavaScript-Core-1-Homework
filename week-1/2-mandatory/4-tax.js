@@ -5,7 +5,12 @@
   Sales tax is 20% of the price of the product
 */
 
-function calculateSalesTax() {}
+function calculateSalesTax(product) {
+  let tax = (product * 0.2) + product;
+  return tax;
+}
+
+//console.log(calculateSalesTax(15));
 
 /*
   CURRENCY FORMATTING
@@ -17,8 +22,20 @@ function calculateSalesTax() {}
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency(product) {
 
+    let tax = calculateSalesTax(product);
+    let money = new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "GBP"
+
+  });
+  
+  let total = money.format(tax);
+  return total;
+}
+
+//console.log(formatCurrency(10));
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
 
