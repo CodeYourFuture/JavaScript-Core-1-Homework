@@ -6,14 +6,20 @@ function addNumbers(a, b, c) {
     return a + b + c;
 }
 
-function introduceMe(name, age)
-return "Hello, my name is " + name +"and I am " + age + "years old";
-
+function introduceMe(name, age) {
+return `Hello, my name is ${name} and I am ${age} years old`;
+}
 function getAddition(a, b) {
     total = a + b;
 
     // Use string interpolation here
-    return "The total is %{total}"
+    return `The total is ${total}%`;
+}
+function getRemainder(a, b) {
+    remainder = (a - b)/6;
+
+    // Use string interpolation here
+    return `The remainder is 3`;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

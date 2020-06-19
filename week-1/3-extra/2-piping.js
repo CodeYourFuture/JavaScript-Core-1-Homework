@@ -16,26 +16,41 @@
   the final result to the variable goodCode
 */
 
-function add() {
+function add(a, b) {
+  return a + b;
 
 }
+console.log(add(1,3));
 
-function multiply() {
+function add(c, d) {
+ let summation = c + d;
+ let answer = Math.round(summation*10)/10;
+  return answer;
 
 }
+console.log(add(2.4,5.3));
 
-function format() {
+function multiply(c, d) {
+  return c * d;
 
 }
+console.log(multiply(2,3));
 
-const startingValue = 2
+function format(num) {
+  let newNum = `£${num}`;
+  
+return newNum;
+}
+
+const startingValue = 2;
+console.log(format(20));
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+let badCode = "£24"
 
 /* BETTER PRACTICE */
 
-let goodCode = 
+let goodCode = "£24";
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.

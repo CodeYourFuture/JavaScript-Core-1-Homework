@@ -4,8 +4,16 @@
   The business is breaking out into a new market and need to convert prices to USD
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
+// var rates = [1.4, 1, 5.7];
+// var Dollar = rates[0];
+// var pound = rates[1];
+// var BrazilianReal = rates[2];
+// var result = 0;
+function convertToUSD(amount) {
 
-function convertToUSD() {}
+  return amount *1.4;
+}
+// console.log();
 
 /*
   CURRENCY FORMATTING
@@ -16,7 +24,12 @@ function convertToUSD() {}
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToBRL() {}
+function convertToBRL(GBP) {
+let BRL = 5.7 *GBP;
+let addPercentage = BRL + (1/100)*BRL;
+return addPercentage;
+}
+console.log(convertToBRL(30));
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.

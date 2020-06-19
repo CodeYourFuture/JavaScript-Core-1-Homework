@@ -25,65 +25,29 @@
 
 
 
-
-
-
-
-
 // var mentor1 = "Daniel";
 // var mentor2 = "Irina";
 // var mentor3 = "Mimi";
 // var mentor4 = "Rob";
 // var mentor5 = "Yohannes";
 
-// console.log()
 
-
-// var mentors = ["Hello Daniel","Hello Daniel","Hello Daniel","Hello Daniel","Hello Daniel","Hello Daniel"]
-// var mentorsNum = mentors.Length;
-// function myMentors(mentors) { 
-//     for (var  i= 0; i< mentors.Length; i++) {
-//     }
+function studentMentorPercentage(par1,par2,pa3){
     
-// }
-// console.log(mentors);
-// function studentMentorPercentage(par1,par2,pa3){
+    var res = (par1/par2) * 100;
+     return res;  
     
-//     var res = (par1/par2) * 100;
-//      return res;  
-    
-// }
-// var r = studentMentorPercentage(15,23);
-// var s = studentMentorPercentage(8,23);
-// console.log(`Percentage of students: ${Math.round(r)}%`);
-// console.log(`Percentage of mentors: ${Math.round(s)}%`);
-
-// mentors;
-// var mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"]
-// var mentor1 = "hello Daniel";
-// console.log(mentor1.toUpperCase());
+}
+var r = studentMentorPercentage(15,23);
+var s = studentMentorPercentage(8,23);
+console.log(`Percentage of students: ${Math.round(r)}%`);
+console.log(`Percentage of mentors: ${Math.round(s)}%`);
 
 
-// var mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"]
-// function upper() {
-//     for (var i = 0, len = mentors.length; i <len; i++){
-//         upper(mentors[i]);
-//     }
-
-// }
-
-// const mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"];
-// console.log(mentors.map (a => a.toUpperCase()));
-
-// const mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"];  
-// mentors.forEach ((name, index) => {
-//    mentors[index] = name.toUpperCase();      
-// });
-// console.log(mentors);
 
 const mentors = ["Hello Daniel","Hello Irina","Hello Mimi","Hello Rob","Hello Yohannes"];
 mentors.forEach(function(value){
-    console.log(value);
+    console.log(value.toUpperCase());
 
 });
-console.log(mentors.map (a => a.toUpperCase()));
+// console.log(mentors.map (a => a.toUpperCase()));
