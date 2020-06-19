@@ -4,8 +4,13 @@
   A business requires a program that calculates how much sales tax to charge
   Sales tax is 20% of the price of the product
 */
+let priceWithTaxUnit;
 
-function calculateSalesTax() {}
+function calculateSalesTax(priceOfOneUnit) {
+  priceWithTaxUnit = priceOfOneUnit + (priceOfOneUnit * 0.2);
+  return priceWithTaxUnit;
+}
+// console.log(calculateSalesTax(15));
 
 /*
   CURRENCY FORMATTING
@@ -17,7 +22,11 @@ function calculateSalesTax() {}
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency(originalPrice) {
+  let taxAdjustedPrice = calculateSalesTax(originalPrice);
+  //console.log("£" + taxAdjustedPrice.toFixed(2));
+  return "£" + taxAdjustedPrice.toFixed(2);
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
