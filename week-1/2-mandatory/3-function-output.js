@@ -1,14 +1,23 @@
 // Add comments to explain what this function does. You're meant to use Google!
+
+/* This is a random numbers generating function that give a random number between 
+ 0 and 9 (both included). */
 function getNumber() {
   return Math.random() * 10;
 }
 
 // Add comments to explain what this function does. You're meant to use Google!
+
+/* This is a method used to combine arrays into one array. The array before concat() (w1) will be placed first in the 
+new array. And the array inside the parenthesis (w2) will be placed last. */
 function s(w1, w2) {
   return w1.concat(w2);
 }
 
 function concatenate(firstWord, secondWord, thirdWord) {
+  
+   return `${firstWord} ${secondWord} ${thirdWord}`;
+
   // Write the body of this function to concatenate three words together
   // Look at the test case below to understand what to expect in return
 }
