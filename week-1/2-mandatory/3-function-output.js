@@ -1,6 +1,6 @@
 // Add comments to explain what this function does. You're meant to use Google!
 function letterSet() {
-  return Math.random() * 10; //Math.random syntax is a floating-point, pseudo-random number between 0 (inclusive) and 1 (exclusive).
+  return Math.random() * 10; //Math.random() syntax is a floating-point, pseudo-random number between 0 (inclusive) and 1 (exclusive).
 }
 
 // Add comments to explain what this function does. You're meant to use Google!
