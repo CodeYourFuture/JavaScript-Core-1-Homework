@@ -45,18 +45,38 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+function shakeBall() {
+  console.log();
+  let answer = `The ball has shaken!`;
+  console.log(answer);
+}
 
 // The answer should come from shaking the ball
-let answer;
+let answer = shakeBall();
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer() {
+  let level = Math.floor(Math.random() * 5);
+  let answer1 = "very positive";
+  let answer2 = "positive";
+  let answer3 = "negative";
+  let answer4 = "very negative";
 
+  if (level === 1) {
+    return `${answer1}`;
+  } else if (level === 2) {
+    return `${answer2}`;
+  } else if (level === 3) {
+    return `${answer3}`;
+  } else if (level === 4) {
+    return `${answer4}`;
+  }
+}
+console.log(checkAnswer());
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
 
