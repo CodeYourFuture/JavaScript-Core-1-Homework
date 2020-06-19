@@ -16,26 +16,39 @@
   the final result to the variable goodCode
 */
 
-function add() {
-
+function add (a, b) {
+  return a + b;
 }
+//console.log(add (3.2, 6.5));
 
-function multiply() {
-
+function multiply(a, b) {
+  return a * b;
 }
+//console.log(multiply(3,6));
 
-function format() {
-
+function format(number1) {
+  //let formattedNumber = `£${number1}`;
+  //console.log(`£ ${number1}`);
+  return `£ ${number1}`;
 }
+format ();
 
-const startingValue = 2
+
+const startingValue = 2;
+function allTogetherMath() {
+  let exitValue = (startingValue + 10) * 2;
+  //console.log("£" + allCalculateTogether);
+  return "£" + exitValue;
+}
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+let badCode = allTogetherMath()
 
 /* BETTER PRACTICE */
-
-let goodCode = 
+function allTogetherGoodPractice (startValue){
+  return "£ " +  ((startValue + 10) * 2);
+}
+let goodCode = allTogetherGoodPractice(4);
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
