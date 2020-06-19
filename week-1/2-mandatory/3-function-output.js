@@ -1,16 +1,25 @@
 // Add comments to explain what this function does. You're meant to use Google!
+// Returns a random number between 0 and 9 //
 function getNumber() {
   return Math.random() * 10;
 }
 
 // Add comments to explain what this function does. You're meant to use Google!
+// Combines two strings (w1 and w2) into one string //
 function s(w1, w2) {
   return w1.concat(w2);
 }
 
-function concatenate(firstWord, secondWord, thirdWord) {
+
+function concatenate(firstWord,secondWord,thirdWord) {
   // Write the body of this function to concatenate three words together
   // Look at the test case below to understand what to expect in return
+ var secondWord = " " + secondWord;
+ var thirdWord = " " + thirdWord;
+var total = firstWord.concat(secondWord, thirdWord); 
+console.log(total);
+  return total;
+
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== 
