@@ -20,6 +20,7 @@ function add (a, b) {
   return (a + b);
 }
 add();
+
 //console.log(add (3.2, 6.5));
 
 function multiply(a, b) {
@@ -49,7 +50,7 @@ let badCode = allTogetherMath()
 function allTogetherGoodPractice (startValue){
   return "£ " +  ((startValue + 10) * 2);
 }
-let goodCode = allTogetherGoodPractice();
+let goodCode = allTogetherGoodPractice(2);
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
