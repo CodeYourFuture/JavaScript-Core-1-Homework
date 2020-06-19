@@ -1,4 +1,4 @@
-// Start by creating a variable `message`
-let message = "This is a string \nString";
+let message = 'Learning javaScript is Fun ';
+let myMessage = typeof message;
 
-console.log(message);
+console.log(`${message} \n${myMessage}`);
