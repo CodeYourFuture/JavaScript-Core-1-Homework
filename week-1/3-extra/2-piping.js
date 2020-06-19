@@ -16,26 +16,33 @@
   the final result to the variable goodCode
 */
 
-function add() {
+function add(a,b) {
+  console.log(a);
+  console.log(b);
+  sum=a+b;
+  value= Math.round(sum*10)/10;
+  console.log(value);
+  return  value;
 
 }
 
-function multiply() {
-
+function multiply(a,b) {
+  return a*b;
 }
 
-function format() {
-
+function format(number) 
+{
+  // var final = number.toFixed(2);
+  return "£"+number;
 }
 
 const startingValue = 2
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
-
+let badCode = "Bad practice is when we do not generalise the code ";
 /* BETTER PRACTICE */
 
-let goodCode = 
+let goodCode = "A function is useful when it can be applied to many domains, in short we should to generalise it as much as we can";
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
