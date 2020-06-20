@@ -6,7 +6,14 @@
 */
 
 var codeYourFutureIsGreat = true;
+var mozafarIsCool = true;
+var calculationCorrect = true;
+var moreThan10Students = true;
 
+/*function selectCYF (selection){
+
+}
+*/
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
