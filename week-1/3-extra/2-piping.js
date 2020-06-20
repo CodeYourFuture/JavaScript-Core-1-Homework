@@ -31,11 +31,11 @@ function format() {
 const startingValue = 2
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+let badCode = "";
 
 /* BETTER PRACTICE */
 
-let goodCode = 
+let goodCode = "";
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
