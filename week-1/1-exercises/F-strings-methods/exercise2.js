@@ -1,3 +1,4 @@
-const name = " Daniel  ";
+var name = "Daniel";
+var nameLowerCase = name.toLowerCase();
 
-console.log(message);
+console.log(nameLowerCase);
