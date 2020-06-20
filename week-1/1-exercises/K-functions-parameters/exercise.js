@@ -1,8 +1,7 @@
-function name() {
-  returns("Hello, my name is `${name}`");
+// multiplication function//
+
+function multiply() {
+  return 3 * 4;
 }
-
-let name = "Osagie";
-let greeting = "Hello, my name is";
-
-console.log(`${greeting} ${name}`);
+let result = multiply(3, 4);
+console.log(result);
