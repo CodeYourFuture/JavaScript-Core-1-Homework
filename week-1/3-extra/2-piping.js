@@ -16,26 +16,28 @@
   the final result to the variable goodCode
 */
 
-function add() {
-
+function add(pipe1, pipe2) {
+  return pipe1 + pipe2;
 }
 
-function multiply() {
-
+function multiply(pipe1, pipe2) {
+  return pipe1 * pipe2;
 }
 
-function format() {
-
+function format(pound) {
+  return `£${pound}`;
 }
 
-const startingValue = 2
+const startingValue = 2;
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+let badCode = format(multiply(add(startingValue, 10), 2)); //badCode has all codes mumbled up in one line//
 
 /* BETTER PRACTICE */
 
-let goodCode = 
+let sum = add(startingValue, 10);
+let product = multiply(sum, 2);
+let goodCode = format(product);
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
@@ -46,17 +48,17 @@ To run these tests type `node 2-piping.js` into your terminal
 function test(test_name, expr) {
   let status;
   if (expr) {
-      status = "PASSED"
+    status = "PASSED";
   } else {
-      status = "FAILED"
+    status = "FAILED";
   }
 
-  console.log(`${test_name}: ${status}`)
+  console.log(`${test_name}: ${status}`);
 }
 
-test('add function - case 1 works', add(1,3) === 4)
-test('add function - case 2 works', add(2.4,5.3) === 7.7)
-test('multiply function works', multiply(2,3) === 6)
-test('format function works', format(16) === "£16")
-test('badCode variable correctly assigned', badCode === "£24")
-test('goodCode variable correctly assigned', goodCode === "£24")
+test("add function - case 1 works", add(1, 3) === 4);
+test("add function - case 2 works", add(2.4, 5.3) === 7.7);
+test("multiply function works", multiply(2, 3) === 6);
+test("format function works", format(16) === "£16");
+test("badCode variable correctly assigned", badCode === "£24");
+test("goodCode variable correctly assigned", goodCode === "£24");
