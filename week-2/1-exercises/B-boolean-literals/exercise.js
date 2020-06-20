@@ -5,7 +5,7 @@
   Add the required variables with the correct boolean values assigned.
 */
 
-var codeYourFutureIsGreat = true;
+const codeYourFutureIsGreat = false;
 
 /* 
   DO NOT EDIT BELOW THIS LINE
