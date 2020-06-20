@@ -5,7 +5,25 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+
+
+function tidyUpString(strArr) {
+let len=0; // length of each string in the array
+let currentz=" ";
+  for(let i=0 ; i < strArr.length ; i++)
+  {
+    current=strArr[i];
+    len=current.length;
+    for(let j=0 ; j < len ; j++)
+    {
+      current=current.trim();
+      current=current.replace("/",""); 
+    }
+
+    strArr[i]=current.toLowerCase();
+  }
+  return strArr;
+}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,7 +33,13 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  if( typeof num ==="number" && num%2===0 && num<=100)
+  {
+    return true;
+  }
+  return false;
+}
 
 /* 
 Write a function that removes an element from an array
@@ -26,7 +50,9 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+
+  let removed_element=arr.splice(index,1);
+  return arr; 
 }
 
 /*
@@ -38,7 +64,20 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  
+  let value=0;
+  let new_value=0;
+  var final_array= new Array(arr.length);
+  for(let i=0;i<arr.length;i++)
+  {
+    value = arr[i];
+    if(value>100){
+      value=100;
+    }
+    value= Math.round(value*100)/100;
+    new_value=value+"%";
+    final_array[i]=new_value;
+  }
+  return final_array;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
