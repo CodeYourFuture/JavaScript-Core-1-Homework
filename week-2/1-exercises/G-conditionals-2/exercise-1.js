@@ -7,8 +7,14 @@
 */
 
 function negativeOrPositive(number) {
-
+  if (number >= 0){
+    return "positive";
+  } 
+  if (number < 0){
+    return "negative";
+  }
 }
+console.log(negativeOrPositive());
 
 /* 
   DO NOT EDIT BELOW THIS LINE

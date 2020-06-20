@@ -5,7 +5,38 @@
   Update the code so that you get the expected result.
 */
 
-function isNegative() {}
+function isNegative(number) {
+  if (number < 0){
+    console.log (`Is ${number} a negative number? true`);
+  } 
+  if (number >= 0) {
+    console.log (`Is ${number} a negative number? false`);
+  }
+}
+isNegative(5)
+
+function isBetween5and10 (number){
+  if (number > 5 && number < 10){
+    console.log (`Is ${number} in the range 5-10? false`);
+  }
+}
+isBetween5and10 (10);
+
+function isShortName (name){
+  if (name.length < 7){
+    console.log (`Is ${name} a short name? true`)
+  } else{
+    console.log (`Is ${name} a short name? false`)
+  }
+}
+isShortName ("Daniel");
+
+function startsWithD (name){
+  if (name === "Daniel"){
+    console.log(`Does ${name} start with 'D'?`);
+  }
+}
+
 
 /* 
   DO NOT EDIT BELOW THIS LINE
