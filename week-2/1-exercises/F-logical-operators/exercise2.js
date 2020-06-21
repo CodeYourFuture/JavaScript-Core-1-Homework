@@ -4,8 +4,31 @@
   This program calls some functions that are either missing or incomplete.
   Update the code so that you get the expected result.
 */
+let num;
+let name;
+function isNegative(num) {
+  if (num < 0) {
+    return true;
+  } return false;
+}
 
-function isNegative() {}
+function isBetween5and10(num) {
+  if (num > 5 && num <= 10) {
+    return true;
+  } return false;
+}
+
+function isShortName(name) {
+  if(name.length < 7) {
+    return true;
+  } return false;
+}
+
+function startsWithD(name) {
+  if(name[0] === "D") {
+    return true;
+  } return false;
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
