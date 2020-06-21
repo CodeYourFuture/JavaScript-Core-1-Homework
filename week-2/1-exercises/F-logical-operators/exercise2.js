@@ -5,7 +5,32 @@
   Update the code so that you get the expected result.
 */
 
-function isNegative() {}
+function isNegative(num) {
+  if (num < 0) {
+    return true;
+  } return false;
+}
+
+function isBetween5and10(num) {
+  if (num >= 5 && num <= 10) {
+    return true;
+  } return false;
+}
+
+function isShortName(name) {
+  if (name.length < 7) {
+    return true;
+  } return false;
+}
+
+// https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-bracket-notation-to-find-the-first-character-in-a-string
+function startWithD(name) {
+  let firstLetter = name[0];
+  if (firstLetter === "D") {
+    return true;
+  } return false;
+}
+console.log(startWithD("Daniel"));
 
 /* 
   DO NOT EDIT BELOW THIS LINE

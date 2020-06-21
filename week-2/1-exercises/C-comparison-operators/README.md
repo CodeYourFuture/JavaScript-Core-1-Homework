@@ -27,3 +27,11 @@ The `>` symbol in the expression is a **comparison operator**. Comparison operat
 
 * Open `exercise.js` and follow the instructions.
 * Open a node console, and write some expressions that use comparison operators
+> 1 > 2
+false
+> 25 <= 25
+true
+> 16 > 9
+true
+> 16 !== 9
+true

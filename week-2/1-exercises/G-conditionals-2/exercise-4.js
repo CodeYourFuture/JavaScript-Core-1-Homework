@@ -8,8 +8,11 @@
   Hint: Google how to check if a string contains a word
 */
 
+// https://www.w3schools.com/jsref/jsref_includes.asp
 function containsCode(sentence) {
-
+  if (sentence.includes("code")) {
+    return true;
+  } return false;
 }
 
 /* 
