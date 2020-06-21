@@ -24,7 +24,7 @@ function Build_Max_Heap(arr,len)
 
     for( let i=k ; i>=0 ; i-- )
     {
-		Max_Heapify(arr,i,len); // we call this to put parents big than child.
+		Max_Heapify(arr,i,len); // we call this to put parents larger than child.
     }
 	return;
 }
@@ -36,8 +36,8 @@ function Max_Heapify(arr,i,len)
 	if(len<=0)
 		return;
 
-	if(len%2==0 && i>= (len/2) )   // after length/2 elements are leaf.
-	    return;                          // so they do not possede any Left and Right elements to be tested . 
+	if(len%2==0 && i>= (len/2) )   // after length/2 elements are leaf(with no child elements)
+	    return;                          // so they do not have any Left and Right elements to be tested . 
 		
 
 	if(len%2!=0 && i>= ((len/2) + 1 ))  
@@ -69,9 +69,6 @@ function Max_Heapify(arr,i,len)
 
 }
 
-
-
-
 function HeapSort(arr,len)
 {
 	var size=len;
@@ -91,15 +88,6 @@ function HeapSort(arr,len)
 	}
 return arr;
 }
-
-// var arra= [11,12,17,1,2,99,100,1002,45];
-// var final=sort(arra);
-// for(let i=0;i<final.length;i++)
-// {
-// 	console.log(final[i]);
-// }
-
-
 
 // export {sort,HeapSort, Max_Heapify,Build_Max_Heap};
 export {sort};

@@ -29,10 +29,8 @@ function sortAges(arr) {
     {
       new_array[index]=arr[i];
       index++;
-      // console.log(arr[i]);
     }
   }
-  // console.log(new_array.length);
   sorted_array=sort(new_array);
   return sorted_array;
 }
