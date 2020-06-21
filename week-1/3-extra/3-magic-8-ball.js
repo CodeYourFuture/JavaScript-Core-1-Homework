@@ -10,29 +10,35 @@ let newNum = getRandNum();
 function getRandNum(){
   let randomNum = Math.floor(Math.random() * 4);
   return randomNum;
-}
+};
 
 //SHAKEN BALL
  function shakeBall() {
   let mess = `The ball is shaken!`;
   return mess;
 };
+//Another random number generator with parameter
+function anotherRandNum(x){
+  return Math.floor(Math.random() * x);
+};
 
 
 //RANDON REPLY
 function calculateReply(){
+  let innerRandNum = anotherRandNum(5);
   
     if (newNum == 0){
-        console.log(answersArray[0][0]);
+
+        console.log(answersArray[0][innerRandNum]);
     }
     else if(newNum == 1){
-      console.log(answersArray[1][0]);
+      console.log(answersArray[1][innerRandNum]);
     }
     else if(newNum == 2){
-      console.log(answersArray[2][0]);
+      console.log(answersArray[2][innerRandNum]);
     }
     else{
-      console.log(answersArray[3][0]);
+      console.log(answersArray[3][innerRandNum]);
     }
 
 }
