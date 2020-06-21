@@ -1,20 +1,37 @@
 /*
 At the start of the course, you worked in teams to sort your team members, labelled by
 numbers, in ascending or descending order.
-
 Today, you will be applying the sorting algorithm you used in that exercise in code! 
-
 Create a function called sortAges which:
 - takes an array of mixed data types as input
 - removes any non-number data types without using the built-in javascript filter method
 - returns an array of sorted ages in ascending order 
   - HARD MODE - without using the built-in javascript sort method 😎
-
 You don't have to worry about making this algorithm work fast! The idea is to get you to
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
+function mySort(arr) {
+  for (let listPos = 0; listPos < arr.length - 1; ++listPos) {
+    for (let listSubsetPos = listPos; listSubsetPos < arr.length; listSubsetPos++) {
+      if (arr[listPos] > arr[listSubsetPos + 1]) {
+        [arr[listPos], arr[listSubsetPos + 1]] = [arr[listSubsetPos + 1], arr[listPos]]
+      }
+    }
+  }
 
-function sortAges(arr) {}
+  return arr
+}
+
+function sortAges(arr) {
+  let newArray = []
+
+  for (let i = 0, j = 0; i < arr.length; ++i) {
+    if (Number.isInteger(arr[i]))
+      newArray[j++] = arr[i]
+  }
+
+  return mySort(newArray)
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
