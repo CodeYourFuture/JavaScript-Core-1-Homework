@@ -1,3 +1,4 @@
+/////////////////////////////////////////////////////////////////////////////
 /*
 Write a function that:
 - takes an array of strings as input
@@ -5,19 +6,22 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-/////////////////////////////////////////////////////////////////////////////////
+
 
 function tidyUpString(strArr) {
-  //let namesArray=['  Osagie  ',  '  osmAn//  ', '  //Nouri  ', ' /ekip '];
-  let whiteSpaceErased; 
-  whiteSpaceErased= strArr.trim();
-  removeForwardSlashes = strArr.shift("/");
-  console.log(whiteSpaceErased);
-  
-  //  for (let i=0; i < strArr.length; i ++ ){
-  //}
+    let makeTidyUpArray = [];
+    let a = '';
+    for (let i = 0; i < strArr.length; i++) {
+        a = strArr[i].trim().replace('/', '').toLowerCase();
+        makeTidyUpArray.push(a);
+    }
+    console.log(makeTidyUpArray); // [ 'daniel', 'irina', 'gordon', 'ashleigh' ]
+    const c = makeTidyUpArray.join(', ')
+    console.log(c); //daniel, irina, gordon, ashleigh
+
+    return makeTidyUpArray;
 }
-tidyUpString()
+tidyUpString(["/Daniel ", "irina ", " Gordon", "ashleigh "]);
 
 ////////////////////////////////////////////////////////////////////////////////
 /*
@@ -27,7 +31,7 @@ Complete the function to check if the variable `num` satisfies the following req
 - is less than or equal to 100
 Tip: use logical operators
 */
-///////////////////////////////////////////////////////////////////////////////
+
 
 function validate(num) {
   if (typeof num === "number" && num %2 === 0 && num <= 100 ){
@@ -47,12 +51,12 @@ The function must:
 - return a new array with the item removed
 - remove the item at the specified index
 */
-////////////////////////////////////////////////////////////////////////////////
+
 
 function remove(arr, index) {
-  return; // complete this statement
+  return arr.splice(index); // complete this statement
 }
-
+console.log(remove());
 /////////////////////////////////////////////////////////////////////////////////
 /*
 Write a function that:
@@ -61,7 +65,6 @@ Write a function that:
 - the numbers must be rounded to 2 decimal places
 - numbers greater 100 must be replaced with 100
 */
-/////////////////////////////////////////////////////////////////////////////////
 
 function formatPercentage(arr) {
   
