@@ -5,6 +5,9 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
+
+// https://www.w3schools.com/jsref/jsref_trim_string.asp
+// https://www.w3schools.com/JSREF/jsref_tolowercase.asp#:~:text=The%20toLowerCase()%20method%20converts,a%20string%20to%20uppercase%20letters.
 function tidyUpString(strArr) {}
 
 /*
@@ -15,7 +18,13 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  if (typeof num === "number" && num % 2 === 0 && num <= 100) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /* 
 Write a function that removes an element from an array
