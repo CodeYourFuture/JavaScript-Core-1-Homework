@@ -2,7 +2,7 @@
 // Look at the tests and see how you can fix them.
 
 function mood() {
-  let isHappy = true;
+  let isHappy = false;
 
   if (isHappy) {
     return "I am happy";
