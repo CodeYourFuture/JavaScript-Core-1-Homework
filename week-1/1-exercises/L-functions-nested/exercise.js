@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////////////////////////
+
+// Write a program that displays the percentage of students and mentors in the group. 
+// The percentage should be rounded to the nearest whole number
 
 function calculatePercentage (numberOfStudents, numbersOfMentors){
     let percentageStudents= (numberOfStudents/(numberOfStudents+numbersOfMentors)) * 100;
@@ -11,7 +15,7 @@ console.log (calculatePercentage (15,8));
 
 
 
-
+///////////////////////////////////////////////////////////////////////////////////
 
 
 
