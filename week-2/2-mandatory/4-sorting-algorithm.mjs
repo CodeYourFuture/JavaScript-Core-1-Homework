@@ -14,7 +14,28 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {}
+// import {sort,HeapSort, Max_Heapify,Build_Max_Heap} from './heapSort';
+import {sort} from './heapSort.mjs';
+
+function sortAges(arr) {
+ 
+  var new_array=new Array();
+  var sorted_array=new Array();
+  var index=0;
+
+  for( let i=0 ; i < arr.length ; i++)
+  {
+    if(typeof arr[i]==="number")
+    {
+      new_array[index]=arr[i];
+      index++;
+      // console.log(arr[i]);
+    }
+  }
+  // console.log(new_array.length);
+  sorted_array=sort(new_array);
+  return sorted_array;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
