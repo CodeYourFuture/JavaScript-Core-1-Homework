@@ -5,8 +5,17 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
-
+function tidyUpString(strArr) {
+//   for (let i=0; i < strArr.length; i++) {
+//     if(strArr[i].includes(" ")) {
+//       strArr[i].trim();
+//     } else if (strArr[i].includes("/")) {
+//       strArr[i].Replace(/\//g, "");
+//     } else {
+//       strArr[i].ToLowerCase();
+//     }
+// }
+}
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
@@ -15,7 +24,17 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  if(typeof num === "number") {
+    if (num % 2 === 0) {
+      if(num <=100) {
+        return true;
+      } return false;
+  } return false;
+  } return false;
+}
+
+
 
 /* 
 Write a function that removes an element from an array
