@@ -9,8 +9,17 @@
 */
 
 function calculateGrade(mark) {
-
+  if (mark >= 80){
+    return "The grade is 'A' ";
+  } else if(mark < 80 && mark > 60){
+    return "The grade is 'B' ";
+  } else if (mark < 60 && mark > 50 ){
+    return "The grade is 'C' ";
+  } else {
+    return "The grade is 'F' ";
+  }
 }
+console.log (calculateGrade());
 
 /* 
 DO NOT EDIT BELOW THIS LINE
