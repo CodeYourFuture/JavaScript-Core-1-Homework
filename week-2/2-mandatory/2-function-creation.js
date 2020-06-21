@@ -45,7 +45,9 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  const newArr = [...arr];
+  newArr.splice(index, 1);
+  return newArr; // complete this statement
 }
 
 /*
@@ -57,8 +59,14 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  
-}
+//   for(let i = 0; i < arr.length; i++) {
+//    if(arr[i] > 100) {
+//      arr[i] = "100%";
+//    } else {
+//      Math.round(arr[i]).toFixed(2) + "%";
+//    }
+//   }
+} 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
