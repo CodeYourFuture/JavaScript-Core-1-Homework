@@ -5,7 +5,13 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(strArr) {
+  let remSpaces = strArr.trim()
+  let remBackSlash = strArr.replace(/\//g,'')
+  let smallStrr = remSpaces.toLowerCase()
+
+ return(smallStrr)
+}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
