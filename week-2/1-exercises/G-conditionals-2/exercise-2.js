@@ -7,6 +7,18 @@
 
 */
 
+function studentPassed(grade) {
+  if (grade < 50) {
+    return "failed";
+  }
+else {
+  return "passed";
+}
+}
+
+
+/*
+
 function studentPassed(grade1) {
   if (grade1 < 50) {
     return "failed";
@@ -15,6 +27,7 @@ else {
   return "passed";
 }
 }
+
 
 
 function studentPassed(grade2) {
@@ -35,7 +48,7 @@ else {
   return "passed";
 }
 }
-
+*/
 /* 
 DO NOT EDIT BELOW THIS LINE
 --------------------------- */
