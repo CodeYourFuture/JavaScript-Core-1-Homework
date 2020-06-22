@@ -6,11 +6,16 @@ Write a function that:
 - makes the string all lowercase
 */
 function tidyUpString(strArr) {
-  let remSpaces = strArr.trim()
-  let remBackSlash = strArr.replace(/\//g,'')
-  let smallStrr = remSpaces.toLowerCase()
 
- return(smallStrr)
+  for(let i=0;i<strArr.length;i++)
+  {
+let remSpaces = strArr[i].trim()
+let remBackSlash = remSpaces.replace(/\//g,'')
+let smallStrr = remBackSlash.toLowerCase()
+strArr[i]=smallStrr;
+  }
+
+return(strArr)
 }
 
 /*
