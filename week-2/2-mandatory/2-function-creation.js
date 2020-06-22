@@ -54,9 +54,9 @@ The function must:
 
 
 function remove(arr, index) {
-  return arr.splice(index); // complete this statement
+  return arr.slice(index, ); // complete this statement
 }
-console.log(remove());
+console.log(remove(["ekip","nouri", "osagie"], 1));
 /////////////////////////////////////////////////////////////////////////////////
 /*
 Write a function that:
