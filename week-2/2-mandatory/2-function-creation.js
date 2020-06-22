@@ -47,7 +47,8 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  arr.splice(index,1)
+  return arr; 
 }
 
 /*
