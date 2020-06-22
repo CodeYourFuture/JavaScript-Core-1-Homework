@@ -26,7 +26,17 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+    if((typeof(num) === "number") && (num%2===0) && (num<=100))
+    {
+return true
+    }
+    else{
+        return false
+    }
+
+}
+
 
 /* 
 Write a function that removes an element from an array
