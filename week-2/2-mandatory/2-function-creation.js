@@ -60,7 +60,19 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  
+
+  for(let i=0;i<arr.length;i++)
+  {
+      if(arr[i]>100)
+      {
+          arr[i]=100;
+      }
+    let dec=arr[i].toFixed(2)
+    dec=parseFloat(dec)
+    arr[i]=dec.toString()+"%"
+  }
+  return(arr)
+
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
