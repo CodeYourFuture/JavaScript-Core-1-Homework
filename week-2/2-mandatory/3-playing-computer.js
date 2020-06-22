@@ -15,6 +15,17 @@
   7. What is the value of the "a" outer variable when "f1" is called for the first time?
 */
 
+/*
+ANSWERS:
+1. b, d and e is not defined;
+2. removed: console.log(b);
+3. Will be printed: 2, 6,4,9,6,13,8;
+4. f1 is called 2 times;
+5. f2 is called 3 times;
+6. In the first f1 call a will be equal to 1;
+7. The value of the "a" outer variable when 'f1' is called fir the first time is 8;
+*/
+
 let x = 2;
 let a = 6;
 
@@ -34,7 +45,7 @@ for (let i = 0; i < 5; ++i) {
   a = a + 1;
   if (i % 2 === 0) {
     const d = f2(i, x);
-    console.log(d);
+    //console.log(d);
   } else {
     const e = f1(i, a);
     console.log(e);
