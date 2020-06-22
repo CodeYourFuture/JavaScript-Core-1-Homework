@@ -1,10 +1,10 @@
 # Your Details
 
-Your Name:
-Your City:
-Your Slack Name:
+Your Name: Osagie Okoedo
+Your City: Birmingham
+Your Slack Name: Osagie Okoedo
 
 # Homework Details
 
-Module:
-Week:
+Module: JavaScript
+Week: 1
