@@ -7,8 +7,21 @@ Write a function that:
 */
 
 // https://www.w3schools.com/jsref/jsref_trim_string.asp
+// http://www.punkchip.com/removing-forward-slashes-from-a-string/
 // https://www.w3schools.com/JSREF/jsref_tolowercase.asp#:~:text=The%20toLowerCase()%20method%20converts,a%20string%20to%20uppercase%20letters.
-function tidyUpString(strArr) {}
+let nameArr = ["  /D/an", "Sue/  ", "   /Paul  "];
+
+function tidyUpString(strArr) {
+  for (let i = 0; i < strArr.length; i++) {
+    let noSpaces = strArr[i].trim();
+    let noSlashes = noSpaces.replace(/\//g, "");
+    let lowercase = noSlashes.toLowerCase();
+
+    return lowercase;
+  }
+}
+
+console.log(tidyUpString(nameArr));
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -34,9 +47,15 @@ The function must:
 - remove the item at the specified index
 */
 
+// https://www.freecodecamp.org/news/lets-clear-up-the-confusion-around-the-slice-splice-split-methods-in-javascript-8ba3266c29ae/
+let carList = ["bmw", "volvo", "range", "jag", "toyota"]
+
 function remove(arr, index) {
-  return; // complete this statement
+  arr.splice(index, 1); // complete this statement
+  return arr;
 }
+
+console.log(remove(carList, 3));
 
 /*
 Write a function that:
