@@ -1,3 +1,5 @@
+
+
 // There are syntax errors in this code - can you fix it to pass the tests?
 
 function addNumbers(a b c) {
@@ -15,6 +17,8 @@ function getAddition(a, b) {
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
+// 
+// To run these tests type `node 1-syntax-errors.js` into your terminal
 
 function test(test_name, expr) {
     let status;

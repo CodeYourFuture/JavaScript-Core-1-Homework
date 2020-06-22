@@ -37,7 +37,11 @@ let badCode =
 
 let goodCode = 
 
-/* ======= TESTS - DO NOT MODIFY ===== */
+/* ======= TESTS - DO NOT MODIFY ===== 
+There are some Tests in this file that will help you work out if your code is working.
+
+To run these tests type `node 2-piping.js` into your terminal
+*/
 
 function test(test_name, expr) {
   let status;
