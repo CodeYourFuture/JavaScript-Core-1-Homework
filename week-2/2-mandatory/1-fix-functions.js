@@ -27,7 +27,7 @@ function greaterThan10() {
 
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
+  let sortedLetters = letters.sort();
 
   return sortedLetters;
 }
