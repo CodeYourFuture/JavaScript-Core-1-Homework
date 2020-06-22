@@ -9,6 +9,10 @@
 */
 
 function containsCode(sentence) {
+  if(sentence.search("code") >= 0){
+    return true;
+  }
+  return false;
 
 }
 
