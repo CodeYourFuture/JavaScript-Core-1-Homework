@@ -6,9 +6,8 @@
 */
 
 function isEmpty(arr) {
-  return arr; // complete this statement
+  return arr.length; // complete this statement
 }
-isEmpty();
 
 /* 
   DO NOT EDIT BELOW THIS LINE

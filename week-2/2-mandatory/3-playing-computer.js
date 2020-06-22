@@ -15,13 +15,13 @@
   3. What is printed to the console?
     A: 2,6,4,9,6,13,8
   4. How many times is "f1" called?
-    A: 
+    A: 2 times
   5. How many times is "f2" called?
-    A:
+    A: 3 times
   6. What value does the "a" parameter take in the first "f1" call?
-    A: 
+    A: 7
   7. What is the value of the "a" outer variable when "f1" is called for the first time?
-    A:
+    A: 7
 */
 
 let x = 2;
@@ -39,7 +39,7 @@ console.log(x);
 console.log(a);
 //console.log(b);
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 5; ++i) {
   a = a + 1;
   if (i % 2 === 0) {
     const d = f2(i, x);
