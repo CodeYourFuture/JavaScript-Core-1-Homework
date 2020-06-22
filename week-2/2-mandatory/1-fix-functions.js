@@ -11,6 +11,7 @@ function mood() {
   }
 }
 
+
 function greaterThan10() {
   let num = 10;
   let isBigEnough;
