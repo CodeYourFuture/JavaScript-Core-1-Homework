@@ -37,11 +37,11 @@
 let x = 2;
 let a = 6;
 
-const f1 = function(a, b) {
+const f1 = function (a, b) {
   return a + b;
 };
 
-const f2 = function(a, b) {
+const f2 = function (a, b) {
   return a + b + x;
 };
 

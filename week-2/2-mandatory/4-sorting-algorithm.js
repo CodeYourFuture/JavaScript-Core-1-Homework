@@ -16,29 +16,23 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 
 function sortAges(arr) {
   let swap;
-  let newArr=[];
-  for (let i=0;i<arr.length;i++)
-  {
-    if(typeof(arr[i]) === "number")
-     {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
       newArr.push(arr[i]);
     }
   }
-for(i=0;i<newArr.length;i++)
-{
-  for(let j=i+1;j<newArr.length;j++)
-  {
-    if(newArr[j]<newArr[i])
-    {
-      swap=newArr[i];
-      newArr[i]=newArr[j];
-      newArr[j]=swap;
+  for (i = 0; i < newArr.length; i++) {
+    for (let j = i + 1; j < newArr.length; j++) {
+      if (newArr[j] < newArr[i]) {
+        swap = newArr[i];
+        newArr[i] = newArr[j];
+        newArr[j] = swap;
+      }
     }
-
   }
-}
 
-  return(newArr)
+  return newArr;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

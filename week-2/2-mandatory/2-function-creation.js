@@ -6,16 +6,14 @@ Write a function that:
 - makes the string all lowercase
 */
 function tidyUpString(strArr) {
-
-  for(let i=0;i<strArr.length;i++)
-  {
-let remSpaces = strArr[i].trim()
-let remBackSlash = remSpaces.replace(/\//g,'')
-let smallStrr = remBackSlash.toLowerCase()
-strArr[i]=smallStrr;
+  for (let i = 0; i < strArr.length; i++) {
+    let remSpaces = strArr[i].trim();
+    let remBackSlash = remSpaces.replace(/\//g, "");
+    let smallStrr = remBackSlash.toLowerCase();
+    strArr[i] = smallStrr;
   }
 
-return(strArr)
+  return strArr;
 }
 
 /*
@@ -27,16 +25,12 @@ Tip: use logical operators
 */
 
 function validate(num) {
-    if((typeof(num) === "number") && (num%2===0) && (num<=100))
-    {
-return true
-    }
-    else{
-        return false
-    }
-
+  if (typeof num === "number" && num % 2 === 0 && num <= 100) {
+    return true;
+  } else {
+    return false;
+  }
 }
-
 
 /* 
 Write a function that removes an element from an array
@@ -47,8 +41,8 @@ The function must:
 */
 
 function remove(arr, index) {
-  arr.splice(index,1)
-  return arr; 
+  arr.splice(index, 1);
+  return arr;
 }
 
 /*
@@ -60,19 +54,15 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-
-  for(let i=0;i<arr.length;i++)
-  {
-      if(arr[i]>100)
-      {
-          arr[i]=100;
-      }
-    let dec=arr[i].toFixed(2)
-    dec=parseFloat(dec)
-    arr[i]=dec.toString()+"%"
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      arr[i] = 100;
+    }
+    let dec = arr[i].toFixed(2);
+    dec = parseFloat(dec);
+    arr[i] = dec.toString() + "%";
   }
-  return(arr)
-
+  return arr;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -106,7 +96,7 @@ test(
     "daniel",
     "irina",
     "gordon",
-    "ashleigh"
+    "ashleigh",
   ])
 );
 test(
@@ -135,7 +125,7 @@ test(
     "c",
     "d",
     "e",
-    "f"
+    "f",
   ])
 );
 
@@ -145,6 +135,6 @@ test(
     "23%",
     "18%",
     "100%",
-    "0.37%"
+    "0.37%",
   ])
 );

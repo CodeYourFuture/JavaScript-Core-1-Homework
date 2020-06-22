@@ -13,10 +13,9 @@ function mood() {
 
 function greaterThan10() {
   let num = 10;
-  let isBigEnough ;
-  if(num >= 10)
-  {
-  isBigEnough = true;
+  let isBigEnough;
+  if (num >= 10) {
+    isBigEnough = true;
   }
   if (isBigEnough) {
     return "num is greater than or equal to 10";
@@ -34,7 +33,7 @@ function sortArray() {
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced = numbers.slice(0,5);
+  let sliced = numbers.slice(0, 5);
 
   return sliced;
 }
