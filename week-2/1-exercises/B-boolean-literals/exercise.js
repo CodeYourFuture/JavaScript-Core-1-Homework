@@ -5,7 +5,7 @@
   Add the required variables with the correct boolean values assigned.
 */
 
-let codeYourFutureIsGreat = true;
+let codeYourFutureIsGreat = true; //Ofcourse, CYF is great//
 let mozafarIsCool = false;
 let calculationCorrect = true;
 let moreThan10Students = false;
