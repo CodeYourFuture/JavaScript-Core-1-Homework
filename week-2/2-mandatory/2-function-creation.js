@@ -15,13 +15,8 @@ function tidyUpString(strArr) {
         a = strArr[i].trim().replace('/', '').toLowerCase();
         makeTidyUpArray.push(a);
     }
-    console.log(makeTidyUpArray); // [ 'daniel', 'irina', 'gordon', 'ashleigh' ]
-    const c = makeTidyUpArray.join(', ')
-    console.log(c); //daniel, irina, gordon, ashleigh
-
     return makeTidyUpArray;
 }
-tidyUpString(["/Daniel ", "irina ", " Gordon", "ashleigh "]);
 
 ////////////////////////////////////////////////////////////////////////////////
 /*
@@ -32,15 +27,13 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-
 function validate(num) {
   if (typeof num === "number" && num %2 === 0 && num <= 100 ){
-    return `${num} is a number, is even, and is less than or equal to 100.`
+    return true;
   } else {
-    return `${num} does not satisfy the requirements.`
+    return false;
   }
 }
-console.log (validate(32));
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -52,11 +45,9 @@ The function must:
 - remove the item at the specified index
 */
 
-
 function remove(arr, index) {
   return arr.slice(index, ); // complete this statement
 }
-console.log(remove(["ekip","nouri", "osagie"], 1));
 /////////////////////////////////////////////////////////////////////////////////
 /*
 Write a function that:
@@ -67,7 +58,17 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  
+
+  for (let i =0; i < arr.length; i++ ){
+
+    if (arr[i] > 100){
+        arr[i]= 100;
+    }else{ 
+      arr[i] = Math.round(arr[i]*100)/100;
+    }
+    arr[i] += "%";
+  }
+  return arr;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////

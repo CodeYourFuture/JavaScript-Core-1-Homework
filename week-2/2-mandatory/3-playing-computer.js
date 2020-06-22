@@ -7,12 +7,21 @@
   Answer the following questions:
 
   1. This program throws an error. Why? (If you can't find it, try executing it).
+    A: We do not need to assign variable b and assign value initially. 
+
   2. Remove the line that throws the error.
+    A: //console.log(b);
+
   3. What is printed to the console?
+    A: 2,6,4,9,6,13,8
   4. How many times is "f1" called?
+    A: 
   5. How many times is "f2" called?
+    A:
   6. What value does the "a" parameter take in the first "f1" call?
+    A: 
   7. What is the value of the "a" outer variable when "f1" is called for the first time?
+    A:
 */
 
 let x = 2;
@@ -28,9 +37,9 @@ const f2 = function(a, b) {
 
 console.log(x);
 console.log(a);
-console.log(b);
+//console.log(b);
 
-for (let i = 0; i < 5; ++i) {
+for (let i = 0; i < 5; i++) {
   a = a + 1;
   if (i % 2 === 0) {
     const d = f2(i, x);
@@ -39,4 +48,5 @@ for (let i = 0; i < 5; ++i) {
     const e = f1(i, a);
     console.log(e);
   }
+  
 }

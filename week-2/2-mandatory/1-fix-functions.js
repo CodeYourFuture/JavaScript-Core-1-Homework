@@ -23,7 +23,6 @@ function greaterThan10() {
     return "num is not big enough";
   }
 }
-greaterThan10(10);
 
 //////////////////////////////////////////////////////
 function sortArray() {
@@ -32,7 +31,6 @@ function sortArray() {
 
   return sortedLetters;
 }
-console.log(sortArray());
 
 /////////////////////////////////////////////////////
 function first5() {
@@ -41,7 +39,6 @@ function first5() {
 
   return sliced;
 }
-console.log (first5());
 
 //////////////////////////////////////////////////////
 function get3rdIndex(arr) {
