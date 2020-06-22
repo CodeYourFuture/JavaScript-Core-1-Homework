@@ -6,15 +6,18 @@
 */
 
 var codeYourFutureIsGreat = true;
+const mozafarIsCool = true;
+const calculationCorrect = true;
+const moreThan10Students = true;
 
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 
-console.log("Is Code Your Future great?", codeYourFutureIsGreat);
-console.log("Is Mozafar cool?", mozafarIsCool);
-console.log("Does 1 + 1 = 2?", calculationCorrect);
-console.log("Are there more than 10 students?", moreThan10Students);
+console.log('Is Code Your Future great?', codeYourFutureIsGreat);
+console.log('Is Mozafar cool?', mozafarIsCool);
+console.log('Does 1 + 1 = 2?', calculationCorrect);
+console.log('Are there more than 10 students?', moreThan10Students);
 
 /* 
   EXPECTED RESULT
