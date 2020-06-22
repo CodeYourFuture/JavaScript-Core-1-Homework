@@ -14,6 +14,16 @@
  */
 
 // `getAllFrequencies` goes here
+function getAllFrequencies() {
+  const lowest = 87;
+  const highest = 108;
+  const allFrequencies = [];
+
+  for (let frequency = lowest; frequency <= highest; frequency++) {
+    allFrequencies.push(frequency);
+  }
+  return allFrequencies;
+}
 
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
@@ -26,6 +36,17 @@
  */
 // `getStations` goes here
 
+function getStations() {
+  const availableFrequencies = getAllFrequencies();
+
+  for (let i = availableFrequencies.length - 1; i >= 0; i--) {
+    if (!isRadioStation(availableFrequencies[i])) {
+      availableFrequencies.splice(i, 1);
+    }
+  }
+
+  return availableFrequencies;
+}
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
@@ -36,10 +57,10 @@ function getAvailableStations() {
     const stationCount = 4;
     getAvailableStations.stations = new Array(stationCount)
       .fill(undefined)
-      .map(function() {
+      .map(function () {
         return Math.floor(Math.random() * (108 - 87 + 1) + 87);
       })
-      .sort(function(frequencyA, frequencyB) {
+      .sort(function (frequencyA, frequencyB) {
         return frequencyA - frequencyB;
       });
   }
@@ -51,7 +72,7 @@ function isRadioStation(frequency) {
   return getAvailableStations().includes(frequency);
 }
 
-const assert = require("assert");
+const assert = require('assert');
 
 function test(testName, fn) {
   try {
@@ -64,7 +85,7 @@ function test(testName, fn) {
   }
 }
 
-test("getAllFrequencies() returns all frequencies between 87 and 108", function() {
+test('getAllFrequencies() returns all frequencies between 87 and 108', function () {
   const frequencies = getAllFrequencies();
   assert.deepStrictEqual(frequencies, [
     87,
@@ -88,11 +109,11 @@ test("getAllFrequencies() returns all frequencies between 87 and 108", function(
     105,
     106,
     107,
-    108
+    108,
   ]);
 });
 
-test("getStations() returns all the available stations", () => {
+test('getStations() returns all the available stations', () => {
   const stations = getStations();
   assert.deepStrictEqual(stations, getAvailableStations());
 });
