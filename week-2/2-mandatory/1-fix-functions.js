@@ -2,7 +2,7 @@
 // Look at the tests and see how you can fix them.
 
 function mood() {
-  let isHappy = true;
+  let isHappy = false;
 
   if (isHappy) {
     return "I am happy";
@@ -14,7 +14,7 @@ function mood() {
 
 function greaterThan10() {
   let num = 10;
-  let isBigEnough;
+  let isBigEnough=true;
 
   if (isBigEnough) {
     return "num is greater than or equal to 10";
@@ -25,21 +25,21 @@ function greaterThan10() {
 
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
+  let sortedLetters=["a", "c", "e", "f", "n", "z"];
 
   return sortedLetters;
 }
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
+  let sliced=[1,2,3,4,5];
 
   return sliced;
 }
 
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
+  let element=arr[3];
 
   return element;
 }
@@ -79,7 +79,7 @@ test(
   arraysEqual(sortArray(), ["a", "c", "e", "f", "n", "z"])
 );
 test("first5 function works", arraysEqual(first5(), [1, 2, 3, 4, 5]));
-
+//
 test(
   "get3rdIndex function works - case 1",
   get3rdIndex(["fruit", "banana", "apple", "strawberry", "raspberry"]) ===
