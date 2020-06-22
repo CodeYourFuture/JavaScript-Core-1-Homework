@@ -9,7 +9,13 @@
 
 function studentPassed(grade) {
 
-}
+  if(grade < 50) {
+    return "failed";
+  } else (grade => 50)
+    return "pass";
+  }
+  
+
 
 /* 
 DO NOT EDIT BELOW THIS LINE

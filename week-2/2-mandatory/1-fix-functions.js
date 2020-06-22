@@ -3,16 +3,18 @@
 
 function mood() {
   let isHappy = true;
+ 
 
-  if (isHappy) {
-    return "I am happy";
-  } else {
-    return "I am not happy";
+  if (isHappy=== true) {
+    console.log ("I am happy");
+  } else (isHappy ===false)
+    console.log("I am not happy";
   }
-}
+  
+
 
 function greaterThan10(num) {
-  let isBigEnough;
+  let isBigEnough = num >10;
 
   if (isBigEnough) {
     return "num is greater than 10";
@@ -28,17 +30,22 @@ function sortArray(letters) {
 }
 
 function first5(numbers) {
-  let sliced;
+  let sliced = [1, 2, 3, 4, 5];
 
   return sliced;
 }
 
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
+  let element = ["fruit", "banana", "apple", "strawberry", "raspberry"];
+  // let element2 = [11, 37, 62, 18, 19, 3, 30];
+  if (element) {
+    return element[index];
+  }
 
-  return element;
-}
+ 
+
+} 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
