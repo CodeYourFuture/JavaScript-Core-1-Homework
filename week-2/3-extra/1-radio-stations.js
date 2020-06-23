@@ -45,7 +45,7 @@ function getStations(){
   for(let counter of arr){
     //console.log(counter);
     if(isRadioStation(counter)){
-     // console.log("return="+counter);
+      console.log("return="+counter);
       test.push(counter);
     }
   }

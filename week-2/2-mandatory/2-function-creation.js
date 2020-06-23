@@ -34,12 +34,10 @@ function validate(num) {
     if((num%2==0)&&(num>100)){
       return false;
     }
-    if(num%2!=0){
+    if((num%2!=0)||(num>100)){
       return false;
     }
-    if(num>100){
-      return false;
-    }
+    
   }
   else{
     return false;
