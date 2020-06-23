@@ -54,13 +54,14 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-//   for(let i = 0; i < arr.length; i++) {
-//    if(arr[i] > 100) {
-//      arr[i] = "100%";
-//    } else {
-//      Math.round(arr[i]).toFixed(2) + "%";
-//    }
-//   }
+  const newPercentages = [];
+  for(let i = 0; i < arr.length; i++) {
+   if(arr[i] > 100) {
+     newPercentages[i] = "100%";
+   } else {
+     newPercentages[i] = ((Math.round((arr[i] + 0.00001) * 100) / 100) + "%"); // used to scale the floating decimals
+   }
+  } return newPercentages;
 } 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
