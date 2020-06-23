@@ -71,9 +71,8 @@ function shakeBall(answer) {
       break;
   }
   return answer;
-}
 
-// When checking the answer, we should tell someone if the answer is
+// This function should say whether the answer it is given is
 // - very positive
 // - positive
 // - negative
@@ -100,7 +99,7 @@ function checkAnswer(answer) {
 checkAnswer();
 // console.log(checkAnswer("very positive"));
 
-/* ======= TESTS - DO NOT MODIFY ===== 
+/* ======= TESTS - DO NOT MODIFY =====
 There are some Tests in this file that will help you work out if your code is working.
 
 To run these tests type `node 3-magic-8-ball.js` into your terminal
@@ -108,7 +107,7 @@ To run these tests type `node 3-magic-8-ball.js` into your terminal
 
 const log = console.log;
 let logged;
-console.log = function () {
+console.log = function() {
   log(...arguments);
   logged = arguments[0];
 };
@@ -132,12 +131,24 @@ function testAll() {
     `shakeBall logs "The ball has shaken!"`,
     logged === "The ball has shaken!"
   );
-  test(`shakeBall returns an string answer"`, typeof answer === "string");
+  test(`shakeBall returns an string answer`, typeof answer === "string");
   test(
     `checkAnswer returns the level of positivity"`,
     ["very positive", "positive", "negative", "very negative"].includes(
       checkAnswer(answer)
     )
+  );
+  const answers = new Set();
+  for (let i = 0; i < 10; ++i) {
+    answers.add(shakeBall());
+  }
+  test(
+    `shakeBall returns different answers`,
+    answers.size > 1,
+  );
+  test(
+    `checkAnswer returns different answers`,
+    new Set(Array.from(answers.values()).map(checkAnswer)).size > 1,
   );
 }
 
