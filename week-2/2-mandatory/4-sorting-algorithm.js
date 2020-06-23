@@ -15,13 +15,32 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function sortAges(arr) {
-  // let array1 = [];
-  // for(let i = 0; i < arr.length; i++) {
-  // if(typeof (arr[i]) !== "number") {
-  // arr.splice(i, 1);  
-  //   } array1.push(arr[i]);
-  // }
-  //   return console.log(array1.sort((a, b) => a - b));
+
+const array1 = [];
+const array2 = [];
+
+  for (let i = 0; i < arr.length; i++) {
+if(typeof (arr[i]) === "string") {
+  array2.push(arr[i]);
+} else if (typeof (arr[i]) === "undefined") {
+  array2.push(arr[i]);
+} else if (typeof (arr[i]) === "boolean") {
+  array2.push(arr[i]);
+} else if (typeof (arr[i]) === "symbol") {
+  array2.push(arr[i]);
+} else if (typeof (arr[i]) === "object") {
+  array2.push(arr[i]);
+} else if (typeof (arr[i]) === "function") {
+  array2.push(arr[i]);
+} else if (typeof (arr[i]) === "bigint") {
+  array2.push(arr[i]);
+} else if (typeof (arr[i]) === "null") {
+  array2.push(arr[i]);
+} else {
+  array1.push(arr[i]);
+    }
+  } return array1.sort((a, b) => a - b);
+
 }
 
 
@@ -43,6 +62,7 @@ const agesCase1 = [
   "🎖",
   "Ismeal",
 ];
+
 const agesCase2 = ["28", 100, 60, 55, "75", "🍕", "Elamin"];
 
 function arraysEqual(a, b) {
