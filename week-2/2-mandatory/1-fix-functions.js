@@ -1,7 +1,7 @@
 // The below functions are syntactically correct but not outputting the right results.
 // Look at the tests and see how you can fix them.
 
-function mood() {
+function mood() {       // This function working very well, there is no problem . 
   let isHappy = true;
 
   if (isHappy) {
