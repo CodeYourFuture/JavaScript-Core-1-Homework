@@ -16,8 +16,33 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 
 function sortAges(arr) {
 
-  
+let sortingArray=[];
+let maximum;
+
+  for ( let i = 0; i< arr.length; i++){
+
+    if (typeof arr[i]!== "number"){
+
+      arr.splice(i, 1);
+      
+      } else if (arr[i] === "number"){
+
+            if (arr[i] > maximum [i]){
+              sortingArray = sortingArray.push(arr[i]);
+            } else {
+              sortingArray = sortingArray.push(maximum[i]);
+            }
+      } 
+  }
+  return sortingArray;
 }
+console.log(sortAges());
+/* 
+
+let numbers = [1, 2, 3];
+let numbersDoubled = numbers.map((number) => number * 2); 
+
+*/
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
