@@ -46,7 +46,7 @@ The function must:
 */
 
 function remove(arr, index) {
-  return arr.slice(0, index).concat(arr.slice(index+1,arr.length)); // complete this statement
+  return arr.slice(0, index).concat(arr.slice(index+1, arr.length)); // complete this statement
 }
 /////////////////////////////////////////////////////////////////////////////////
 /*

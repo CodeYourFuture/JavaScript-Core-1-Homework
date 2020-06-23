@@ -14,29 +14,52 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
+/* 
 function sortAges(arr) {
-
-let sortingArray=[];
-let maximum;
-
-  for ( let i = 0; i< arr.length; i++){
-
-    if (typeof arr[i]!== "number"){
-
-      arr.splice(i, 1);
-      
-      } else if (arr[i] === "number"){
-
-            if (arr[i] > maximum [i]){
-              sortingArray = sortingArray.push(arr[i]);
-            } else {
-              sortingArray = sortingArray.push(maximum[i]);
+    let maximum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let i = 0; i < arr.length; i++) {
+            if (typeof arr[i] !== "number") {
+                arr.splice(i, 1); i--;
             }
-      } 
-  }
-  return sortingArray;
+            if (arr[i] > arr[i + 1]) {
+                let tmp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = tmp;
+            }
+        }
+    }
+    console.log(arr);
+    return arr;
 }
-console.log(sortAges());
+console.log(sortAges()); 
+
+*/
+
+function sortAges(arr) {
+    let done = false;
+    while (!done) {
+        done = true;
+        for (let i = 0; i < arr.length; i++) {
+            if (typeof arr[i] !== "number") {
+                //removes one element from the index i and 
+                // to check the next number, decreases the index --
+                arr.splice(i, 1); i--;
+            }
+            if (arr[i] > arr[i + 1]) {
+                done = false;
+                let tmp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = tmp;
+            }
+        }
+    }
+    console.log(arr);
+    return arr;
+}
+
+
+
 /* 
 
 let numbers = [1, 2, 3];
