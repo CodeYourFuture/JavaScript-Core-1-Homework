@@ -1,24 +1,22 @@
 // The below functions are syntactically correct but not outputting the right results.
 // Look at the tests and see how you can fix them.
 
-function mood() {
-  let isHappy = true;
-  if (isHappy === false) {
+function mood(isHappy) {
+  if (isHappy === true ) {
     return "I am happy";
   } else {
     return "I am not happy";
   }
 }
-function greaterThan10() {
-  let num = 11;
-  let isBigEnough= true;
-  if (isBigEnough) {
+function greaterThan10(num) {
+ 
+  let isBigEnough= 10;
+  if (isBigEnough < num) {
     return "num is greater than 10";
   } else {
     return "num is not big enough";
   }
 }
-
 
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
