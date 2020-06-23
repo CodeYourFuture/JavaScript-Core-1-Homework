@@ -11,10 +11,10 @@ function mood() {       // This function working very well, there is no problem 
   }
 }
 
-function greaterThan10(num) {
-  let isBigEnough;
+function greaterThan10(num) {   // First assign the num parameter to isBigEnough value 
+  let isBigEnough = num;        //after that added greater than operator inside the if statement 
 
-  if (isBigEnough) {
+  if (isBigEnough>10) {
     return "num is greater than 10";
   } else {
     return "num is not big enough";
