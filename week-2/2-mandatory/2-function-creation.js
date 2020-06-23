@@ -5,8 +5,22 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
 
+myArr = ["SADAT", "    /HELLO", "   werty      /"];
+function tidyUpString(strArr){
+  
+  //  for(let i=0; i < strArr.length; i++){
+  //   console.log(strArr[i].trim().replace('/', '').toLowerCase());   
+  //  }
+
+  let newAr = strArr.map(data => data.trim().replace('/', '').toLowerCase());
+  
+  return newAr;
+   
+
+}
+
+//console.log(tidyUpString(myArr));
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
@@ -14,8 +28,18 @@ Complete the function to check if the variable `num` satisfies the following req
 - is less than or equal to 100
 Tip: use logical operators
 */
+function validate(num){
+  let isNum = typeof(num);
+  let isEven = num % 2 ==0;
+  let isLess = num <= 100;
+ if(isNum === 'number' && isEven === true && isLess === true){
+  return true;
+ }else {
+   return false;
+ }
 
-function validate(num) {}
+}
+
 
 /* 
 Write a function that removes an element from an array
@@ -25,9 +49,15 @@ The function must:
 - remove the item at the specified index
 */
 
+
 function remove(arr, index) {
-  return; // complete this statement
+  let newArray = arr;
+
+  newArray.splice(index, 1);
+  return newArray;
+  
 }
+
 
 /*
 Write a function that:
@@ -38,6 +68,13 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
+  let nArray = arr.map(data => {
+    if(data > 100){
+      data = 100;
+    }
+    return `${Number(data.toFixed(2))}%`;
+  })
+  return nArray;
   
 }
 
