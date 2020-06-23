@@ -21,9 +21,9 @@ function greaterThan10(num) {   // First assign the num parameter to isBigEnough
   }
 }
 
-function sortArray(letters) {
+function sortArray(letters) { //added sort methods
   let sortedLetters = letters;
-
+  let sortedLetters = letters.sort();
   return sortedLetters;
 }
 
