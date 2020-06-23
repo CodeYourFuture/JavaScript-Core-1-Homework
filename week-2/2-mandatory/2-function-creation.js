@@ -5,8 +5,20 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(strArr) {
+  let trimString;
+  let removeSlash;
+  let convertToLowerCase;
+  for (let i = 0; i < strArr.length; i++) {
+    trimString = strArr[i].trim();
+    removeSlash = trimString.replace("/", "");
+    convertToLowerCase = removeSlash.toLowerCase();
+    strArr[i] = convertToLowerCase;
+  }
+  return strArr;
+}
 
+//trim(), toLowerCase() and replace("/", "")
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
