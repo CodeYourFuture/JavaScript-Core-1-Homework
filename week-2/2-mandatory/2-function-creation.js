@@ -6,15 +6,10 @@ Write a function that:
 - makes the string all lowercase
 */
 function tidyUpString(strArr) {
-//   for (let i=0; i < strArr.length; i++) {
-//     if(strArr[i].includes(" ")) {
-//       strArr[i].trim();
-//     } else if (strArr[i].includes("/")) {
-//       strArr[i].Replace(/\//g, "");
-//     } else {
-//       strArr[i].ToLowerCase();
-//     }
-// }
+  const newStrArr = [];
+  for(let i =0; i <strArr.length; i++) {
+  newStrArr[i] =  strArr[i].trim().replace(/\//g, "").toLowerCase();
+  } return newStrArr;
 }
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
