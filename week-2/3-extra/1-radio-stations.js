@@ -16,12 +16,10 @@
 // `getAllFrequencies` goes here
   function getAllFrequencies (){
     let allFrequencies=[];
-    for (let i = 87; i < 108; i++){
-      allFrequencies[i]= allFrequencies[i+1];
-      //console.log(allFrequencies[i]);
-      return allFrequencies[i];
+    for (let i = 87; i < 109; i++){
+      allFrequencies.push(i);
     }
-
+    return allFrequencies;
   }
   getAllFrequencies ();
 
@@ -36,11 +34,24 @@
  */
 // `getStations` goes here
 
-function getStations (){
-  let isRadioFrequency;
-  
-
+function getStations(f) {
+  let resultArr=[];
+  //let arr=f;
+  function isRadioFrequency (f){
+    if (f < 108 && f > 87){
+      return true;
+    }
+    return false;
+  }
+  for (let i=0; i< f.length; i++){
+    if (isRadioFrequency(f[i])){
+      resultArr.push(f[i]);
+    }
+  }
+  return resultArr;
 }
+// getStations (getAllFrequencies());
+getStations (getAllFrequencies ());
 
 
 /* ======= TESTS - DO NOT MODIFY ======= */
