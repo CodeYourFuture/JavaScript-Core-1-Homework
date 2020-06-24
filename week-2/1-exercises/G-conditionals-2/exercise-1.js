@@ -14,7 +14,7 @@ function negativeOrPositive(number) {
   }
 }
 
-/*OR*/
+/*An Alternative/
 // function negativeOrPositive(number) {
 //   if (number < 0) {
 //     return "negative";
