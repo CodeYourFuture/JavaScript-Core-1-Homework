@@ -5,8 +5,11 @@
 
 */
 
-function isEmpty(arr) {
-  return; // complete this statement
+function isEmpty(names, numbers) {
+  if (names.length === 0) {
+    return true; // complete this statement
+  }
+  return false;
 }
 
 /* 
