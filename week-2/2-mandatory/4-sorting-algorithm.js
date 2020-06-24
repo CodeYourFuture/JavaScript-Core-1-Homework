@@ -24,26 +24,36 @@ function sortAges(arr) {
       
     }
    // console.log("before removing="+test);
-    for(let i=0;i<arr.length;i++){
+    for(let i=0;i<test.length;i++){
        
       test[i]=arr[i];
       if(test[i]===Number(test[i])){
        test1.push(test[i]);
       }
     }
-    for(let i=0;i<test1.length;i++)
+    let j;
+    for(let i=0;i<test1.length-1;i++)
     {
-      for(let j=0;j<test1.length;j++){
-        if(test1[i]<test1[j]){
-          let temp=test1[j];
+      let temp=test1[i];
+      for(let j=i+1;j<test1.length;j++){
+        if(temp>test1[j]){
+           temp=test1[j];
           test1[j]=test1[i]
           test1[i]=temp;
+
+
         }
       }
+     
+        
+      
     }
+    console.log(test1);
     return test1;
    
 }
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
