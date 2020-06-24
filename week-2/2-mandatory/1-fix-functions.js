@@ -1,21 +1,21 @@
 // The below functions are syntactically correct but not outputting the right results.
 // Look at the tests and see how you can fix them.
 
-function mood() {
-  let isHappy = true;
+function mood(isHappy) {
+  //let isHappy = true;
 
-  if (isHappy) {
+  if (isHappy === true) {
     return "I am happy";
   } else {
     return "I am not happy";
   }
 }
 
-function greaterThan10() {
-  let num = 10;
-  let isBigEnough;
+function greaterThan10(num) {
+  num = 10;
+  //isBigEnough = 10;
 
-  if (isBigEnough) {
+  if (num >= 10) {
     return "num is greater than or equal to 10";
   } else {
     return "num is not big enough";
@@ -24,21 +24,21 @@ function greaterThan10() {
 
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
+  let sortedLetters = letters.sort();
 
   return sortedLetters;
 }
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
+  let sliced =numbers.slice(0,5)
 
   return sliced;
 }
 
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
+  let element = arr[3];
 
   return element;
 }
