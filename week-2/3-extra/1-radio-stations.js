@@ -36,6 +36,12 @@
  */
 // `getStations` goes here
 
+function getStations (){
+  let isRadioFrequency;
+  
+
+}
+
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
