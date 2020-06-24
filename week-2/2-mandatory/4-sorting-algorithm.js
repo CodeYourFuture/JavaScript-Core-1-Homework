@@ -14,7 +14,7 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-/* 
+/*
 function sortAges(arr) {
     let maximum = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -57,7 +57,6 @@ function sortAges(arr) {
     console.log(arr);
     return arr;
 }
-
 
 
 /* 
