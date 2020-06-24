@@ -3,9 +3,9 @@
 
 
 function mood() {
-  let isHappy = false;
+  let isHappy = true;
 
-  if (isHappy) {
+  if (isHappy === true ) {
     return "I am happy";
   } else {
     return "I am not happy";
@@ -14,11 +14,10 @@ function mood() {
 
 
 ///////////////////////////////////////////////////
-function greaterThan10() {
-  let num = 10;
-  let isBigEnough= true;
+function greaterThan10(num) {
+  let isBigEnough=10;
 
-  if (isBigEnough) {
+  if (isBigEnough < num) {
     return "num is greater than 10";
   } else {
     return "num is not big enough";

@@ -21,7 +21,7 @@
       //console.log(allFrequencies[i]);
       return allFrequencies[i];
     }
-    
+
   }
   getAllFrequencies ();
 
