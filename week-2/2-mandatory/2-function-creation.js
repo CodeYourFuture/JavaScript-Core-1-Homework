@@ -21,7 +21,7 @@ function tidyUpString(strArr) {
 }
 
 tidyUpString(nameArr);
-
+console.log("----------");
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
@@ -47,7 +47,7 @@ The function must:
 */
 
 // https://www.freecodecamp.org/news/lets-clear-up-the-confusion-around-the-slice-splice-split-methods-in-javascript-8ba3266c29ae/
-let carList = ["bmw", "volvo", "range", "jag", "toyota"];
+let carList = ["bmw", "volvo", "range", "jaguar", "toyota"];
 
 function remove(arr, index) {
   arr.splice(index, 1); // complete this statement
@@ -55,7 +55,7 @@ function remove(arr, index) {
 }
 
 console.log(remove(carList, 3));
-
+console.log("----------");
 /*
 Write a function that:
 - takes an array of numbers as input
@@ -63,24 +63,24 @@ Write a function that:
 - the numbers must be rounded to 2 decimal places
 - numbers greater 100 must be replaced with 100
 */
-let num = [10.128, 101.223, 20, 30, 40, 111];
+let num = [10.128, 101.223, 20, 30, 111];
+
 function formatPercentage(arr) {
   for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[i] > 100) {
-        let check100 = 100;
-        return check100;
-      } else {
-        check100 = arr[i];
-        return check100;
-      }
+    if (arr[i] > 100) {
+      let check100 = 100;
+      return check100;
+    } else {
+      check100 = arr[i];
+      return check100;
     }
-    let twoDecimals = check100.toFixed(2);
-    let addPercent = twoDecimals + "%";
-    return addPercent;
   }
 }
 console.log(formatPercentage(num));
+console.log("----------");
+// let twoDecimals = check100.toFixed(2);
+// let addPercent = twoDecimals + "%";
+// return addPercent;
 
 function greaterThan100(num) {
   let greaterThan100 = num[1] > 100;
@@ -92,6 +92,22 @@ function greaterThan100(num) {
   }
 }
 console.log(greaterThan100(num));
+console.log("----------");
+
+// https://stackoverflow.com/questions/19674992/how-to-use-a-return-value-in-another-function-in-javascript
+function addTwoDecimals() {
+  let twoDecimals = greaterThan100(num);
+  return twoDecimals.toFixed(2);
+}
+console.log(addTwoDecimals());
+console.log("----------");
+
+function addPercent() {
+  let percent = addTwoDecimals() + "%";
+  return percent
+}
+console.log(addPercent());
+console.log("----------");
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
