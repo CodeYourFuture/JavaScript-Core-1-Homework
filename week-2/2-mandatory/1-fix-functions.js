@@ -3,13 +3,13 @@
 
 
 function mood() {
-  let isHappy = false;
+  let isHappy = true;
 
-  if (isHappy) {
-    return "I am not happy";
+  if (isHappy && true) {
+     return "I am happy" ;
   } 
     else {
-    return "I am happy";
+    return "I am not happy";
   }
 }
 
