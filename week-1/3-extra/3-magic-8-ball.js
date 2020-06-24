@@ -45,17 +45,38 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+const answers = ["It is certain.", "It is decidedly so.", "Without a doubt.", "Yes - definitely.", "You may rely on it.", "As I see it, yes.", "Most likely.", "Outlook good.", "Yes.", "Signs point to yes.", "Reply hazy, try again.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.", "Don't count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Very doubtful."];
+
+function shakeBall() {
+console.log("The ball has shaken!");
+return answers[Math.floor(Math.random()*20)];
+}
+
+
 
 // The answer should come from shaking the ball
-let answer;
+let answer = shakeBall();
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer() {
+  var i = answers.indexOf(answer)
+  if (i < 5) {
+    return "very positive"
+  }
+  else if (i < 10) {
+return "positive"
+  }
+else if (i < 15) {
+  return "negative"
+}
+else {
+  return "very negative"
+}
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
