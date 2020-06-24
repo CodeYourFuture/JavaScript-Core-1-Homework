@@ -16,12 +16,11 @@ function tidyUpString(strArr) {
     let noSpaces = strArr[i].trim();
     let noSlashes = noSpaces.replace(/\//g, "");
     let lowercase = noSlashes.toLowerCase();
-
-    return lowercase;
+    console.log(lowercase);
   }
 }
 
-console.log(tidyUpString(nameArr));
+tidyUpString(nameArr);
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -82,6 +81,17 @@ function formatPercentage(arr) {
   }
 }
 console.log(formatPercentage(num));
+
+function greaterThan100(num) {
+  let greaterThan100 = num[1] > 100;
+
+  if (greaterThan100) {
+    return 100;
+  } else {
+    return num[1];
+  }
+}
+console.log(greaterThan100(num));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
