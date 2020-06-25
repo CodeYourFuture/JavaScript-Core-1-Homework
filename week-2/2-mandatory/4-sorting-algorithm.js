@@ -14,7 +14,29 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {}
+/*
+Example of filter https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+let words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+let result = words.filter(word => word.length > 6);
+console.log(result);
+*/
+
+// filter method https://www.youtube.com/watch?v=4_iT6EGkQfk
+let ages = ["28", 100, 60, 55, "75", "🍕", "Elamin"];
+let filteredAges = ages.filter(age => typeof age ==="number");
+console.log(filteredAges);
+
+// sort method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+filteredAges.sort((a, b) => a - b);
+console.log(filteredAges);
+
+// put the above filter and sort chunks into function below
+function sortAges(arr) {
+  let filteredArr = arr.filter(arrItem => typeof arrItem === "number");
+  let sortArr = filteredArr.sort((a, b) => a - b);
+  return sortArr;
+}
+console.log(sortAges(ages));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
