@@ -14,13 +14,13 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {
+
   function sortAges(arr) {
     let newArr = [];
     let ok;
     for(let i = 0; i < arr.length; i++){
       if(typeof(arr[i]) === 'number'){
-        newArr.push(Number(arr[i]));
+        newArr.push((arr[i]));
       }
     }
     do{
