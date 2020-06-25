@@ -51,7 +51,7 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {
+/*function formatPercentage(arr) {
   let newArr = arr.map(item => {
     if(item > 100){
       item = 100;
@@ -59,7 +59,23 @@ function formatPercentage(arr) {
     return `${Number(item.toFixed(2))}%`;
   })
   return newArr; 
-}
+}*/
+
+function formatPercentage(arr) {
+  for( let i = 0; i < arr.length; i++){
+      if (arr[i] > 100){
+          arr[i] = 100;
+      }
+      let j = arr[i].toFixed(2)
+      j = parseFloat(j);
+      arr[i] = j.toString() + "%";
+  }
+  return arr;
+  }
+  
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

@@ -15,28 +15,50 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 
-  function sortAges(arr) {
+function sortAges(arr) {
+  let swap;
+  let arr1 = [];
+  for (let i = 0; i < arr.length; i++){
+    if (typeof(arr[i] === "number")){
+      arr1.push(arr[i])
+    }
+  }
+  for (i = 0; i < arr1.length; i++){
+    for (let j = i+1; j < arr1.length; j++){
+      if (arr1 [j] < arr1[i]
+      ){
+swap = arr1[i];
+arr1[i] = arr1[j];
+arr1[j]= swap;
+      }
+    }
+  }
+  return arr1;
+}
+
+
+  /*function sortAges(arr) {
     let newArr = [];
-    let ok;
+    let arr1;
     for(let i = 0; i < arr.length; i++){
       if(typeof(arr[i]) === 'number'){
         newArr.push((arr[i]));
       }
     }
     do{
-      ok = false;
+      arr1 = false;
       for(let i = 0; i < newArr.length; i++){
         if(newArr[i+1] < newArr[i]){
           let aux = newArr[i];
           newArr[i] = newArr[i+1];
           newArr[i+1] = aux;
-          ok =true;
+          arr =true;
         }
       }
-    }while(ok);
+    }while(arr1);
    return newArr;
 }
-
+*/
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const agesCase1 = [
