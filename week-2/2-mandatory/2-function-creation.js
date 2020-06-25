@@ -18,7 +18,9 @@ function tidyUpString(strArr) {
   return strArr;
 }
 
-//trim(), toLowerCase() and replace("/", "")
+// used trim(), toLowerCase() and replace("/", "")
+
+
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
@@ -28,7 +30,7 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  if ((num = "number")) {
+  if ((typeof (num) === "number" && num % 2 == 0 && num <= 100)) {
     return true;
   }
   return false;
@@ -43,6 +45,7 @@ The function must:
 */
 
 function remove(arr, index) {
+
   return; // complete this statement
 }
 
