@@ -4,8 +4,8 @@
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {
-  let tidyStrArr = strArr.map(item => item.trim().replace('/', '').toLowerCase());
+function tidyUpString(x) {
+  let tidyStrArr = x.map(item => item.trim().replace('/', '').toLowerCase());
  return tidyStrArr;
 }
 /*
@@ -43,8 +43,8 @@ Write a function that:
 - the numbers must be rounded to 2 decimal places
 - numbers greater 100 must be replaced with 100
 */
-function formatPercentage(arr) {
-  let newArr = arr.map(item => {
+function formatPercentage(x) {
+  let newArr = x.map(item => {
     if(item > 100){
       item = 100;
     }

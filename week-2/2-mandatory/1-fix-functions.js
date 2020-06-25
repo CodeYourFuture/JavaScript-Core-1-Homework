@@ -9,7 +9,7 @@ function mood(isHappy) {
   }
 }
 function greaterThan10(num) {
- 
+  
   let isBigEnough= 10;
   if (isBigEnough < num) {
     return "num is greater than 10";
