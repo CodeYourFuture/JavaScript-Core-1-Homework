@@ -24,22 +24,19 @@ function greaterThan10() {
 
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
-
-  return sortedLetters;
+  sorted = letters.sort().join("");
+  return sorted;
 }
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
-
+  let sliced = numbers.slice(0, 5);
   return sliced;
 }
 
 function get3rdIndex(arr) {
-  let index = 3;
-  let element;
-
+  // let index = 3;
+  let element = arr[3];
   return element;
 }
 
