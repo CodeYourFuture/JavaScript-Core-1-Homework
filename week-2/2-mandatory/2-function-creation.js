@@ -44,10 +44,13 @@ The function must:
 - remove the item at the specified index
 */
 
-function remove(arr, index) {
-
-  return; // complete this statement
+function remove(arr, index){
+  arr.splice(index, 1);
+  return arr;
 }
+
+// console.log(`remove element from index ${index} of array ${arr}`);
+// console.log(remove(arr, index));
 
 /*
 Write a function that:
@@ -57,7 +60,15 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {}
+function takesArray(arr) {
+  if (typeof(num) === "number" && Math.float(num) && num > 100) {
+    return true;
+  }
+}
+
+// function formatPercentage(arr) {
+//   let num =
+// // return arr.toString()
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
