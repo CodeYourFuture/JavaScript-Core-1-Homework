@@ -13,7 +13,7 @@ let mentors = [`Daniel`, `Irina`, `Rares`]; // Create an array with the names of
 console.log(numbers);
 console.log(mentors);
 
-/* 
+/*  
   EXPECTED RESULT
   ---------------
   [1,2,3,4,5,6,7,8,9,10]

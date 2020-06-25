@@ -7,12 +7,16 @@
 function first(arr) {
   return numbers[0]; // complete this statement
 }
-// function last(arr) {
-//   return numbers[2] = 2; // complete this statement
-// }
+
+
 
 function last(arr) {
-  return names[3]; // complete this statement
+  return numbers[2]; // complete this statement
+}
+
+
+ function last(arr) {
+ return names[3]; // complete this statement
 }
 
 /* 

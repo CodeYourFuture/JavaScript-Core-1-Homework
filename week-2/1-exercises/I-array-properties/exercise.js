@@ -7,10 +7,10 @@
 
 function isEmpty(arr=null) {
   
-if (numbers == 0) {
-  return false; // complete this statement
+if (arr == 0) {
+  return true; // complete this statement
 } else 
-return true;
+return false;
 }
 
 /* 
