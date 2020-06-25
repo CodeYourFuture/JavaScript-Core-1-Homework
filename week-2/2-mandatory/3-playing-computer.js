@@ -8,11 +8,11 @@
 
   1. This program throws an error. Why? (If you can't find it, try executing it). b IS UNDEFINED
   2. Remove the line that throws the error.   LINE 20 REMOVED
-  3. What is printed to the console?
-  4. How many times is "f1" called?  3 TIMES
-  5. How many times is "f2" called?  TWICE
-  6. What value does the "a" parameter take in the first "f1" call? 7
-  7. What is the value of the "a" outer variable when "f1" is called for the first time? 6
+  3. What is printed to the console? 2  6  4  9  6  13  8
+  4. How many times is "f1" called?  F1 IS CALLED TWICE
+  5. How many times is "f2" called?  F2 IS CALLED 3 TIMES
+  6. What value does the "a" parameter take in the first "f1" call? IN THE FIRST F1 CALL, A TAKES THE PARAMETER 8
+  7. What is the value of the "a" outer variable when "f1" is called for the first time? 8
 */
 
 let x = 2;
@@ -34,9 +34,9 @@ for (let i = 0; i < 5; ++i) {
   a = a + 1;
   if (i % 2 === 0) {
     const d = f2(i, x);
-    console.log("This is the " + i + "th iteration of f2 = " + d);
+    console.log(d);
   } else {
     const e = f1(i, a);
-    console.log("This is the " + i + "th iteration of f1 = " + e);
+    console.log(e);
   }
 }
