@@ -1,0 +1,89 @@
+let frequenciesArray = [];
+function getAllFrequencies(a, b) {
+  for(; a <=b; a++) {
+    frequenciesArray.push(a); 
+  }
+return frequenciesArray;
+}
+let radioFrequencies = [];
+let n = frequenciesArray.length;
+function getStations(frequenciesArray) {
+  for(let i = 0; i < n; i++) {
+    if (isRadioStation(frequenciesArray[i]) === true) {
+      radioFrequencies.push(frequenciesArray[i]);
+    } return radioFrequencies;
+  }
+}
+getAllFrequencies(87, 108);
+getStations(frequenciesArray);
+
+/* ======= TESTS - DO NOT MODIFY ======= */
+
+function getAvailableStations() {
+    // Using `stations` as a property as defining it as a global variable wouldn't
+    // always make it initialized before the function is called
+    if (!getAvailableStations.stations) {
+      const stationCount = 4;
+      getAvailableStations.stations = new Array(stationCount)
+        .fill(undefined)
+        .map(function() {
+          return Math.floor(Math.random() * (108 - 87 + 1) + 87);
+        })
+        .sort(function(frequencyA, frequencyB) {
+          return frequencyA - frequencyB;
+        });
+    }
+  
+    return getAvailableStations.stations;
+  }
+  
+  function isRadioStation(frequency) {
+    return getAvailableStations().includes(frequency);
+  }
+  
+  const assert = require("assert");
+  
+  function test(testName, fn) {
+    try {
+      fn();
+      console.log(`\n✅ ${testName}: PASS`);
+    } catch (error) {
+      console.log(
+        `\n❌ ${testName}: FAIL (see details below)\n\n${error.message}`
+      );
+    }
+  }
+  
+  test("getAllFrequencies() returns all frequencies between 87 and 108", function() {
+    const frequencies = getAllFrequencies();
+    assert.deepStrictEqual(frequencies, [
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108
+    ]);
+  });
+  
+  test("getStations() returns all the available stations", () => {
+    const stations = getStations();
+    assert.deepStrictEqual(stations, getAvailableStations());
+  });
+  
