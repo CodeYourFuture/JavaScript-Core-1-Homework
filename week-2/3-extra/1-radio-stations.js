@@ -42,8 +42,9 @@ function getStations() {
       stations.push(availFrequencies[i]);
     }
   }
-  console.log(stations);
-  return stations;
+  let uniqueStations = [...new Set(stations)];
+  return uniqueStations;
+  //return stations;
 }
 
 /* ======= TESTS - DO NOT MODIFY ======= */
