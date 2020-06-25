@@ -58,6 +58,36 @@ function sortAges(arr) {
     return arr;
 }
 
+/*
+function sortAges(arr) {
+  let newArray=[];
+  let new_Array=[];
+  let index;
+    for(let i=0;i<arr.length;i++){
+        newArray[i]=arr[i];
+    }
+   // console.log("before removing="+test);
+    for(let i=0;i<arr.length;i++){
+      newArray[i]=arr[i];
+      if(newArray[i]===Number(newArray[i])){
+       new_Array.push(newArray[i]);
+      }
+    }
+    for(let i=0;i<new_Array.length;i++)
+    {
+      for(let j=0;j<new_Array.length;j++){
+        if(new_Array[i]<new_Array[j]){
+          let view=new_Array[j];
+          new_Array[j]=new_Array[i]
+          new_Array[i]=view;
+        }
+      }
+    }
+    return new_Array;
+}
+
+*/
+
 
 /* 
 
