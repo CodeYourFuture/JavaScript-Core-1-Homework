@@ -27,7 +27,12 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  if ((num = "number")) {
+    return true;
+  }
+  return false;
+}
 
 /* 
 Write a function that removes an element from an array
@@ -49,9 +54,7 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {
-  
-}
+function formatPercentage(arr) {}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -84,7 +87,7 @@ test(
     "daniel",
     "irina",
     "gordon",
-    "ashleigh"
+    "ashleigh",
   ])
 );
 test(
@@ -113,7 +116,7 @@ test(
     "c",
     "d",
     "e",
-    "f"
+    "f",
   ])
 );
 
@@ -123,6 +126,6 @@ test(
     "23%",
     "18%",
     "100%",
-    "0.37%"
+    "0.37%",
   ])
 );
