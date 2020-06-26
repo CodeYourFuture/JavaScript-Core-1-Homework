@@ -26,6 +26,11 @@
  */
 // `getStations` goes here
 
+function getAllFrequencies(list) {
+  var freq = []
+
+}
+
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
