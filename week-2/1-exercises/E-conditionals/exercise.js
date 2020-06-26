@@ -8,6 +8,12 @@
 
 var name = "Daniel";
 var danielsRole = "mentor";
+// if statment is reduntant in this case
+// if(danielsRole === "mentor"){
+  console.log(`Hi, I'm ${name}, I'm a ${danielsRole}.`);
+// } else if(danielsRole === "student"){
+//   console.log(`Hi, I'm ${name}, I'm a ${danielsRole}.`);
+// }
 
 /* 
 EXPECTED RESULT
