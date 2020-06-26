@@ -5,8 +5,12 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
-
+function tidyUpString(strArr) {
+  for (let i = 0; i < strArr.length; i++) {
+    strArr[i] = strArr[i].trim().replace(/\//g, "").toLowerCase();
+  }
+  return strArr;
+}
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
@@ -15,7 +19,9 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  return typeof num === "number" && num % 2 === 0 && num <= 100;
+}
 
 /* 
 Write a function that removes an element from an array
@@ -26,7 +32,9 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  let newArr = arr;
+  newArr.splice(index, 1);
+  return newArr; // complete this statement
 }
 
 /*
@@ -38,7 +46,13 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  
+  let perArr = arr.map((item) => {
+    if (item > 100) {
+      item = 100;
+    }
+    return `${Number(item.toFixed(2))}%`;
+  });
+  return perArr;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -72,7 +86,7 @@ test(
     "daniel",
     "irina",
     "gordon",
-    "ashleigh"
+    "ashleigh",
   ])
 );
 test(
@@ -101,7 +115,7 @@ test(
     "c",
     "d",
     "e",
-    "f"
+    "f",
   ])
 );
 
@@ -111,6 +125,6 @@ test(
     "23%",
     "18%",
     "100%",
-    "0.37%"
+    "0.37%",
   ])
 );
