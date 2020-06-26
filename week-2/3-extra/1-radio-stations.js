@@ -13,7 +13,18 @@
  * - Should return this array to use in other functions
  */
 
-// `getAllFrequencies` goes here
+const minFreq = 87;
+const maxFreq = 108
+
+function getAllFrequencies() {
+  var frequencies = [];
+
+  for (var i = minFreq; i <= maxFreq; ++i) {
+    frequencies.push(i);
+  }
+
+  return frequencies;
+}
 
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
@@ -24,7 +35,16 @@
  * - There is a helper function called isRadioFrequency that takes an integer as an argument and returns a boolean.
  * - Return only the frequencies that are radio stations.
  */
-// `getStations` goes here
+const frequencies = getAllFrequencies();
+
+function isRadioFrequency(value) {
+  return frequencies.includes(value)
+}
+
+function getStations() {
+  return frequencies
+}
+
 
 
 /* ======= TESTS - DO NOT MODIFY ======= */
