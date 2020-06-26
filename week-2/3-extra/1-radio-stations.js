@@ -35,12 +35,37 @@ function getAllFrequencies(){
  */
 // `getStations` goes here
 
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+// IF I USE THE HELPER FUNCTION AS I DID BELOW, THE TEST WILL NOT PASS WHEN getAvailableStations FUNCTION WILL RETURN TWO NUMBERS WHICH ARE THE SAME. EXAMPLE: [101, 95, 95, 104];
+// THAT'S WHY I CREATE ANOTHER FUNCTION IN WHICH I DON'T USE THE HELPER FUNCTION 
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+// function getStations(){
+//   let frequencies = getAllFrequencies();
+//   let availableRadioStations=[]; 
+//    frequencies.map(frequency => {
+//     if(isRadioStation(frequency)){
+//       availableRadioStations.push(frequency);
+//     }
+//   })
+//   console.log(availableRadioStations);
+//   return availableRadioStations;
+// }
 
 
 function getStations(){
-  let frequencies = getAvailableStations();
-  return frequencies;
-
+  let frequencies = getAllFrequencies();
+  let allAvailableStations = getAvailableStations();
+  let frequenciesThatAreRadioStations = [];
+  allAvailableStations.map(availableStation => {
+    if(frequencies.includes(availableStation)){
+      frequenciesThatAreRadioStations.push(availableStation);
+    }
+  })
+  return frequenciesThatAreRadioStations;
 }
 
 
