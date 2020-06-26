@@ -41,7 +41,7 @@ The function must:
 
 function remove(arr, index) {
 	let removeItem = arr.slice(0, index);
-	let returnArr = arr.slice(index + 1, arr);
+	let returnArr = arr.slice(index + 1, arr.length);
 	return removeItem.concat(returnArr); // complete this statement
 }
 
