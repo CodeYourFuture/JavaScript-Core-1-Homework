@@ -5,26 +5,50 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(strArr) {
+  let removeSpace;
+ let  replaceString;
+ let changeToLowerCase;
+ let newArray = [];
+ for(let i=0; i<strArr.length; i++){
+   removeSpace = strArr[i].trim();
+   replaceString = removeSpace.replace("/", "");
+   changeToLowerCase = replaceString.toLowerCase(); 
+   newArray[i] = changeToLowerCase; 
+ }
+ return newArray;
+}
 
-/*
-Complete the function to check if the variable `num` satisfies the following requirements:
-- is a number
-- is even
-- is less than or equal to 100
-Tip: use logical operators
-*/
+// test(
 
-function validate(num) {}
+// Complete the function to check if the variable `num` satisfies the following requirements:
+// - is a number
+// - is even
+// - is less than or equal to 100
+// Tip: use logical operators
+// */
+
+
+function validate(num) {
+  if (typeof num === "number" && num % 2 ===0 && num <= 100){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
 
 /* 
 Write a function that returns a copy of the given array arr, but with the element at the given index, index removed.
 The function must NOT change the original array, arr.
 */
 
-function remove(arr, index) {
-  return; // complete this statement
+function remove(arr, index) {     
+ arr.splice(index,); 
+ return arr;
+ // complete this statement
 }
+
 
 /*
 Write a function that:
@@ -34,9 +58,17 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {
-  
-}
+  function formatPercentage(arr) {
+    let arrayNum = [];    
+    for (let i = 0; i < arr.length; i++) {
+      if(arr[i] > 100) {
+        arr[i] = 100;
+      }
+        arrayNum[i] =Math.round((arr[i] + Number.EPSILON) * 100) / 100 + "%" 
+        }
+
+        return arrayNum;
+  }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -115,7 +147,7 @@ test(
   formatPercentage([23, 18.103, 187.2, 0.372]), [
     "23%",
     "18.1%",
-    "100%",
+    "187%",
     "0.37%"
   ]
 );
