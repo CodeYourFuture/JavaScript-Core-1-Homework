@@ -13,8 +13,30 @@ Create a function called sortAges which:
 You don't have to worry about making this algorithm work fast! The idea is to get you to
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
+//[100, 55, 45, 66, 23]
 
-function sortAges(arr) {}
+function sortAges(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      result.push(arr[i]);
+    }
+    for (let i = 0; i < result.length; i++) {
+      let minValue = i;
+      for (let j = i + 1; j < result.length; j++) {
+        if (result[j] < result[minValue]) {
+          minValue = j;
+        }
+      }
+      if (minValue !== i) {
+        let temp = result[minValue];
+        result[minValue] = result[i];
+        result[i] = temp;
+      }
+    }
+  }
+  return result;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

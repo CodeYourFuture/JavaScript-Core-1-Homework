@@ -1,10 +1,10 @@
 // The below functions are syntactically correct but not outputting the right results.
 // Look at the tests and see how you can fix them.
 
-function mood() {
+function mood(mood) {
   let isHappy = true;
 
-  if (isHappy) {
+  if (mood == isHappy) {
     return "I am happy";
   } else {
     return "I am not happy";
@@ -14,7 +14,7 @@ function mood() {
 function greaterThan10(num) {
   let isBigEnough;
 
-  if (isBigEnough) {
+  if (num > 10) {
     return "num is greater than 10";
   } else {
     return "num is not big enough";
@@ -22,27 +22,26 @@ function greaterThan10(num) {
 }
 
 function sortArray(letters) {
-  let sortedLetters = letters;
+  let sortedLetters = letters.sort();
 
   return sortedLetters;
 }
 
 function first5(numbers) {
-  let sliced;
+  let sliced = numbers.slice(0, 5);
 
   return sliced;
 }
 
 function get3rdIndex(arr) {
-  let index = 3;
-  let element;
+  let index = arr[3];
 
-  return element;
+  return index;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const util = require('util');
+const util = require("util");
 
 function test(test_name, actual, expected) {
   let status;
@@ -57,7 +56,9 @@ function test(test_name, actual, expected) {
   if (isEqual) {
     status = "PASSED";
   } else {
-    status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
+    status = `FAILED: expected: ${util.inspect(
+      expected
+    )} but your function returned: ${util.inspect(actual)}`;
   }
 
   console.log(`${test_name}: ${status}`);
@@ -79,25 +80,32 @@ test("mood function works for true", mood(true), "I am happy");
 test("mood function works for false", mood(false), "I am not happy");
 test(
   "greaterThanTen function works for 11",
-  greaterThan10(11), "num is greater than 10"
+  greaterThan10(11),
+  "num is greater than 10"
 );
 test(
   "greaterThanTen function works for 10",
-  greaterThan10(10), "num is not big enough"
+  greaterThan10(10),
+  "num is not big enough"
 );
 test(
   "greaterThanTen function works for 9",
-  greaterThan10(9), "num is not big enough"
+  greaterThan10(9),
+  "num is not big enough"
 );
-test(
-  "sortArray function works",
-  sortArray(["a", "n", "c", "e", "z", "f"]), ["a", "c", "e", "f", "n", "z"]
-);
+test("sortArray function works", sortArray(["a", "n", "c", "e", "z", "f"]), [
+  "a",
+  "c",
+  "e",
+  "f",
+  "n",
+  "z",
+]);
 
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 test("first5 function works", first5(numbers), [1, 2, 3, 4, 5]);
 if (!arraysEqual(numbers, [1, 2, 3, 4, 5, 6, 7, 8])) {
-  console.log("PROBLEM: first5 changed its input array - it shouldn't!")
+  console.log("PROBLEM: first5 changed its input array - it shouldn't!");
 }
 
 test(

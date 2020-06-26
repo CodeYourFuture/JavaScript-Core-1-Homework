@@ -7,7 +7,7 @@ For example:
 
 The most common type of conditional is the **if statement**.
 
-An if statment runs some code if a condition is met. If the condition is not met, then the code will skipped.
+An if statement runs some code if a condition is met. If the condition is not met, then the code will skipped.
 
 ```js
 var isHappy = true;
