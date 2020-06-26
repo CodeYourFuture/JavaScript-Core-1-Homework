@@ -13,8 +13,33 @@ Create a function called sortAges which:
 You don't have to worry about making this algorithm work fast! The idea is to get you to
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
+function bubbleSort(arr) {
+  let n = arr.length - 1
 
-function sortAges(arr) {}
+  for (let i = 0; i < n; ++i) {
+    for (let j = 0; j < n-i; ++j) {
+
+      if (arr[j] > arr[j+1]) {       
+        let temp = arr[j];
+        arr[j] = arr[j+1];
+        arr[j+1] = temp;
+      }
+    }
+  }
+  return arr;
+}
+
+function sortAges(arr) {
+  let ages = [];
+
+  for (let i = 0; i < arr.length; ++i) {
+    if (typeof(arr[i]) === "number") {
+      ages.push(arr[i]);
+    } 
+  }
+
+  return bubbleSort(ages);
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

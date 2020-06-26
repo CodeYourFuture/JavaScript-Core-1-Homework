@@ -5,7 +5,16 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(strArr) {
+  for (let i = 0; i < strArr.length; ++i) {
+    strArr[i] = strArr[i].trim();
+    strArr[i] = strArr[i].replace("/", ""); // removes forward slashes (/) in the strings
+    strArr[i] = strArr[i].toLowerCase();
+  }
+
+  return strArr
+}
+
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -14,17 +23,20 @@ Complete the function to check if the variable `num` satisfies the following req
 - is less than or equal to 100
 Tip: use logical operators
 */
+function validate(num) {
+  return typeof(num) === "number"  &&  num%2 === 0  &&  num <= 100;
+}
 
-function validate(num) {}
 
 /* 
 Write a function that returns a copy of the given array arr, but with the element at the given index, index removed.
 The function must NOT change the original array, arr.
 */
-
 function remove(arr, index) {
-  return; // complete this statement
+  arr.splice(index, 1)
+  return arr;
 }
+
 
 /*
 Write a function that:
@@ -33,10 +45,18 @@ Write a function that:
 - the numbers must be rounded to 2 decimal places
 - numbers greater 100 must be replaced with 100
 */
-
 function formatPercentage(arr) {
-  
+  for (let i = 0; i < arr.length; ++i) {
+    if (arr[i] > 100) {
+      arr[i] = 100;
+    }
+    
+    arr[i] = Number(arr[i].toFixed(2)) + "%";
+  }
+
+  return arr;
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
