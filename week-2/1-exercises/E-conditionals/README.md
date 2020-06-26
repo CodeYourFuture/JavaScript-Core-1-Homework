@@ -7,7 +7,7 @@ For example:
 
 The most common type of conditional is the **if statement**.
 
-An if statment runs some code if a condition is met. If the condition is not met, then the code will skipped.
+An if statement runs some code if a condition is met. If the condition is not met, then the code will skipped.
 
 ```js
 var isHappy = true;
@@ -17,7 +17,7 @@ if (isHappy) {
 }
 ```
 
-The code in paratheses - e.g. `(isHappy)` - is the condition. The condition can be _any_ expression. The following are all valid conditions:
+The code in parentheses - e.g. `(isHappy)` - is the condition. The condition can be _any_ expression. The following are all valid conditions:
 
 ```js
 // boolean value

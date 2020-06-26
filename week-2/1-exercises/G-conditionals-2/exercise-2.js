@@ -8,7 +8,15 @@
 */
 
 function studentPassed(grade) {
-
+  if (typeof(grade) !== "number" || grade > 100 || grade < 0) {
+    return "invalid grade format";
+  }
+  else if (grade < 50) {
+    return "failed";
+  }
+  else {
+    return "passed";
+  }
 }
 
 /* 

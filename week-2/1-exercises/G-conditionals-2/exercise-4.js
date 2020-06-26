@@ -9,7 +9,14 @@
 */
 
 function containsCode(sentence) {
-
+  var word = "code";
+  
+  if (sentence.includes(word)) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 /* 
