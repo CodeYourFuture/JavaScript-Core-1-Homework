@@ -29,14 +29,14 @@ function sortArray(letters) { //added sort methods
 
 function first5(numbers) {
   let sliced;
-
+  let sliced = numbers.slice(0,5);
   return sliced;
 }
 
 function get3rdIndex(arr) {
   let index = 3;
   let element;
-
+  let element = arr[index]
   return element;
 }
 
