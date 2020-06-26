@@ -5,7 +5,15 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(strArr) {
+	for (let i = 0; i < strArr.length; i++) {
+		strArr[i] = strArr[i].toLowerCase();
+		strArr[i] = strArr[i].replace(/\//g, "");
+		strArr[i] = strArr[i].trim();
+	}
+
+	return strArr;
+}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,7 +23,13 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+	if (typeof num === "number" && num % 2 === 0 && num <= 100) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 /* 
 Write a function that removes an element from an array
@@ -26,7 +40,9 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+	let removeItem = arr.slice(0, index);
+	let returnArr = arr.slice(index + 1, arr);
+	return removeItem.concat(returnArr); // complete this statement
 }
 
 /*
@@ -38,49 +54,56 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  
+	for (let j = 0; j < arr.length; j++) {
+		if (arr[j] > 100) {
+			arr[j] = 100;
+		}
+		let a = arr[j].toFixed(2);
+		let b = a.toString() + "%";
+		
+	}
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function arraysEqual(a, b) {
-  if (a === b) return true;
-  if (a == null || b == null) return false;
-  if (a.length != b.length) return false;
+	if (a === b) return true;
+	if (a == null || b == null) return false;
+	if (a.length != b.length) return false;
 
-  for (let i = 0; i < a.length; ++i) {
-    if (a[i] !== b[i]) return false;
-  }
+	for (let i = 0; i < a.length; ++i) {
+		if (a[i] !== b[i]) return false;
+	}
 
-  return true;
+	return true;
 }
 
 function test(test_name, expr) {
-  let status;
-  if (expr) {
-    status = "PASSED";
-  } else {
-    status = "FAILED";
-  }
+	let status;
+	if (expr) {
+		status = "PASSED";
+	} else {
+		status = "FAILED";
+	}
 
-  console.log(`${test_name}: ${status}`);
+	console.log(`${test_name}: ${status}`);
 }
 
 test(
-  "tidyUpString function works - case 1",
-  arraysEqual(tidyUpString(["/Daniel ", "irina ", " Gordon", "ashleigh "]), [
-    "daniel",
-    "irina",
-    "gordon",
-    "ashleigh"
-  ])
+	"tidyUpString function works - case 1",
+	arraysEqual(tidyUpString(["/Daniel ", "irina ", " Gordon", "ashleigh "]), [
+		"daniel",
+		"irina",
+		"gordon",
+		"ashleigh",
+	])
 );
 test(
-  "tidyUpString function works - case 2",
-  arraysEqual(
-    tidyUpString([" /Sanyia ", " Michael ", "AnTHonY ", "   Tim   "]),
-    ["sanyia", "michael", "anthony", "tim"]
-  )
+	"tidyUpString function works - case 2",
+	arraysEqual(
+		tidyUpString([" /Sanyia ", " Michael ", "AnTHonY ", "   Tim   "]),
+		["sanyia", "michael", "anthony", "tim"]
+	)
 );
 
 test("validate function works - case 1", validate(10) === true);
@@ -90,27 +113,27 @@ test("validate function works - case 4", validate("Ten") === false);
 test("validate function works - case 5", validate(108) === false);
 
 test(
-  "remove function works - case 1",
-  arraysEqual(remove([10, 293, 292, 176, 29], 3), [10, 293, 292, 29])
+	"remove function works - case 1",
+	arraysEqual(remove([10, 293, 292, 176, 29], 3), [10, 293, 292, 29])
 );
 test(
-  "remove function works - case 1",
-  arraysEqual(remove(["a", "b", "c", "d", "e", "f", "g"], 6), [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f"
-  ])
+	"remove function works - case 1",
+	arraysEqual(remove(["a", "b", "c", "d", "e", "f", "g"], 6), [
+		"a",
+		"b",
+		"c",
+		"d",
+		"e",
+		"f",
+	])
 );
 
 test(
-  "formatPercentage function works - case 1",
-  arraysEqual(formatPercentage([23, 18, 187.2, 0.372]), [
-    "23%",
-    "18%",
-    "100%",
-    "0.37%"
-  ])
+	"formatPercentage function works - case 1",
+	arraysEqual(formatPercentage([23, 18, 187.2, 0.372]), [
+		"23%",
+		"18%",
+		"100%",
+		"0.37%",
+	])
 );
