@@ -5,7 +5,19 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(arr) {
+  let array = [];
+  let index;
+  for (var i = 0; i < arr.length; i++) {
+    array[i] = arr[i];
+    array[i] = array[i].trim();
+     array[i] = array[i].toLowerCase();
+     array[i] = array[i].replace(/[\/\\]/g,'')
+
+  }
+ return array;
+}
+
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,7 +27,17 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+
+  if(typeof num == 'number' && num % 2== 0 && num <=100){
+    return true;
+  } else {
+    return false;
+  }
+  }
+  
+
+
 
 /* 
 Write a function that returns a copy of the given array arr, but with the element at the given index, index removed.
@@ -23,7 +45,17 @@ The function must NOT change the original array, arr.
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  let arr1 = [];
+  for( let i = 0; i < arr.length; i++){
+    arr1[i] = arr[i];
+    // var index = array1.indexOf(index);
+    if (index > -1) {
+        arr1.splice(index, 1);
+    }
+  }
+
+
+  return arr1; // complete this statement
 }
 
 /*
@@ -35,7 +67,20 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  
+  let newArray =[];
+  let index;
+  for (let i = 0; i < arr.length; i++) {
+    newArray[i] = arr[i];
+    if (newArray[i]> 100){
+      newArray[i] = 100;
+      
+    }
+    newArray[i] = Math.round(newArray[i]*100)/100; 
+    newArray[i] = `${newArray[i]}%`;
+  }
+
+  return newArray;
+
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
