@@ -18,17 +18,16 @@
 let x = 2;
 let a = 6;
 
-const f1 = function(a, b) {
+const f1 = function (a, b) {
   return a + b;
 };
 
-const f2 = function(a, b) {
+const f2 = function (a, b) {
   return a + b + x;
 };
 
 console.log(x);
 console.log(a);
-console.log(b);
 
 for (let i = 0; i < 5; ++i) {
   a = a + 1;
@@ -40,3 +39,11 @@ for (let i = 0; i < 5; ++i) {
     console.log(e);
   }
 }
+/*
+1. The console.log(b) threw the error. 
+3. 2,6,4,9,6,13,8
+4. 2 times
+5. 3 times
+6. 1
+7. I think 7 if you mean the 'a' variable in the for loop.
+*/

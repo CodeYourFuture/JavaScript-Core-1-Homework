@@ -5,9 +5,18 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
 
+function tidyUpString(strArr) {
+  for (let i = 0; i < strArr.length; i++) {
+    let removed = strArr[i].trim();
+    let remBackSlash = removed.replace(/\//g, "");
+    let smallStrr = remBackSlash.toLowerCase();
+    strArr[i] = smallStrr;
+  }
+  return strArr;
+}
 /*
+
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
 - is even
@@ -15,7 +24,13 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  if (typeof num === "number" && num % 2 === 0 && num <= 100) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /* 
 Write a function that removes an element from an array
@@ -26,7 +41,9 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  let removed = arr.splice(index, 1);
+
+  return arr; // complete this statement
 }
 
 /*
@@ -37,10 +54,18 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {
-  
-}
 
+function formatPercentage(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      arr[i] = 100;
+    }
+    let dec = arr[i].toFixed(2);
+    dec = parseFloat(dec);
+    arr[i] = dec.toString() + "%";
+  }
+  return arr;
+}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function arraysEqual(a, b) {
@@ -72,7 +97,7 @@ test(
     "daniel",
     "irina",
     "gordon",
-    "ashleigh"
+    "ashleigh",
   ])
 );
 test(
@@ -101,7 +126,7 @@ test(
     "c",
     "d",
     "e",
-    "f"
+    "f",
   ])
 );
 
@@ -111,6 +136,6 @@ test(
     "23%",
     "18%",
     "100%",
-    "0.37%"
+    "0.37%",
   ])
 );
