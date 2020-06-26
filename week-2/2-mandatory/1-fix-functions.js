@@ -1,7 +1,7 @@
 // The below functions are syntactically correct but not outputting the right results.
 // Look at the tests and see how you can fix them.
 
-function mood() {
+function mood() {       // This function working very well, there is no problem . 
   let isHappy = true;
 
   if (isHappy) {
@@ -11,32 +11,32 @@ function mood() {
   }
 }
 
-function greaterThan10(num) {
-  let isBigEnough;
+function greaterThan10(num) {   // First assign the num parameter to isBigEnough value 
+  let isBigEnough = num;        //after that added greater than operator inside the if statement 
 
-  if (isBigEnough) {
+  if (isBigEnough>10) {
     return "num is greater than 10";
   } else {
     return "num is not big enough";
   }
 }
 
-function sortArray(letters) {
+function sortArray(letters) { //added sort methods
   let sortedLetters = letters;
-
+  let sortedLetters = letters.sort();
   return sortedLetters;
 }
 
 function first5(numbers) {
   let sliced;
-
+  let sliced = numbers.slice(0,5);
   return sliced;
 }
 
 function get3rdIndex(arr) {
   let index = 3;
   let element;
-
+  let element = arr[index]
   return element;
 }
 
