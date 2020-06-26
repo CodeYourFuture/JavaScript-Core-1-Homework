@@ -7,7 +7,15 @@
 */
 
 function negativeOrPositive(number) {
-
+  if (typeof(number) !== "number") {
+    return "not a number";
+  }
+  else if (number < 0) {
+    return "negative";
+  }
+  else {
+    return "positive";
+  }
 }
 
 /* 

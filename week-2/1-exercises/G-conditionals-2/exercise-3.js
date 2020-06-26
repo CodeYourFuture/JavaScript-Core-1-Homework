@@ -9,7 +9,21 @@
 */
 
 function calculateGrade(mark) {
-
+  if (typeof(mark) !== "number" || mark > 100 || mark < 0) {
+    return "invalid grade format";
+  }
+  else if (mark >= 80) {
+    return "A";
+  }
+  else if (mark >= 60) {
+    return "B";
+  }
+  else if (mark >= 50) {
+    return "C";
+  }
+  else {
+    return "F";
+  }
 }
 
 /* 
