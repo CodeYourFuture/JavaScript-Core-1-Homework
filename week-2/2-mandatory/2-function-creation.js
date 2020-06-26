@@ -20,7 +20,6 @@ function tidyUpString(strArr) {
 
 // used trim(), toLowerCase() and replace("/", "")
 
-
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
@@ -30,7 +29,7 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  if ((typeof (num) === "number" && num % 2 == 0 && num <= 100)) {
+  if (typeof num === "number" && num % 2 == 0 && num <= 100) {
     return true;
   }
   return false;
@@ -44,13 +43,10 @@ The function must:
 - remove the item at the specified index
 */
 
-function remove(arr, index){
+function remove(arr, index) {
   arr.splice(index, 1);
   return arr;
 }
-
-// console.log(`remove element from index ${index} of array ${arr}`);
-// console.log(remove(arr, index));
 
 /*
 Write a function that:
@@ -61,12 +57,16 @@ Write a function that:
 */
 
 function takesArray(arr) {
-  if (typeof(num) === "number" && Math.float(num) && num > 100) {
-    return true;
+  let numArray = [2, 3, 6, 8];
+  newNum = Math.floor(numArray, 2);
+  if(numArray > 100) { 
+    num = 100;
   }
 }
 
-// function formatPercentage(arr) {
+// arrString = numArray.toString();
+
+function formatPercentage(arr) {
 //   let num =
 // // return arr.toString()
 
