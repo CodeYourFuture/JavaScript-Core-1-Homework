@@ -7,58 +7,36 @@ Today, you will be applying the sorting algorithm you used in that exercise in c
 Create a function called sortAges which:
 - takes an array of mixed data types as input
 - removes any non-number data types without using the built-in javascript filter method
-- returns an array of sorted ages in ascending order 
+- eturnrs an array of sorted ages in ascending order 
   - HARD MODE - without using the built-in javascript sort method 😎
 
 You don't have to worry about making this algorithm work fast! The idea is to get you to
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-
 function sortAges(arr) {
-  let swap;
-  let arr1 = [];
+  //let swap;
+  let newArr = [];
   for (let i = 0; i < arr.length; i++){
-    if (typeof(arr[i] === "number")){
-      arr1.push(arr[i])
+    if (typeof(arr[i]) === "number"){
+      newArr.push(arr[i]);
     }
   }
-  for (i = 0; i < arr1.length; i++){
-    for (let j = i+1; j < arr1.length; j++){
-      if (arr1 [j] < arr1[i]
+  for (i = 0; i < newArr.length; i++){
+    for (let j = i+1; j < newArr.length; j++){
+      if (newArr[j] < newArr[i]
       ){
-swap = arr1[i];
-arr1[i] = arr1[j];
-arr1[j]= swap;
+swap = newArr[i];
+newArr[i] = newArr[j];
+newArr[j]= swap;
       }
     }
   }
-  return arr1;
+  return newArr;
 }
 
 
-  /*function sortAges(arr) {
-    let newArr = [];
-    let arr1;
-    for(let i = 0; i < arr.length; i++){
-      if(typeof(arr[i]) === 'number'){
-        newArr.push((arr[i]));
-      }
-    }
-    do{
-      arr1 = false;
-      for(let i = 0; i < newArr.length; i++){
-        if(newArr[i+1] < newArr[i]){
-          let aux = newArr[i];
-          newArr[i] = newArr[i+1];
-          newArr[i+1] = aux;
-          arr =true;
-        }
-      }
-    }while(arr1);
-   return newArr;
-}
-*/
+  
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const agesCase1 = [
