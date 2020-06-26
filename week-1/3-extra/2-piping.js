@@ -43,6 +43,9 @@ There are some Tests in this file that will help you work out if your code is wo
 To run these tests type `node 2-piping.js` into your terminal
 */
 
+To run these tests type `node 2-piping.js` into your terminal
+*/
+
 const util = require('util');
 
 function test(test_name, actual, expected) {

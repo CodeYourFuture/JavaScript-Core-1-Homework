@@ -13,6 +13,12 @@ function multiply(a, b, c) {
   return;
 }
 
+/* ======= TESTS - DO NOT MODIFY ===== 
+There are some Tests in this file that will help you work out if your code is working.
+
+To run these tests type `node 2-logic-error` into your terminal
+*/
+=======
 /* ======= TESTS - DO NOT MODIFY =====
 There are some Tests in this file that will help you work out if your code is working.
 

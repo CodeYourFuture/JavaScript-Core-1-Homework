@@ -14,12 +14,51 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {}
+function sortAges(arr) {
+  let test=[];
+  let test1=[];
+  let index;
+    for(let i=0;i<arr.length;i++){
+       
+        test[i]=arr[i];
+      
+    }
+   // console.log("before removing="+test);
+    for(let i=0;i<test.length;i++){
+       
+      test[i]=arr[i];
+      if(test[i]===Number(test[i])){
+       test1.push(test[i]);
+      }
+    }
+    let j;
+    for(let i=0;i<test1.length-1;i++)
+    {
+      let temp=test1[i];
+      for(let j=i+1;j<test1.length;j++){
+        if(temp>test1[j]){
+           temp=test1[j];
+          test1[j]=test1[i]
+          test1[i]=temp;
+
+
+        }
+      }
+     
+        
+      
+    }
+    console.log(test1);
+    return test1;
+   
+}
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const agesCase1 = [
-  "🎹",
+  "🎹",//0,2,4,5,7
   100,
   "💩",
   55,

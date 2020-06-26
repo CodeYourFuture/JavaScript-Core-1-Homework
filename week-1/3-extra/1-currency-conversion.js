@@ -23,6 +23,24 @@ There are some Tests in this file that will help you work out if your code is wo
 To run these tests type `node 1-currency-conversion` into your terminal
 */
 
+function test(test_name, expr) {
+  let status;
+  if (expr) {
+    status = "PASSED";
+  } else {
+    status = "FAILED";
+  }
+
+  console.log(`${test_name}: ${status}`);
+}
+
+test("convertToUSD function works", convertToUSD(32) === 44.8);
+test("convertToBRL function works", convertToBRL(30) === 172.71);
+
+
+To run these tests type `node 1-currency-conversion` into your terminal
+*/
+
 const util = require('util');
 
 function test(test_name, actual, expected) {

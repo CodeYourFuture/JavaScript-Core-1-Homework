@@ -63,9 +63,16 @@ There are some Tests in this file that will help you work out if your code is wo
 To run these tests type `node 3-magic-8-ball.js` into your terminal
 */
 
+/* ======= TESTS - DO NOT MODIFY ===== 
+There are some Tests in this file that will help you work out if your code is working.
+
+To run these tests type `node 3-magic-8-ball.js` into your terminal
+*/
+
+
 const log = console.log;
 let logged;
-console.log = function() {
+console.log = function () {
   log(...arguments);
   logged = arguments[0];
 };

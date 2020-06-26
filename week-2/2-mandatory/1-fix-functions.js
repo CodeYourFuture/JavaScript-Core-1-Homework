@@ -2,7 +2,7 @@
 // Look at the tests and see how you can fix them.
 
 function mood() {
-  let isHappy = true;
+  let isHappy = false;
 
   if (isHappy) {
     return "I am happy";
@@ -11,6 +11,10 @@ function mood() {
   }
 }
 
+
+function greaterThan10() {
+  let num = 11;
+  let isBigEnough=true;
 function greaterThan10(num) {
   let isBigEnough;
 
@@ -21,12 +25,18 @@ function greaterThan10(num) {
   }
 }
 
+function sortArray() {
+  let letters = ["a", "n", "c", "e", "z", "f"];
+  let sortedLetters=["a", "c", "e", "f", "n", "z"];
 function sortArray(letters) {
   let sortedLetters = letters;
 
   return sortedLetters;
 }
 
+function first5() {
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  let sliced=[1,2,3,4,5];
 function first5(numbers) {
   let sliced;
 
@@ -35,7 +45,7 @@ function first5(numbers) {
 
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
+  let element=arr[3];
 
   return element;
 }
@@ -93,6 +103,8 @@ test(
   "sortArray function works",
   sortArray(["a", "n", "c", "e", "z", "f"]), ["a", "c", "e", "f", "n", "z"]
 );
+test("first5 function works", arraysEqual(first5(), [1, 2, 3, 4, 5]));
+//
 
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 test("first5 function works", first5(numbers), [1, 2, 3, 4, 5]);

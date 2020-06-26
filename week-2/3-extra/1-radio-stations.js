@@ -14,18 +14,43 @@
  */
 
 // `getAllFrequencies` goes here
+function getAllFrequencies(){
+  let arr=[];
+  let cnt=87;
+  for(let i=87;i<=108;i++){
+      arr.push(i);
+  }
+  //console.log(`${arr}`);
+  return arr;
+}
 
 /**
- * Next, let's write a function that gives us only the frequencies that are radio stations.
+ * Next, let's write a function that gives us only the frequencies 
+ * that are radio stations.
  * Call this function `getStations`.
  *
  * This function should:
  * - Get the available frequencies from `getAllFrequencies`
- * - There is a helper function called isRadioFrequency that takes an integer as an argument and returns a boolean.
+ * - There is a helper function called isRadioFrequency that takes
+ *  an integer as an argument and returns a boolean.
  * - Return only the frequencies that are radio stations.
  */
 // `getStations` goes here
+//isRadioStation(frequenc
 
+function getStations(){
+  let arr=getAllFrequencies();
+  let test=[];
+  //console.log(arr.length)
+  for(let counter of arr){
+    //console.log(counter);
+    if(isRadioStation(counter)){
+      //console.log("return="+counter);
+      test.push(counter);
+    }
+  }
+  return test;
+}
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
@@ -52,6 +77,7 @@ function isRadioStation(frequency) {
 }
 
 const assert = require("assert");
+const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require("constants");
 
 function test(testName, fn) {
   try {
