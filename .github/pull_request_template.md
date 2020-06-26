@@ -7,4 +7,4 @@ Your Slack Name:nouri89
 # Homework Details
 
 Module:javaScript 
-Week:1
+Week:2
