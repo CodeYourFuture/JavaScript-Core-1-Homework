@@ -82,13 +82,16 @@ function getAllFrequencies() {
  */
 // `getStations` goes here
 function getStations() {
-	var af = getAllFrequencies();
-
-	var currentStation = Math.floor(Math.random() * (108 - 87 + 1) + 87);
-
-	isRadioFrequency(currentStation);
-	return currentStation;
+	let radioStations = getAllFrequencies();
+	let validStations = [];
+	for (let i = 0; i < radioStations.length; i++) {
+		if (isRadioStation(radioStations[i])) {
+			validStations.push(radioStations[i]);
+		}
+	}
+	return validStations;
 }
+
 function isRadioFrequency(frequency) {
 	found = false;
 	var af = getAllFrequencies();
