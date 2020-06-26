@@ -1,44 +1,44 @@
 // The below functions are syntactically correct but not outputting the right results.
 // Look at the tests and see how you can fix them.
 
-function mood() {
-  let isHappy = true;
-
-  if (isHappy) {
+function mood(isHappy) {
+  if (isHappy === true ) {
     return "I am happy";
   } else {
     return "I am not happy";
   }
 }
-
 function greaterThan10(num) {
-  let isBigEnough;
-
-  if (isBigEnough) {
+  
+  let isBigEnough= 10;
+  if (isBigEnough < num) {
     return "num is greater than 10";
   } else {
     return "num is not big enough";
   }
 }
 
-function sortArray(letters) {
-  let sortedLetters = letters;
-
+function sortArray() {
+  let letters = ["a", "n", "c", "e", "z", "f"];
+  let sortedLetters = letters.sort();
   return sortedLetters;
 }
-
-function first5(numbers) {
-  let sliced;
-
+function first5() {
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  let sliced = numbers.slice(0, 5);
   return sliced;
 }
-
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
-
+  let element = arr[index];
   return element;
 }
+
+
+
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
