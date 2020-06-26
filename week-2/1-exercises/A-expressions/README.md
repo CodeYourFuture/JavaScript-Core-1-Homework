@@ -1,4 +1,4 @@
-In JavaScript there are **expressions** and **statements**. We will use these words frequently to describe code.
+cIn JavaScript there are **expressions** and **statements**. We will use these words frequently to describe code.
 
 ### Expression
 
