@@ -2,7 +2,7 @@ There are three logical operators in JavaScript: `||` (OR), `&&` (AND), `!` (NOT
 
 They let you write expressions that evaluate to a boolean value.
 
-Suppose you want to test if a number if bigger than 3 and smaller than 10. We can write this using logical operators.
+Suppose you want to test if a number is bigger than 3 and smaller than 10. We can write this using logical operators.
 
 ```js
 var num = 10;

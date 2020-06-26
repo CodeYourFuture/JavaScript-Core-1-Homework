@@ -5,8 +5,41 @@
   Update the code so that you get the expected result.
 */
 
-function isNegative() {}
+var num1 = 0;
+var num2 = 0;
+var name = "Daniel";
+var fisrtLetter = name.charAt(0);
 
+// Negative number function
+function isNegative(num1) {
+  if(num1 < 0){
+return true;
+}
+return false;
+}
+
+// range function
+function isBetween5and10(num2){
+  if(num2 >= 5 && num2 <= 10){
+    return true;
+  }
+  return false;
+}
+// length of string function
+function isShortName(name){
+  if(name.length < 8){
+    return true;
+  }
+  return false;
+}
+//firts letter of string function
+function startsWithD(name){
+  if(fisrtLetter === "D"){
+    return true;
+  }
+  return false;
+  
+}
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
