@@ -10,10 +10,12 @@ console.log(trimWord(" CodeYourFuture "));
 
 function getWordLength(word) {
 
-  return "A wild sentence appeared!";
+  let wordLength = "A wild sentence appeared!";
+  return wordLength.length;
 }
+ 
 
-console.log(getWordLength().length);
+console.log(getWordLength());
 
 
 function multiply(a, b, c) {
