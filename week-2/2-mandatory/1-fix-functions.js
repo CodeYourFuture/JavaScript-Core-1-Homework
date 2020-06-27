@@ -48,13 +48,15 @@ console.log(first5());
 
 
 function get3rdIndex(arr) {
-  let index = 3;
-  let element= index;
+  
+  let element= [11, 37, 62, 18, 19, 3, 30];
+
 
   return element;
 }
 
-console.log(get3rdIndex(["fruit", "banana", "apple", "strawberry", "raspberry"]));
+
+console.log(element.findIndexget3rdIndex());
 console.log(get3rdIndex([11, 37, 62, 18, 19, 3, 30]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
