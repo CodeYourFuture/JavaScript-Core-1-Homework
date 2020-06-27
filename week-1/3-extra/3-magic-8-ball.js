@@ -58,8 +58,9 @@ function shakeBall() {
 //answers[Math.floor(Math.random()*answers.length)]
 // The answer should come from shaking the ball
 //let answer;
+}
 
-// When checking the answer, we should tell someone if the answer is
+// This function should say whether the answer it is given is
 // - very positive
 // - positive
 // - negative
@@ -112,9 +113,12 @@ if(answer==3){
   return "very negative";
 }
  
+=======
+// This function should expect to be called with any value which was returned by the shakeBall function.
+function checkAnswer(answer) {
 }
 
-/* ======= TESTS - DO NOT MODIFY ===== 
+/* ======= TESTS - DO NOT MODIFY =====
 There are some Tests in this file that will help you work out if your code is working.
 
 To run these tests type `node 3-magic-8-ball.js` into your terminal
@@ -122,7 +126,7 @@ To run these tests type `node 3-magic-8-ball.js` into your terminal
 
 const log = console.log;
 let logged;
-console.log = function () {
+console.log = function() {
   log(...arguments);
   logged = arguments[0];
 };
@@ -148,11 +152,36 @@ function testAll() {
   );
   
   test(`shakeBall returns an string answer"`, typeof answer === "string");
+
+  test(`shakeBall returns an string answer`, typeof answer === "string");
+
+  test(
+    `checkAnswer("It is decidedly so.") returns "very positive`,
+    checkAnswer("It is decidedly so.") === "very positive"
+  )
+
+  test(
+    `checkAnswer("My reply is no.") returns "very negative`,
+    checkAnswer("My reply is no.") === "very negative"
+  )
+
   test(
     `checkAnswer returns the level of positivity"`,
     ["very positive", "positive", "negative", "very negative"].includes(
       checkAnswer(answer)
     )
+  );
+  const answers = new Set();
+  for (let i = 0; i < 10; ++i) {
+    answers.add(shakeBall());
+  }
+  test(
+    `shakeBall returns different answers`,
+    answers.size > 1,
+  );
+  test(
+    `checkAnswer returns different answers`,
+    new Set(Array.from(answers.values()).map(checkAnswer)).size > 1,
   );
 }
 
