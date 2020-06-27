@@ -6,13 +6,7 @@ Write a function that:
 - makes the string all lowercase
 */
  function tidyUpString(strArr) {
-//   // let names = strArr[i];
-//   // for (let i=0; i < names.length; i++) {
-//   //   console.log(names)
-//   // }
-//   for (let names of strArr) {
-//     console.log(names)
-//   }
+   
  }
 
 /*
