@@ -1,20 +1,28 @@
-// Add comments to explain what this function does. You're meant to use Google!
+// This function round the decimal number to the nearset whole number 
 function getNumber() {
   return Math.random() * 10;
 }
 
-// Add comments to explain what this function does. You're meant to use Google!
+// The concat() method is used to join two or more strings.
 function s(w1, w2) {
   return w1.concat(w2);
 }
 
-function concatenate(firstWord, secondWord, thirdWord) {
-  // Write the body of this function to concatenate three words together.
-  // Look at the test case below to understand what this function is expected to return.
+function concatenate(firstword, secondWord, thirdWord) {
+
+  return firstword.concat(secondWord + thirdWord);
 }
 
-/* ======= TESTS - DO NOT MODIFY =====
-There are some Tests in this file that will help you work out if your code is working.
+console.log(concatenate("code ", "your ", "future"));
+console.log(concatenate("I ", "like ", "pizza"));
+console.log(concatenate("I ", "am ", 13));
+
+
+
+
+/* ======= TESTS - DO NOT MODIFY ===== */
+
+/*There are some Tests in this file that will help you work out if your code is working.
 To run these tests type `node 3-function-output` into your terminal
 */
 

@@ -4,8 +4,15 @@ Write a function that:
 - removes any spaces in the beginning or end of the strings
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
+*//*
+function tidyUpString(strArr) {
+let tidU =["/Daniel ", "irina ", " Gordon", "ashleigh "];
+  
+  return ["daniel", "irina", "gordon","ashleigh"]
+
+}
+
 */
-function tidyUpString(strArr) {}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,16 +22,27 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+ let
+if (num <= 100)
+ {
+ num = true;
+}
+else {
+  num =false;
+}
+}
+validate(20);
+
 
 /* 
 Write a function that returns a copy of the given array arr, but with the element at the given index, index removed.
 The function must NOT change the original array, arr.
 */
 
-function remove(arr, index) {
-  return; // complete this statement
-}
+//function remove(arr, index) {
+  //return; // complete this statement}
+
 
 /*
 Write a function that:
@@ -34,11 +52,10 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {
+//function formatPercentage(arr) {}
   
-}
 
-/* ======= TESTS - DO NOT MODIFY ===== */
+
 
 const util = require('util');
 
@@ -60,6 +77,10 @@ function test(test_name, actual, expected) {
 
   console.log(`${test_name}: ${status}`);
 }
+
+
+/* ======= TESTS - DO NOT MODIFY ===== */
+
 
 function arraysEqual(a, b) {
   if (a === b) return true;
@@ -117,5 +138,8 @@ test(
     "18.1%",
     "100%",
     "0.37%"
+
   ]
 );
+
+
