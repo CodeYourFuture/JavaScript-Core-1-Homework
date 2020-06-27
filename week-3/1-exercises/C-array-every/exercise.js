@@ -5,8 +5,8 @@
 var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
 var group = ["Austine", "Dany", "Swathi", "Daniel"];
 
-function gr(arr){
-  return (students.includes(arr))
+function gr(name){
+  return (students.includes(name))
 
 }
 
