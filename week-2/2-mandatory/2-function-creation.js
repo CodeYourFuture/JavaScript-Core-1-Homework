@@ -19,16 +19,6 @@ function tidyUpString(strArr) {
  return newArray;
 }
 
-// test(
-
-// Complete the function to check if the variable `num` satisfies the following requirements:
-// - is a number
-// - is even
-// - is less than or equal to 100
-// Tip: use logical operators
-// */
-
-
 function validate(num) {
   if (typeof num === "number" && num % 2 ===0 && num <= 100){
     return true;
@@ -44,7 +34,7 @@ The function must NOT change the original array, arr.
 */
 
 function remove(arr, index) {     
- arr.splice(index,); 
+ arr.splice(index); 
  return arr;
  // complete this statement
 }

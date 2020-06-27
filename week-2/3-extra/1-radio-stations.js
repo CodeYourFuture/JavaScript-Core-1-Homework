@@ -14,6 +14,13 @@
  */
 
 // `getAllFrequencies` goes here
+function getAllFrequencies() {
+  let arrayFrequencies = [];
+  for (let i = 87; i <= 108; i++) {
+    arrayFrequencies.push(i);
+  }
+  return arrayFrequencies;
+}
 
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
@@ -26,6 +33,18 @@
  */
 // `getStations` goes here
 
+function getStations() {
+  let availableFrequencies = getAllFrequencies();
+  let stations =[];
+
+  for (let i = 0; i < availableFrequencies.length; i++) {
+    if (isRadioStation(availableFrequencies[i])) {
+      stations.push(availableFrequencies[i]);
+    }
+  }
+  return stations;
+
+}
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
@@ -36,10 +55,10 @@ function getAvailableStations() {
     const stationCount = 4;
     getAvailableStations.stations = new Array(stationCount)
       .fill(undefined)
-      .map(function() {
+      .map(function () {
         return Math.floor(Math.random() * (108 - 87 + 1) + 87);
       })
-      .sort(function(frequencyA, frequencyB) {
+      .sort(function (frequencyA, frequencyB) {
         return frequencyA - frequencyB;
       });
   }
@@ -64,7 +83,7 @@ function test(testName, fn) {
   }
 }
 
-test("getAllFrequencies() returns all frequencies between 87 and 108", function() {
+test("getAllFrequencies() returns all frequencies between 87 and 108", function () {
   const frequencies = getAllFrequencies();
   assert.deepStrictEqual(frequencies, [
     87,
@@ -88,7 +107,7 @@ test("getAllFrequencies() returns all frequencies between 87 and 108", function(
     105,
     106,
     107,
-    108
+    108,
   ]);
 });
 
