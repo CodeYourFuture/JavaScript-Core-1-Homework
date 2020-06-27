@@ -12,15 +12,16 @@ Write a function that:
 let nameArr = ["  /D/an", "Sue/  ", "   /Paul  "];
 
 function tidyUpString(strArr) {
+  let newArray = [];
   for (let i = 0; i < strArr.length; i++) {
     let noSpaces = strArr[i].trim();
     let noSlashes = noSpaces.replace(/\//g, "");
     let lowercase = noSlashes.toLowerCase();
-    console.log(lowercase);
+    newArray[i] = lowercase;
   }
+  return newArray;
 }
-
-tidyUpString(nameArr);
+console.log(tidyUpString(nameArr));
 console.log("----------");
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -68,23 +69,20 @@ let num = [10.128, 101.223, 20, 30, 111];
 function formatPercentage(arr) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > 100) {
-      let check100 = 100;
-      return check100;
-    } else {
-      check100 = arr[i];
-      return check100;
+      arr[i] = 100;
     }
+    arr[i] = Math.floor(arr[i] * 100) / 100;
+    arr[i] = `${arr[i]}%`;
   }
+  return arr;
 }
-console.log(formatPercentage(num));
-console.log("----------");
-// let twoDecimals = check100.toFixed(2);
-// let addPercent = twoDecimals + "%";
-// return addPercent;
 
+console.log("----------");
+
+/* this chunk works as a standalone without the for loop so I keep it as reference.
 function greaterThan100(num) {
   let greaterThan100 = num[1] > 100;
-
+  
   if (greaterThan100) {
     return 100;
   } else {
@@ -92,22 +90,80 @@ function greaterThan100(num) {
   }
 }
 console.log(greaterThan100(num));
-console.log("----------");
+*/
 
+/* this chunk works as a standalone without the for loop
 // https://stackoverflow.com/questions/19674992/how-to-use-a-return-value-in-another-function-in-javascript
 function addTwoDecimals() {
   let twoDecimals = greaterThan100(num);
   return twoDecimals.toFixed(2);
 }
 console.log(addTwoDecimals());
-console.log("----------");
+*/
 
+/* this chunk works as a standalone without the for loop
 function addPercent() {
   let percent = addTwoDecimals() + "%";
   return percent
 }
 console.log(addPercent());
+*/
+/*
+function greaterThan100(num) {
+  
+  for (let i = 0; i < num.length; i++) {
+    let greaterThan100 = num[i] > 100;
+    if (greaterThan100) {
+      // return 100;
+      console.log(num[i] = 100);
+    } else {
+      // return num[i];
+      console.log(num[i]);
+    }
+  }
+}
+console.log(greaterThan100(num));
 console.log("----------");
+*/
+// https://stackoverflow.com/questions/19674992/how-to-use-a-return-value-in-another-function-in-javascript
+/*let num2 = greaterThan100(num);
+
+function addTwoDecimals(num2) {
+  for (let i = 0; i < num2.length; i++) {
+    console.log(num2[i].toFixed(2));
+  }
+}
+console.log(addTwoDecimals(num2));
+console.log("----------");
+/*
+let num3 = addTwoDecimals(num2);
+
+function addPercent(num3) {
+  for (let i = 0; i < num3.length; i++) {
+    console.log(num3[i] + "%");
+  }
+  //let percent = addTwoDecimals() + "%";
+  //return percent
+}
+//console.log(addPercent());
+console.log("----------");
+*/
+
+/*
+function formatPercentage(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let testFinal = arr[i];
+    if (testFinal > 100) {
+      testFinal = 100;
+    }
+    testFinal = testFinal.toFixed(2);
+    testFinal = testFinal + "%";
+    arr[i] = testFinal;
+  }
+  console.log(arr);
+  return arr;
+}
+*/
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
