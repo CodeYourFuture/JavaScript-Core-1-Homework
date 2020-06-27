@@ -55,7 +55,20 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {}
+function formatPercentage(arr) {
+  const percentage = arr.map(function(n) {
+    if (n < 100)
+    { 
+      console.log(`${Number(n.toFixed(2))}%`); 
+    } 
+    else 
+    {
+     console.log("100%");
+    }
+  
+  })
+  
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
