@@ -14,14 +14,23 @@
  */
 
 // `getAllFrequencies` goes here
+// NOTES: https://dev.to/ycmjason/how-to-create-range-in-javascript-539i
+function getAllFrequencies(start, end) {
+  let frequencies = [];
+  for (let i = start; i <=end; i++) {
+    frequencies.push(i);
+  }
+  return frequencies;
+}
 
+console.log(getAllFrequencies(87, 108));
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
  * Call this function `getStations`.
  *
  * This function should:
  * - Get the available frequencies from `getAllFrequencies`
- * - There is a helper function called isRadioFrequency that takes an integer as an argument and returns a boolean.
+ * - There is a helper function called isRadioStation that takes an integer as an argument and returns a boolean.
  * - Return only the frequencies that are radio stations.
  */
 // `getStations` goes here
