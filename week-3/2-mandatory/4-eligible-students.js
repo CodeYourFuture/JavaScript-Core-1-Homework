@@ -7,18 +7,8 @@
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
 
-function checkAttendance(data){
-  return (data[1]>=8)
-   }
-   
-function eligibleStudents(arr) {
-  arr1= arr.filter(checkAttendance)
-  let arr2=[];
-    for(let i=0;i<arr1.length;i++)
-   {
-         arr2.push(arr1[i][0])        
-     }
-     return arr2
+function eligibleStudents() {
+
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
