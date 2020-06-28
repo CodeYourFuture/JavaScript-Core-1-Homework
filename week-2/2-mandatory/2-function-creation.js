@@ -23,7 +23,7 @@ Tip: use logical operators
 */
 
 function validate(num) {
- let
+
 if (num <= 100)
  {
  num = true;

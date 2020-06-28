@@ -56,8 +56,7 @@ function get3rdIndex(arr) {
 }
 
 
-console.log(element.findIndexget3rdIndex());
-console.log(get3rdIndex([11, 37, 62, 18, 19, 3, 30]));
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
