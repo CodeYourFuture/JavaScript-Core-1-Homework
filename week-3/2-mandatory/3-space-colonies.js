@@ -8,8 +8,12 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
+function familyCcheck(name){
+  return (name.includes("family") && name.charAt(0)==="A")
+}
 
+function colonisers(arr) {
+  return arr.filter(familyCcheck)
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
