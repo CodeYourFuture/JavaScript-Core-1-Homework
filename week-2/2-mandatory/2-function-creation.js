@@ -57,15 +57,20 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  let numArray = [];
+  let numArray;
+  let roundedNum;
+  let strArray;
   // newNum = Math.floor(numArray, 2);
   for (let i = 0; i < arr.length; i++) {
-    if(numArray[i] > 100) {
+    if (numArray[i] > 100) {
       numArray[i] = 100;
     }
-    return numArray.toFixed(2);
+    roundedNum = Math.floor(2);
+
+    }
+    return numArray[i].toFixed(2);
   }
-  output = num.toFixed(2);
+  output = numArray.toFixed(2);
 console.log(output);
 }
 
