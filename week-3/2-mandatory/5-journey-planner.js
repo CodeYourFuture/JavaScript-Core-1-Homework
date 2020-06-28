@@ -7,8 +7,8 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
-
+function journeyPlanner(arr, by) {
+    return arr.filter(item => item.includes(by)).map(item => item[0]);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

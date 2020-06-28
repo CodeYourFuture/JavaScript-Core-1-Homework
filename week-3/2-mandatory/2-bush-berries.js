@@ -10,8 +10,11 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
-
+function bushChecker(arr) {
+  if(arr.find(berryColor => berryColor != "pink") === undefined){
+    return "Bush is safe to eat from";
+  }
+  return "Toxic! Leave bush alone!";
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
