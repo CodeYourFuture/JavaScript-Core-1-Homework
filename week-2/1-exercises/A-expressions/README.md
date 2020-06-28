@@ -1,3 +1,53 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 In JavaScript there are **expressions** and **statements**. We will use these words frequently to describe code.
 
 ### Expression
@@ -36,7 +86,8 @@ You quickly find out the result of an expression by running node in a terminal w
 * Run the command `node`
 * _You have now opened a node console (also called a REPL)_
 * Type an expression and press enter
-* To exit the console type Ctrl+C or type the command `.exit`
+* To exit the console type Ctrl+C.exti.exit
+ or type the command `.exit`
 
 Example from inside a terminal window:
 

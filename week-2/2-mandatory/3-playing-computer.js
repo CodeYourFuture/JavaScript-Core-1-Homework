@@ -28,7 +28,7 @@ const f2 = function(a, b) {
 
 console.log(x);
 console.log(a);
-console.log(b);
+// console.log(b); it has not been defined
 
 for (let i = 0; i < 5; ++i) {
   a = a + 1;
@@ -40,3 +40,10 @@ for (let i = 0; i < 5; ++i) {
     console.log(e);
   }
 }
+
+
+
+
+
+
+
