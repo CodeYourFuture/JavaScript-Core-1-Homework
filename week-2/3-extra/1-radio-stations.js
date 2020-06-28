@@ -42,6 +42,7 @@ function getStations() {
       stations.push(availableFrequencies[i]);
     }
   }
+  console.log(stations);
   return stations;
 
 }
