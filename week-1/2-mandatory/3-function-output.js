@@ -10,15 +10,16 @@ function s(w1, w2) {
 
 function concatenate(firstword, secondWord, thirdWord) {
 
+
    const join = firstword.concat(secondWord + thirdWord);
+
 
    return join;
 
 }
 
-console.log(concatenate("code", "your", "future"));
-console.log(concatenate("I ", "like ", "pizz "));
-console.log(concatenate("I", "am", 13));
+console.log(concatenate("code ", "your ", "future"));
+
 
 
 

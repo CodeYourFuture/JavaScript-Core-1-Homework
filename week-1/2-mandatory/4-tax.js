@@ -6,9 +6,9 @@
 */
 
 function calculateSalesTax(productPrice) {
-  
-let salesTax= 20%productPrice ; 
-  return  salesTax ;
+   
+  return productPrice*20/100+productPrice ; 
+    
 }
 
 
@@ -21,10 +21,16 @@ console.log(calculateSalesTax(15));
   They must also start with the currency symbol
   Write a function that adds tax to a number, and then transforms the total into the format £0.00
 
-  Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
+  Remember that the prices must include the sales tax (hint: you already
+     wrote a function for this!)
 */
 
 function addTaxAndFormatCurrency() {}
+
+
+function formatCurrency() {
+
+}
 
 /* ======= TESTS - DO NOT MODIFY =====
 There are some Tests in this file that will help you work out if your code is working.
