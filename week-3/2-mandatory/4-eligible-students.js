@@ -8,7 +8,7 @@
 */
 
 function eligibleStudents() {
-
+  return arr.filter(checkAttendance).map( (value) => value[0] )
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
