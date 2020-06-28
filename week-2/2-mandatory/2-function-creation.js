@@ -56,17 +56,22 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function takesArray(arr) {
-  let numArray = [2, 3, 6, 8];
-  newNum = Math.floor(numArray, 2);
-  if(numArray > 100) { 
-    num = 100;
+function formatPercentage(arr) {
+  let numArray = [];
+  // newNum = Math.floor(numArray, 2);
+  for (let i = 0; i < arr.length; i++) {
+    if(numArray[i] > 100) {
+      numArray[i] = 100;
+    }
+    return numArray.toFixed(2);
   }
+  output = num.toFixed(2);
+console.log(output);
 }
+
 
 // arrString = numArray.toString();
 
-function formatPercentage(arr) {
 //   let num =
 // // return arr.toString()
 
