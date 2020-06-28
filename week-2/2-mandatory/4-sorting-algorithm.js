@@ -21,7 +21,7 @@ const sorted = arr.filter(function(value) {
  const ascendSort  = sorted.sort(function(a, b) {
    return a - b;
  })
- console.log(ascendSort);
+return ascendSort;
  }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
