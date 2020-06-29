@@ -4,8 +4,20 @@
   Write a function that will return all street names which contain 'Lane' in their name.
 */
 
-function getLanes() {
+function check_lane(street)
+{
+  check=String(street).search("Lane");
+  if(check!=-1 )
+    return true;
 
+  return false; 
+}
+
+
+function getLanes(arr_streets) {
+
+  var new_array=arr_streets.filter( el=> check_lane(el) ); // new_array will store the elements with "lane word"
+  return new_array;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
