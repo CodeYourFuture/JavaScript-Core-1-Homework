@@ -6,9 +6,26 @@
 
   NOTE: only the names should be returned, not the means of transport.
 */
+function check_mode(place,mode)
+{
+  // console.log("place is "+place);
+  check=String(place).search(mode);
+  if(check!=-1 )
+    return true;
 
-function journeyPlanner() {
+  return false; 
+}
 
+
+function journeyPlanner(arr_places,mode) {
+
+  var new_array=arr_places.filter(el=>check_mode(el,mode)); // new_array will store the elements with given mode.
+  var final_places=[]; // will retieve only the names of the places.
+
+  for(let i=0;i<new_array.length;i++)
+    final_places.push(new_array[i][0]);
+
+  return final_places;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
