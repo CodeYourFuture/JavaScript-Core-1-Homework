@@ -10,8 +10,20 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
+function allEqual(arr) {
+  return new Set(arr).size === 1;
+}
 
+function bushChecker(arr) { 
+
+  if( new Set(arr).size === 1 ) // creates a set and if all the elements are same, size of the set will be 1.
+  {
+    answer="Bush is safe to eat from";
+  }
+  else 
+  answer= "Toxic! Leave bush alone!";
+
+  return answer;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
