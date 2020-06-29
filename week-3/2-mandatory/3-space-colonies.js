@@ -8,8 +8,19 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
+function check_family_name(fam_name)
+{
+  check=fam_name.search("family");
+  if(check!=-1 && fam_name[0]==="A")
+    return true; 
+  
+  return false;
+}
 
+function colonisers(voyagers) {
+
+  return voyagers.filter(check_family_name);
+ 
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
