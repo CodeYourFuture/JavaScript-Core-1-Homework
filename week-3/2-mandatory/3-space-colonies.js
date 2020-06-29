@@ -20,7 +20,6 @@ function check_family_name(fam_name)
 function colonisers(voyagers) {
 
   return voyagers.filter(check_family_name);
- 
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
