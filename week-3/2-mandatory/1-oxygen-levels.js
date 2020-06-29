@@ -9,8 +9,24 @@ To be safe, they need to land on the first unamed planet that has Oxygen levels 
 Write a function that finds the oxygen level of the first safe planet - Oxygen between 19.5% and 23.5%
 */
 
-function safeLevels() {
+var first=true;
 
+function check(element)
+{
+  if( parseFloat(element) > 19.5 && parseFloat(element) < 23.5 && first )
+  {
+    console.log("first element found is "+element);
+    first=false;
+    return element; 
+  }
+}
+
+function safeLevels(arr) {
+
+  first=true;
+  value=arr.filter(check);
+  final_value= String(value);
+  return final_value;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -30,7 +46,7 @@ function test(test_name, expr) {
 }
 
 test(
-    "safeLevels function works - case 2",
+    "safeLevels function works - case 1",
     safeLevels(oxygenLevels1) === "19.9%"
 );
 
