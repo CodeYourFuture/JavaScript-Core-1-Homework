@@ -21,14 +21,13 @@ function sortAges(arr) {
       result.push(arr[age]); // filters only numbers and adds to the empty array (result)//
     }
   }
-  return result;
+  function sorting(a, b) {
+    return a - b;  
 }    
-  // console.log(result);
-  function sorting(a, b) { 
-    return a - b  
-  }
+  return sortAscending = result.sort(sorting); // sorts numbers in ascending order//
+}
 
-return result.sort(sorting);  // sorts numbers in ascending order//
+  
 
 
 
