@@ -15,8 +15,34 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function sortAges(arr) {
-  
-}
+  let result = [];
+  for (let age = 0; age < agesCase2.length; age++) {
+    if (typeof agesCase2[age] === "number") {
+      result.push(agesCase2[age]); // filters only numbers and adds to the empty array (result)//
+    }
+  }
+  return result;
+}    
+  // console.log(result);
+  function sorting(a, b) {
+    return a - b
+  }
+
+return result.sort(sorting);
+
+
+
+//   let removeNonNumber = [];
+//   let sortAscending = [];
+//   for (let i = 0; i < sortAges.length; i++) {
+//     if (typeof arr[i] === "number") {
+//       removeNonNumber.push(arr[i]);
+//     }
+//   }
+//   sortAscending = function (a, b) {
+//     return a - b;
+// }
+// }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

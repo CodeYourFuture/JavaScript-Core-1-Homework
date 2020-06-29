@@ -57,28 +57,20 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  let numArray;
-  let roundedNum;
-  let strArray;
-  // newNum = Math.floor(numArray, 2);
+  
   for (let i = 0; i < arr.length; i++) {
-    if (numArray[i] > 100) {
-      numArray[i] = 100;
+    if (arr[i] > 100) {
+      arr[i] = "100%"; // gives any number above 100 a value of "100%"
     }
-    roundedNum = Math.floor(2);
-
+    else {
+      arr[i] = `${parseFloat(arr[i].toFixed(2))}%`;
+      // arr[i] = Math.round((arr[i] + Number.EPSILON) * 100) / 100 + "%" [alternative method]//
     }
-    return numArray[i].toFixed(2);
   }
-  output = numArray.toFixed(2);
-console.log(output);
+  return arr;
 }
+ 
 
-
-// arrString = numArray.toString();
-
-//   let num =
-// // return arr.toString()
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
