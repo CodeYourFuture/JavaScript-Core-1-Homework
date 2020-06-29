@@ -2,9 +2,9 @@
 function sort(arr)
 {
 	if(arr.length<=0)
-		return;
+		return;	
 
-	return HeapSort(arr,(arr.length-1));;
+	return HeapSort(arr,(arr.length-1)); // it returns a sorted array;
 }
 
 
@@ -66,7 +66,6 @@ function Max_Heapify(arr,i,len)
 	 Max_Heapify(arr,largest,len); // since we changed the element at largest position, we will have to run max-heapify again for that element to see if it is a bigger than it's child.
 
 	  return;
-
 }
 
 function HeapSort(arr,len)
@@ -75,7 +74,7 @@ function HeapSort(arr,len)
 	if(len<=0)
 		return;
 
-	Build_Max_Heap(arr,len);
+	Build_Max_Heap(arr,len); // every parent should be greater than his child
 
 	for( let i=len ; i > 0 ; i-- )
 	{
@@ -89,5 +88,4 @@ function HeapSort(arr,len)
 return arr;
 }
 
-// export {sort,HeapSort, Max_Heapify,Build_Max_Heap};
 export {sort};

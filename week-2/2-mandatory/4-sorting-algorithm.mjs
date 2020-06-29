@@ -19,7 +19,7 @@ import {sort} from './heapSort.mjs';
 
 function sortAges(arr) {
  
-  var new_array=new Array();
+  var new_array=new Array(); // it will contain only numbers but in random order.
   var sorted_array=new Array();
   var index=0;
 
