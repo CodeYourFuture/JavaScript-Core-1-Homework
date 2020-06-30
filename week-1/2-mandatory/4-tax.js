@@ -12,12 +12,12 @@ function calculateSalesTax() {}
   ===================
   The business has informed you that prices must have 2 decimal places
   They must also start with the currency symbol
-  Write a function that transforms numbers into the format £0.00
+  Write a function that adds tax to a number, and then transforms the total into the format £0.00
 
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function addTaxAndFormatCurrency() {}
 
 /* ======= TESTS - DO NOT MODIFY =====
 There are some Tests in this file that will help you work out if your code is working.
@@ -41,6 +41,6 @@ test("calculateSalesTax function - case 1 works", calculateSalesTax(15), 18)
 test("calculateSalesTax function - case 2 works", calculateSalesTax(17.5), 21)
 test("calculateSalesTax function - case 3 works", calculateSalesTax(34), 40.8)
 
-test("formatCurrency function - case 1 works", formatCurrency(15), "£18.00")
-test("formatCurrency function - case 2 works", formatCurrency(17.5), "£21.00")
-test("formatCurrency function - case 3 works", formatCurrency(34), "£40.80")
+test("addTaxAndFormatCurrency function - case 1 works", addTaxAndFormatCurrency(15), "£18.00")
+test("addTaxAndFormatCurrency function - case 2 works", addTaxAndFormatCurrency(17.5), "£21.00")
+test("addTaxAndFormatCurrency function - case 3 works", addTaxAndFormatCurrency(34), "£40.80")
