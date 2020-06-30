@@ -23,35 +23,75 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
+  function isValidPassword(password) {
+    function isLongEnough(password) {
+      return password.length >= 5;
+    }
 
+    function atLeastOneUpperCase(password) {
+      return /[A-Z]/.test(password);
+    }
+
+    function atLeastOneLowerCase(password) {
+      return /[a-z]/.test(password);
+    }
+
+    function atLeastOneNumber(password) {
+      return /[0-9]/.test(password);
+    }
+
+    function atLeastOneSymbol(password) {
+      return /[!#$%.]/.test(password);
+    }
+
+    return (
+      isLongEnough(password) &&
+      atLeastOneUpperCase(password) &&
+      atLeastOneLowerCase(password) &&
+      atLeastOneNumber(password) &&
+      atLeastOneSymbol(password)
+    );
+  }
+
+  function checkingFirstOccurence(allPasswords, password, checkingIndex) {
+    return allPasswords.indexOf(password) === checkingIndex;
+  }
+
+  return passwords.map(
+    (password, index) =>
+      isValidPassword(password) &&
+      checkingFirstOccurence(passwords, password, index)
+  );
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
-const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
+const passwords1 = ['Se%5', 'TktE.TJTU', '384#HsHF', 'dvyyeyy!5', 'tryT3729'];
+const passwords2 = ['StUFf27%', 'Pl3nty!', 'Jai33', 'shajsaUA**&&', 'Pl3nty!'];
 
 const util = require('util');
 
 function test(test_name, actual, expected) {
-    let status;
-    if (util.isDeepStrictEqual(actual, expected)) {
-        status = "PASSED";
-    } else {
-        status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
-    }
+  let status;
+  if (util.isDeepStrictEqual(actual, expected)) {
+    status = 'PASSED';
+  } else {
+    status = `FAILED: expected: ${util.inspect(
+      expected
+    )} but your function returned: ${util.inspect(actual)}`;
+  }
 
-    console.log(`${test_name}: ${status}`);
+  console.log(`${test_name}: ${status}`);
 }
 
 test(
-  "validatePasswords function works - case 1",
+  'validatePasswords function works - case 1',
   validatePasswords(passwords1),
   [false, false, true, false, false]
- );
+);
 
 test(
-  "validatePasswords function works - case 2",
+  'validatePasswords function works - case 2',
   validatePasswords(passwords2),
   [true, true, false, false, false]
 );
