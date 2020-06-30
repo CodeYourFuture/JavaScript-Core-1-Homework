@@ -10,10 +10,14 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
+function bushChecker(berry) {
+  for(let i=0; i < berry.length; i++) {
+if(berry[i] !== "pink") {
+  return `Toxic! Leave bush alone!`;
+    } return `Bush is safe to eat from`
 
 }
-
+}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
