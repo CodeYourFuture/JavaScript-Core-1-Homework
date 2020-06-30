@@ -16,9 +16,10 @@ var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
 function checkTheIndexForNull (index){
-    return index==="null";
+    return index === "null";
 } 
 var exitProgram= pairsByIndex.some(checkTheIndexForNull);
+//https://nodejs.org/api/process.html#process_process_exit_code
 process.exit(1);
 
 var pairs = pairsByIndex.map(function(indexes) {
