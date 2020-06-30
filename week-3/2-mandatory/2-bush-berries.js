@@ -11,10 +11,10 @@
 */
 
 function bushChecker(arr) {
-  if(arr.find(berryColor => berryColor != "pink") === undefined){
-    return "Bush is safe to eat from";
-  }
-  return "Toxic! Leave bush alone!";
+  if(arr.some(berryColor => berryColor != "pink")){
+    return "Toxic! Leave bush alone!";
+    }
+  return "Bush is safe to eat from";
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
