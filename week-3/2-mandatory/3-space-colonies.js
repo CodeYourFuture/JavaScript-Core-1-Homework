@@ -7,9 +7,12 @@
 
   NOTE: don't include any element that is not a "family".
 */
+let newArray = [];
 
-function colonisers() {
-
+function colonisers(name) {
+if(name.includes("family") === true && name.startsWith("A")=== true) {
+  newArray.push(name);
+}
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
