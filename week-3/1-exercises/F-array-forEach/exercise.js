@@ -21,9 +21,15 @@ function sorting3And5Remainer (number){
   }
 }
 
-let sortedRemainer = arr.map(sorting3And5Remainer);
+function log(number){
+  console.log (number);
+}
 
-console.log (sortedRemainer);
+//let sortedRemainer = 
+
+arr.map(sorting3And5Remainer).forEach(log);
+
+//console.log (sortedRemainer);
 
 /* EXPECTED OUTPUT */
 
