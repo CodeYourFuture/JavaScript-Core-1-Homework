@@ -7,7 +7,7 @@
   Answer the following questions:
 
   1. This program throws an error. Why? (If you can't find it, try executing it). b IS UNDEFINED
-  2. Remove the line that throws the error.   LINE 20 REMOVED
+  2. Remove the line that throws the error.   LINE 31 REMOVED
   3. What is printed to the console? 2  6  4  9  6  13  8
   4. How many times is "f1" called?  F1 IS CALLED TWICE
   5. How many times is "f2" called?  F2 IS CALLED 3 TIMES
