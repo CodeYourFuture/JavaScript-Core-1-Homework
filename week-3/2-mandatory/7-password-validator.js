@@ -21,24 +21,22 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
-function checkPassword(password){
+
+
+
+function validatePasswords(passwords) {
+  return passwords.map((password) => {
 
   let passwordArray = password.split("");
- 
-  
+   
   return password.length > 5  && 
   passwordArray.some(item => item >= "A" && item <= "Z") &&
   passwordArray.some(item => item >= "a" && item <= "z") &&
   passwordArray.some(item => item >= "0" && item <= "9") &&
   passwordArray.some(item =>["!", "#", "$", "%", "."].indexOf(item) >= 0) &&
-  passwordArray.some(item =>(item >= "A" && item <= "Z") || (item >= "a" && item <= "z")  || 
+  passwordArray.some(item =>(item >= "A" && item <= "Z") || (item >= "a" && item <= "z") || 
   (item >= "0" && item <= "9") || ["!", "#", "$", "%", "."].indexOf(item) >= 0);
-}
-
-
-function validatePasswords(passwords) {
-  console.log(passwords.map(checkPassword));
-  //return passwords.map(checkPassword);
+});
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -79,6 +77,6 @@ test(
  test(
    "validatePasswords function works - case 2",
    arraysEqual(
-      validatePasswords(passwords2), [true, true, false, false, false]
+      validatePasswords(passwords2), [true, true, false, false, false] // The right array is [true, true, true, false, true]
    )
  );
