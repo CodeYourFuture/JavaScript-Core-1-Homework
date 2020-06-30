@@ -90,6 +90,17 @@ function testAll() {
     logged === "The ball has shaken!"
   );
   test(`shakeBall returns an string answer`, typeof answer === "string");
+
+  test(
+    `checkAnswer("It is decidedly so.") returns "very positive`,
+    checkAnswer("It is decidedly so.") === "very positive"
+  )
+
+  test(
+    `checkAnswer("My reply is no.") returns "very negative`,
+    checkAnswer("My reply is no.") === "very negative"
+  )
+
   test(
     `checkAnswer returns the level of positivity"`,
     ["very positive", "positive", "negative", "very negative"].includes(
