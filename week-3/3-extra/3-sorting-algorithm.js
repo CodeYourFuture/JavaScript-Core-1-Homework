@@ -14,35 +14,35 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sort(a, b) {
-  return a-b;
-}
+
 
 function sortAges(arr) {
-  let test_arr =[];
-  let test1_arr = [];
+  let test=[];
+  let test1=[];
   let index;
-  for (let i = 0; i < arr.length; i++){
-    test_arr[i] = arr[i];
-  }
-
-  for (let i = 0; i < arr.length; i++) {
-    test_arr[i] = arr[i];
-    if(test_arr[i]===Number(test_arr[i])) {
-      test1_arr.push(test_arr[i]);
+    for(let i=0;i<arr.length;i++){
+        test[i]=arr[i];
     }
-  }
-    for (let i = 0; i < arr.length; i++){
-      for(let j = 0; j < arr.length; j++) {
-        if(test1_arr[i] < test1_arr[j]){
-          let temp = test1_arr[j];
-          test1_arr[i] = test1_arr[j];
-          test1_arr[i] = temp;
+    for(let i=0;i<arr.length;i++){
+      test[i]=arr[i];
+      if(test[i]===Number(test[i])){
+       test1.push(test[i]);
+      }
+    }
+    for(let i=0;i<test1.length;i++)
+    {
+      for(let j=0;j<test1.length;j++){
+        if(test1[i]<test1[j]){
+          let temp=test1[j];
+          test1[j]=test1[i]
+          test1[i]=temp;
         }
       }
     }
-    return test1_arr.sort(sort);
+    return test1;
   }
+ 
+
 
 
 /* ======= TESTS - DO NOT MODIFY ===== */

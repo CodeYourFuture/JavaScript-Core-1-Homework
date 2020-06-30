@@ -10,8 +10,20 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
 
+function bushChecker(arr) {
+  let Array =[];
+  let index;
+  for (let i = 0; i < arr.length; i++) {
+      Array[i] = arr[i];   
+  }
+  for (var i = 0; i < arr.length; i++ ) {
+    if(Array[i] !== "pink"){
+        return 'Toxic! Leave bush alone!';
+    }}
+return 'Bush is safe to eat from';
+  
+ 
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
