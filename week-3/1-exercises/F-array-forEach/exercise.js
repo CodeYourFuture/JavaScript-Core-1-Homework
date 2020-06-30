@@ -9,6 +9,22 @@
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
+function sorting3And5Remainer (number){
+  if (number%3 === 0 ){
+    return "Fizz";
+  } if (number%5 === 0){
+    return "Buzz";
+  } if (number%3 === 0 && number%5 === 0){
+    return "FizzBuzz";
+  } else{
+    return number;
+  }
+}
+
+let sortedRemainer = arr.map(sorting3And5Remainer);
+
+console.log (sortedRemainer);
+
 /* EXPECTED OUTPUT */
 
 /*
