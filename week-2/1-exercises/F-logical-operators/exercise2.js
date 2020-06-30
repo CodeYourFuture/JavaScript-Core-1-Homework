@@ -5,7 +5,33 @@
   Update the code so that you get the expected result.
 */
 
-function isNegative() {}
+function isNegative(a) {
+  if (a < 0) {
+    return true;
+  } 
+  return false;
+}
+
+function isBetween5and10(a) {
+  if (a > 5 && a <= 10) {
+    return true;
+  }
+  return false;
+}
+
+function isShortName(a) {
+  if (a.length < 7) {
+    return true;
+  }
+  return false;
+} 
+
+function startsWithD(a) {
+  if(a[0] === "D") {
+    return true;
+  }
+  return false;
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
