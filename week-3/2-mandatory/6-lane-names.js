@@ -4,7 +4,7 @@
   Write a function that will return all street names which contain 'Lane' in their name.
 */
 
-function getLanes(item) {
+/* function getLanes(item) {
     let streetNamesWithLanes=[];
     if (item.includes("Lane")){
         streetNamesWithLanes.push(item);
@@ -12,6 +12,10 @@ function getLanes(item) {
         return "Does not include Lane";
     }
     return streetNamesWithLanes;
+} */
+
+function getLanes(item) {
+    return item.filter(x => x.includes('Lane'));
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
