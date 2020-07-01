@@ -9,6 +9,15 @@
 var name = "Daniel";
 var danielsRole = "mentor";
 
+function checker(){
+if(danielsRole === 'mentor'){
+  return `Hi, I'm ${name}, I'm a mentor.`;
+}else{
+  return `Hi, I'm ${name}, I'm a student.`;
+}
+}
+
+console.log(checker());
 /* 
 EXPECTED RESULT
 ---------------

@@ -14,7 +14,7 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-
+let array = [20 , 10 , 30, 25];
 
 
 //THIS FUNCTION REMOVES ANY NON NUMBER VALUES FROM A GIVEN ARRAY.
@@ -24,10 +24,10 @@ function numberChecker(arr){
     for(let z=0; z < arr.length; z++){
        
         if(typeof(arr[z]) === 'number'){
-            emptyArray.push(arr[z]);
+           emptyArray.push(arr[z]);
         }else{
             //remove selected index
-           // arr.splice(z, 1);
+           //arr.splice(z, 1);
         }
     
     

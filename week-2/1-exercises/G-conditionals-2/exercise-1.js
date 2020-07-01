@@ -7,6 +7,13 @@
 */
 
 function negativeOrPositive(number) {
+  let num = Math.sign(number);
+  if(num === -1){
+    return `negative`;
+  }else if(num === 1 || num === 0){
+    return `positive`;
+  }
+
 
 }
 

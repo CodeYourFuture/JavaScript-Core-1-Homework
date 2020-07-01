@@ -10,7 +10,14 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
+function bushChecker(arr) {
+   let safeToEat = arr.every(item => item === "pink");
+   
+   if(safeToEat === false){
+    return `Toxic! Leave bush alone!`;
+   }else {
+     return "Bush is safe to eat from";
+   }
 
 }
 

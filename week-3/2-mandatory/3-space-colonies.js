@@ -7,11 +7,29 @@
 
   NOTE: don't include any element that is not a "family".
 */
+let myArr = [
+"Adam family",
+"Potter family",
+"Eric",
+"Aldous",
+"Button family",
+"Jude",
+"Carmichael",
+"Bunny",
+"Asimov",
+"Oscar family",
+"Avery family",
+"Archer family"
+];
 
-function colonisers() {
+
+function colonisers(arr) {
+  let selectedFamilies = arr.filter(item => item.length > 9 && item.charAt(0) === 'A');
+  return selectedFamilies;
+
 
 }
-
+//console.log(colonisers(myArr));
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [

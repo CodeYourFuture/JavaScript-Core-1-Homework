@@ -7,11 +7,24 @@
 
 // Finish the predicate function to test if the passed number is negative (less than zero)
 function isNegative(number) {
+  let num = Math.sign(number);
+  if(num === 1 ){
+    return false;
 
+  }else {
+    return true;
+  }
+  
 }
+
 
 // Finish the predicate function to test if the passed number is between 0 and 10
 function isBetweenZeroAnd10(number) {
+  if(number >= 0 && number <= 10){
+    return true;
+  }else {
+    return false;
+  }
 
 }
 

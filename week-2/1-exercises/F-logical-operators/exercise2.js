@@ -5,7 +5,42 @@
   Update the code so that you get the expected result.
 */
 
-function isNegative() {}
+function isNegative(num) {
+  let num2 = Math.sign(num);
+  if(num2 !== 1){
+      return true;
+  }else {
+    return false;
+  }
+}
+
+function isShortName(name){
+    let len = name.length;
+    if(len <= 6){
+      return true;
+    }else{
+      return false;
+    }
+
+}
+function isBetween5and10(num){
+  if(num >= 5 && num <= 10){
+      return true;
+  }else{
+    return false;
+  }
+
+}
+
+function startsWithD(name){
+  let firstLetter = name.charAt(0);
+  if(firstLetter === 'D'){
+    return firstLetter;
+  }else{
+    return `${name} doesn't start with D`;
+  }
+
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
