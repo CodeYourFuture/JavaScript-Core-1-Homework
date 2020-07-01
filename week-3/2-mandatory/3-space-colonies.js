@@ -7,17 +7,22 @@
 
   NOTE: don't include any element that is not a "family".
 */
-
-
+ 
 
 function colonisers(item) {
   let newColonisers=[];
-  item.filter("family").includes("A");
-  newColonisers.push(item)
-  return newColonisers;
+  
+  if(item.includes("family")){
+    newColonisers = item.filter("A");
+    //console.log(newColonisers);
+    return newColonisers;
+  } else{
+    return "Go in search for a new planet";
+  }
+  //console.log(newColonisers);
 }
-colonisers();
-
+colonisers(voyagers);
+console.log(colonisers);
 /* ======= TESTS - DO NOT MODIFY ===== */
 
  const voyagers = [
