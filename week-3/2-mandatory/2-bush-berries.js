@@ -9,9 +9,22 @@
 
   Use the tests to confirm which message to return
 */
+// check one berry colour is pink === true
+function checkColourPink(berryColour) {
+  if(berryColour === 'pink') {
+    return true;
+  }
+}
 
-function bushChecker() {
-
+// check all berry colours are pink === true
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
+function bushChecker(allBushBerryColours) {
+  let colourResult = allBushBerryColours.every(checkColourPink);
+  if(colourResult === true) {
+    return "Bush is safe to eat from";
+  } else {
+    return "Toxic! Leave bush alone!";
+  }
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
