@@ -22,28 +22,50 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
+// looks great but does a lot of extra work
+// function validatePasswords(passwords) {
+//     return passwords.map((password,index,arr) => {
 
-function validatePasswords(passwords) {
-    return passwords.map((password,index,arr) => {
-
-      let passwordArray = password.split("");
+//       let passwordArray = password.split("");
        
-      return password.length > 5  && // check the min length of password
-      // check if the password have uppercase letter
-      passwordArray.some(item => item >= "A" && item <= "Z") && 
-      // check if the password have lowercase letter
-      passwordArray.some(item => item >= "a" && item <= "z") &&
-      // check if the password have number
-      passwordArray.some(item => item >= "0" && item <= "9") &&
-      // check if the password have special symbols
-      passwordArray.some(item =>["!", "#", "$", "%", "."].includes(item)) && 
-      /* this validation for exception of all symbols that are not English alphabet symbols,
-      not numbers or non-alphanumeric symbols ("!", "#", "$", "%", "."). */
-      passwordArray.every(item =>(item >= "A" && item <= "Z") || (item >= "a" && item <= "z")  || 
-      (item >= "0" && item <= "9") || ["!", "#", "$", "%", "."].includes(item)) &&
-      // check if the password is duplicated
-      index === arr.indexOf(password);
-    });
+//       return password.length > 5  && // check the min length of password
+//       // check if the password have uppercase letter
+//       passwordArray.some(item => item >= "A" && item <= "Z") && 
+//       // check if the password have lowercase letter
+//       passwordArray.some(item => item >= "a" && item <= "z") &&
+//       // check if the password have number
+//       passwordArray.some(item => item >= "0" && item <= "9") &&
+//       // check if the password have special symbols
+//       passwordArray.some(item =>["!", "#", "$", "%", "."].includes(item)) && 
+//       /* this validation for exception of all symbols that are not English alphabet symbols,
+//       not numbers or non-alphanumeric symbols ("!", "#", "$", "%", "."). */
+//       passwordArray.every(item =>(item >= "A" && item <= "Z") || (item >= "a" && item <= "z")  || 
+//       (item >= "0" && item <= "9") || ["!", "#", "$", "%", "."].includes(item)) &&
+//       // check if the password is duplicated
+//       index === arr.indexOf(password);
+//     });
+// }
+function validatePasswords(passwords) {
+  return passwords.map((password,index,arr) => {
+
+    // check if the password is duplicated and the min length of password
+    if(index !== arr.indexOf(password) || password.length < 5){
+       return false;
+    }; 
+    let passwordArray = password.split("");
+     
+    return passwordArray.some(item => item >= "A" && item <= "Z") && // check if the password have uppercase letter 
+    // check if the password have lowercase letter
+    passwordArray.some(item => item >= "a" && item <= "z") &&
+    // check if the password have number
+    passwordArray.some(item => item >= "0" && item <= "9") &&
+    // check if the password have special symbols
+    passwordArray.some(item =>["!", "#", "$", "%", "."].includes(item)) && 
+    /* this validation for exception of all symbols that are not English alphabet symbols,
+    not numbers or non-alphanumeric symbols ("!", "#", "$", "%", "."). */
+    passwordArray.every(item =>(item >= "A" && item <= "Z") || (item >= "a" && item <= "z")  || 
+    (item >= "0" && item <= "9") || ["!", "#", "$", "%", "."].includes(item));
+  });
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
