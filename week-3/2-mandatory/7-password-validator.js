@@ -23,7 +23,8 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
-
+  let conditions = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  return passwords.map(x => (x.length >= 5 && conditions.some(y => x.includes(y)) && x.toLowerCase() != x && x.toUpperCase() != x && (x.indexOf('!') != -1 || x.indexOf('#') != -1 || x.indexOf('$') != -1 || x.indexOf('%') != -1 || x.indexOf('.') != -1)) ? true : false)
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
