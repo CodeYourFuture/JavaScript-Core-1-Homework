@@ -7,12 +7,8 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner(item) {
-  let newArr=[];
-  for(i = 0; i < item.length; i++){
-    
-  }
-
+function journeyPlanner(item, vehicle) {
+  return item.filter(x => x.includes(vehicle)).map(x => x[0])
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
