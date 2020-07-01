@@ -3,3 +3,18 @@
 
 var numbers = [0.1, 0.2, 0.3, 0.4, 0.5];
 
+//var brandnewarray=[];
+
+var brandnewarray=numbers.map(function multiplyBy100(num){
+    return num*100;
+});
+console.log("result by using anamanous function="+brandnewarray);
+
+brandnewarray=numbers.map(num=>{
+    return num*100;
+})
+console.log("result by using arrow function="+brandnewarray);
+
+brandnewarray=numbers.map(num=>num*100);
+console.log("result by using arrow function without {},so no need to return="+brandnewarray);
+
