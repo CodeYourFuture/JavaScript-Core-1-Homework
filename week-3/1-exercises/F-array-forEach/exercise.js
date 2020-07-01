@@ -19,7 +19,7 @@ arr.forEach(function test(num,index){
     console.log("Buzz");
   }
   else{
-    console.log(index);
+    console.log(num);
   }
 });
 
