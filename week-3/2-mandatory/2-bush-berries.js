@@ -9,15 +9,23 @@
 
   Use the tests to confirm which message to return
 */
+let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"];
+let bushBerryColours2 = ["pink", "pink", "pink", "pink"];
 
-function bushChecker() {
-
+function bushChecker(berry) {
+    if (berry.some(color => color !== "pink")){
+      return "Toxic! Leave bush alone!";
+    } else {
+      return "Bush is safe to eat from";
+    }
 }
+bushChecker(bushBerryColours1);
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
-let bushBerryColours2 = ["pink", "pink", "pink", "pink"]
+// let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
+// let bushBerryColours2 = ["pink", "pink", "pink", "pink"]
 
 function test(test_name, expr) {
   let status;
