@@ -10,8 +10,18 @@ Write a function that finds the oxygen level of the first safe planet - Oxygen b
 */
 
 function safeLevels() {
-
+    const convert = arr.map(function (level) {
+      return (parseFloat(level))
+    })
+    const safeLevels = convert.filter(function (n) {
+      return n > 19.5 && n < 23.5
+    })
+  return `"${safeLevels[0]}%"`
 }
+// let output = `"${safeLevels[0]}%"`
+// console.log(output)
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

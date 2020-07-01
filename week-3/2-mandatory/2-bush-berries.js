@@ -10,9 +10,25 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
-
+function bushChecker(bush) {
+  if (bush.filter(color => color !== "pink").length > 0) {
+    return "Toxic! Leave bush alone!"
+  }
+else
+return "Bush is safe to eat from"
 }
+
+// function isNotPink(color) {
+//   return color !== "pink";
+// }
+
+// function bushChecker(bush) {
+//   if (bush.filter(isNotPink).length > 0) {
+//     return "Toxic! Leave bush alone!"
+//   }
+//   else
+//     return "Bush is safe to eat from"
+// }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
