@@ -1,6 +1,7 @@
 function halve(number) {
   // complete the function here
-  return number/2         
+    var divide = number / 2;
+    return divide;         
 }
 
 var result = halve(12);
