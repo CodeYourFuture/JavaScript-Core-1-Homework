@@ -8,7 +8,15 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
+
+/*function colonisers(arr) {
+let safefamily =arr.filter(x=> x.length > 9 && x.charAt(0) ==="A");
+return safefamily;
+}*/
+
+function colonisers(arr) {
+  let family = arr.filter(x=> x.length > 9 && x.charAt(0) === "A");
+  return family;
 
 }
 
