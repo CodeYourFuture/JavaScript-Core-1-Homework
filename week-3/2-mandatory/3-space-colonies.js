@@ -10,13 +10,17 @@
 
 
 
-function colonisers() {
-
+function colonisers(item) {
+  let newColonisers=[];
+  item.filter("family").includes("A");
+  newColonisers.push(item)
+  return newColonisers;
 }
+colonisers();
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const voyagers = [
+ const voyagers = [
   "Adam family",
   "Potter family",
   "Eric",
@@ -29,7 +33,7 @@ const voyagers = [
   "Oscar family",
   "Avery family",
   "Archer family"
-];
+]; 
 
 function arraysEqual(a, b) {
   if (a === b) return true;
