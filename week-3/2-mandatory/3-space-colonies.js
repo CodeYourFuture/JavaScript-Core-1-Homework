@@ -8,7 +8,9 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
+function colonisers(arr) {
+  let alphaSettlers = arr.filter(item => item.length > 9 && item.charAt(0) === 'A');
+  return alphaSettlers;
 
 }
 
