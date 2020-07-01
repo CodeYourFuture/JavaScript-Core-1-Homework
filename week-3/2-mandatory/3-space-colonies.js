@@ -8,21 +8,11 @@
   NOTE: don't include any element that is not a "family".
 */
  
-
 function colonisers(item) {
-  let newColonisers=[];
-  
-  if(item.includes("family")){
-    newColonisers = item.filter("A");
-    //console.log(newColonisers);
-    return newColonisers;
-  } else{
-    return "Go in search for a new planet";
-  }
-  //console.log(newColonisers);
+  return item.filter(x => x.includes('family') && x[0] == 'A');
 }
-colonisers(voyagers);
-console.log(colonisers);
+
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 
  const voyagers = [

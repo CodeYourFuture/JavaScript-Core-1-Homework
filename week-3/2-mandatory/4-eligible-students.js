@@ -6,34 +6,46 @@
     (see tests to confirm how this data will be structured)
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
-/*
+
+
+// function studentsNamesWithGrades (item){
+//   let arr =[];
+//   arr.push(item[i][1] >= 8);
+//   return arr;
+// }
+
+
+// function eligibleStudents (item){
+//   let namesArr=[];
+//   item.map(item[i][1] => item[i]);
+// }
 const attendances = [
   ["Ahmed", 8],
   ["Clement", 10],
   ["Elamin", 6],
   ["Adam", 7],
   ["Tayoa", 11],
-  ["Nina", 10]
-]
-*/
+  ["Nina", 10],
+];
 
-let attendOver8=[];
+function eligibleStudents() {
+  console.log(
+    attendances.filter((subarray) => (subarray[1] >= 8 ? subarray[1]:'')).map(a=>a[0])
 
-function eligibleStudents(arr) {
-  return arr [i][i] > 8;
+  );
 }
-console.log(eligibleStudents);
+eligibleStudents();
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const attendances = [
-  ["Ahmed", 8],
-  ["Clement", 10],
-  ["Elamin", 6],
-  ["Adam", 7],
-  ["Tayoa", 11],
-  ["Nina", 10]
-] 
+// const attendances = [
+//   ["Ahmed", 8],
+//   ["Clement", 10],
+//   ["Elamin", 6],
+//   ["Adam", 7],
+//   ["Tayoa", 11],
+//   ["Nina", 10]
+// ] 
 
 function arraysEqual(a, b) {
     if (a === b) return true;
