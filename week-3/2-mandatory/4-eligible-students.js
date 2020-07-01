@@ -19,33 +19,21 @@
 //   let namesArr=[];
 //   item.map(item[i][1] => item[i]);
 // }
+
+function eligibleStudents(item) {
+  return item.filter(x => x[1] >= 8).map(x => x[0]);
+}
+
+/* ======= TESTS - DO NOT MODIFY ===== */
+
 const attendances = [
   ["Ahmed", 8],
   ["Clement", 10],
   ["Elamin", 6],
   ["Adam", 7],
   ["Tayoa", 11],
-  ["Nina", 10],
-];
-
-function eligibleStudents() {
-  console.log(
-    attendances.filter((subarray) => (subarray[1] >= 8 ? subarray[1]:'')).map(a=>a[0])
-
-  );
-}
-eligibleStudents();
-
-/* ======= TESTS - DO NOT MODIFY ===== */
-
-// const attendances = [
-//   ["Ahmed", 8],
-//   ["Clement", 10],
-//   ["Elamin", 6],
-//   ["Adam", 7],
-//   ["Tayoa", 11],
-//   ["Nina", 10]
-// ] 
+  ["Nina", 10]
+ ] 
 
 function arraysEqual(a, b) {
     if (a === b) return true;
