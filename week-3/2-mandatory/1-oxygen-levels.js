@@ -22,6 +22,7 @@ function safeLevels(oxygen) {
 const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"]
 const oxygenLevels2 = ["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"]
 
+
 function test(test_name, expr) {
     let status;
     if (expr) {
