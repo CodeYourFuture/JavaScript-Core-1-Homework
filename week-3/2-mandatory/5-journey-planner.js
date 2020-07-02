@@ -7,8 +7,17 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
-
+function journeyPlanner(arr,a) {
+  
+  let routArray=arr.filter(function(rout){
+     return rout.includes(a);
+  })
+  //console.log(routArray);
+  var location=routArray.map(function(rout){
+    return rout[0];
+  })
+  
+  return location;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

@@ -23,6 +23,44 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
+  let lengthFilter=passwords.filter(function(pass){
+    return pass.length>=5;
+  })
+ // console.log("length="+lengthFilter);
+  let capFilter=lengthFilter.filter(function(pass){
+    // return str.match(/[a-z]/);
+    return pass.match(/[A-Z]/);
+  })
+  //console.log("cap="+capFilter);
+  
+  let lowFilter=capFilter.filter(function(pass){
+    // return str.match(/[a-z]/);
+    return pass.match(/[a-z]/);
+  })
+  
+  let numFilter=lowFilter.filter(function(pass){
+    // return str.match(/[a-z]/);
+    return pass.match(/[0-9]/);
+  })
+  let nonAlphaNumeric=["!", "#", "$", "%", "."];
+  let expFilter=numFilter.filter(function(pass){
+    // return str.match(/[a-z]/);
+    //("^.*[^a-zA-Z0-9].*$");
+    return pass.match(/[!#$%.]/);
+    //return pass.includes(nonAlphaNumeric);
+    
+  })
+
+  let final=passwords.map(function(pwd){
+      if(pwd.includes(expFilter)){
+        return true;
+      }
+      else{
+        return false;
+      }
+  })
+
+  return final;
 
 }
 

@@ -8,8 +8,13 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(arr,index) {
+let str="zubeda khanum";
+str.includes("khanum");
+let canStay=arr.filter(function(name){
+  return name[0]==='A' && name.includes("family");
+});
+return canStay;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
