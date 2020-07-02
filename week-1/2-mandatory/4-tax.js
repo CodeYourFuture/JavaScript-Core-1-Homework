@@ -6,8 +6,8 @@
 */
 
 function calculateSalesTax(productPrice) {
-   
-  return productPrice*20/100+productPrice ; 
+   saleTax= 20/100;
+  return productPrice*saleTax+productPrice ; 
     
 }
 
@@ -25,9 +25,18 @@ console.log(calculateSalesTax(15));
      wrote a function for this!)
 */
 
-function formatCurrency() {
+function formatCurrency(productPrice) {
+  saleTax= 20/100;
+  currency=  "£" ;
+
+
+  salePrice= productPrice* saleTax+ productPrice;
+  return currency + salePrice.toFixed(2) ;
 
 }
+
+console.log(formatCurrency(15));
+
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.

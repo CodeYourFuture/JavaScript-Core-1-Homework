@@ -4,7 +4,8 @@ Write a function that:
 - removes any spaces in the beginning or end of the strings
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
-*//*
+*/
+
 function tidyUpString(strArr) {
 let tidU =["/Daniel ", "irina ", " Gordon", "ashleigh "];
   
@@ -12,7 +13,7 @@ let tidU =["/Daniel ", "irina ", " Gordon", "ashleigh "];
 
 }
 
-*/
+
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -43,8 +44,9 @@ The function must:
 - remove the item at the specified index
 */
 
-//function remove(arr, index) {
-  //return; // complete this statement}
+function remove(arr, index) {
+return; // complete this statement
+}
 
 
 /*
@@ -55,12 +57,12 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-//function formatPercentage(arr) {}
+function formatPercentage(arr) {}
   
 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
-/*
+
 function arraysEqual(a, b) {
   if (a === b) return true;
   if (a == null || b == null) return false;
@@ -133,4 +135,3 @@ test(
   ])
 );
 
-*/
