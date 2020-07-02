@@ -9,17 +9,29 @@
 
   Use the tests to confirm which message to return
 */
+/*
+function checkPink(fruit) {
+  return fruit === "pink";
+}
+function bushChecker(arr) {
+  let tester = arr.every(checkPink);
+  let txt = "";
+  if (tester == true) {
+    txt = "Bush is safe to eat from";
+  } else {
+    txt = "Toxic! Leave bush alone!";
+  }
+  return txt;
+} */
 
 function bushChecker(arr) {
-  let testFruit = arr.every((item) => {
-    if (item === "pink") {
-      return "Bush is safe to eat from";
-    }
-    return "Toxic! Leave Bush alone!";
-  });
+  let testFruit = arr.every((item) => item === "pink");
+  if (testFruit === true) {
+    return "Bush is safe to eat from";
+  } else {
+    return "Toxic! Leave bush alone!";
+  }
 }
-
-
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

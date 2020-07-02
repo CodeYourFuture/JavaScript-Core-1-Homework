@@ -6,8 +6,11 @@
 
   NOTE: only the names should be returned, not the means of transport.
 */
+function location(arr) {
+  if arr.
+}
+function journeyPlanner(arr) {
 
-function journeyPlanner() {
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
