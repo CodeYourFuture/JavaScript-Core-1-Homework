@@ -9,6 +9,18 @@
 var name = "Daniel";
 var danielsRole = "mentor";
 
+<<<<<<< Updated upstream
+=======
+function studentormentor() {
+  if (danielsRole === 'mentor') {
+    return `Hi, I'm ${name}, I'm a mentor.`;
+  } else {
+    return `Hi, I'm ${name}, I'm a student.`;
+  }
+}
+// console.log(checker());
+
+>>>>>>> Stashed changes
 /* 
 EXPECTED RESULT
 ---------------
