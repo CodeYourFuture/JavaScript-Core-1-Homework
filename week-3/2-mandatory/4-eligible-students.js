@@ -8,13 +8,13 @@
 */
 
 //nested array [0] name [1] attendance, return array with just index [0] if [1] is >= 8
-function eligibleStudents(arr) {
-  let newArr = [];
-  for(let i= 0; i < arr.length; i++) {
-    if (arr[i][1] >= 8) {
-      newArr.push(arr[i][0]);
+function eligibleStudents(attendancesArray) {
+  let namesArray = [];
+  for(let i= 0; i < attendancesArray.length; i++) {
+    if (attendancesArray[i][1] >= 8) {
+      namesArray.push(attendancesArray[i][0]);
     }  
-  } return newArr;
+  } return namesArray;
 };
 
 

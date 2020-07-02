@@ -10,9 +10,9 @@
 
 //filter to remove non family and non A start
 
-function colonisers(arr) {
-  return arr.filter(function(el) {
-    return el.startsWith("A") && el.includes("family");
+function colonisers(voyagersArray) {
+  return voyagersArray.filter(function(voyagerName) {
+    return voyagerName.startsWith("A") && voyagerName.includes("family");
   })
 }
 

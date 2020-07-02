@@ -7,13 +7,13 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 // return[0] index value if incudes string "transport"
-function journeyPlanner(arr, transport) {
-  let newArr =[];
-for(let i = 0; i < arr.length; i++) {
-  if (arr[i].includes(transport)) {
-    newArr.push(arr[i][0]);
+function journeyPlanner(londonLocationsArray, transportMethod) {
+  let locationsAvailableArray =[];
+for(let i = 0; i < londonLocationsArray.length; i++) {
+  if (londonLocationsArray[i].includes(transportMethod)) {
+    locationsAvailableArray.push(londonLocationsArray[i][0]);
   } 
-  } return newArr;
+  } return locationsAvailableArray;
   
 }
 /* ======= TESTS - DO NOT MODIFY ===== */

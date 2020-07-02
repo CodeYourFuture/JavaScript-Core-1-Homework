@@ -5,12 +5,12 @@
 */
 
 
-  function checkLanes(string) {
-  return string.includes("Lane");
+  function checkLanes(streetNameAsString) {
+  return streetNameAsString.includes("Lane");
   }
 
-function getLanes(arr) {
- return arr.filter(checkLanes);
+function getLanes(streetNamesArray) {
+ return streetNamesArray.filter(checkLanes);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
