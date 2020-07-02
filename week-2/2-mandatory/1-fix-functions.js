@@ -59,16 +59,12 @@ function first5() {
 console.log(first5());
 
 
-function get3rdIndex(arr) {
+function get3rdIndex(array) {
   
-  let element= [11, 37, 62, 18, 19, 3, 30];
-
-
-  return element;
+  return array[3];
 }
-
-
-
+console.log(get3rdIndex(["fruit", "banana", "apple", "strawberry", "raspberry"]));
+console.log(get3rdIndex([11, 37, 62, 18, 19, 3, 30]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

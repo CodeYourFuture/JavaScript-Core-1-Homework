@@ -6,8 +6,8 @@
 */
 
 function calculateSalesTax(productPrice) {
-   
-  return productPrice*20/100+productPrice ; 
+   saleTax= 20/100;
+  return productPrice*saleTax+productPrice ; 
     
 }
 
@@ -25,14 +25,23 @@ console.log(calculateSalesTax(15));
      wrote a function for this!)
 */
 
-function addTaxAndFormatCurrency() {}
+
+function addTaxAndFormatCurrency(productPrice) {
+
+    saleTax= 20/100;
+    currency=  "£" ;
+  
+  
+    salePrice= productPrice* saleTax+ productPrice;
+    return currency + salePrice.toFixed(2) ;
+  
+  }
+  
+  
 
 
-function formatCurrency() {
 
-}
-
-/* ======= TESTS - DO NOT MODIFY =====
+/* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
 To run these tests type `node 4-tax.js` into your terminal
 */
