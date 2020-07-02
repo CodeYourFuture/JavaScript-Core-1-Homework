@@ -8,18 +8,13 @@
 */
 
 function capitalise(str) {
-  //firstChar = str[0]
+  
   str = str.split('');
   str[0]= str[0].toUpperCase()
   
   str = str.join('')
   return str
-  //str.join("")
-
-  //console.log(str)
-  //newStr.join(firstChar.toUpperCase())
-
-
+  
 }
 
 /* 
