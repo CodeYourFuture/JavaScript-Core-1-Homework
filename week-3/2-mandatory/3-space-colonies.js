@@ -8,8 +8,11 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(arr) {
+  let settlers = arr.filter(
+    (item, index, arr) => item[0] === "A" && arr[index].includes("family")
+  );
+  return settlers;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -26,24 +29,26 @@ const voyagers = [
   "Asimov",
   "Oscar family",
   "Avery family",
-  "Archer family"
+  "Archer family",
 ];
 
-const util = require('util');
+const util = require("util");
 
 function test(test_name, actual, expected) {
-    let status;
-    if (util.isDeepStrictEqual(actual, expected)) {
-        status = "PASSED";
-    } else {
-        status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
-    }
+  let status;
+  if (util.isDeepStrictEqual(actual, expected)) {
+    status = "PASSED";
+  } else {
+    status = `FAILED: expected: ${util.inspect(
+      expected
+    )} but your function returned: ${util.inspect(actual)}`;
+  }
 
-    console.log(`${test_name}: ${status}`);
+  console.log(`${test_name}: ${status}`);
 }
 
-test(
-  "colonisers function works",
-  colonisers(voyagers),
-  ["Adam family", "Avery family", "Archer family"]
-)
+test("colonisers function works", colonisers(voyagers), [
+  "Adam family",
+  "Avery family",
+  "Archer family",
+]);
