@@ -10,7 +10,7 @@ Write a function that finds the oxygen level of the first safe planet - Oxygen b
 */
 
 function oxygen(oxygenLevel){
-  return (oxygenLevel>"19.5%" && oxygenLevel<"23.5%")    
+  return ( parseFloat(oxygenLevel.trim('%')) > parseFloat("19.5%".trim('%')) && parseFloat(oxygenLevel.trim('%')) < parseFloat("23.5%".trim('%')))    
 }
 
 function safeLevels(arr) {
