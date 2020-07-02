@@ -1,6 +1,6 @@
 /*
   I am new to London and would like to know what transport I can take to different famous locations.
-  An array with London locations have been provided.
+  An array with London locations, and the forms of transport you can take to get there, have been provided.
 
   Return an array of where I can go if I only want to use a specific mode of transport.
 
@@ -8,58 +8,44 @@
 */
 
 function journeyPlanner() {
-
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const londonLocations = [
   ["Angel", "tube", "bus"],
+  ["Greenwich", "bus", "river boat", "dlr", "air line", "tube"],
   ["London Bridge", "tube", "river boat"],
   ["Tower Bridge", "tube", "bus"],
-  ["Greenwich", "bus", "river boat"]
 ]
 
-function arraysEqual(a, b) {
-  if (a === b) return true;
-  if (a == null || b == null) return false;
-  if (a.length != b.length) return false;
+const util = require('util');
 
-  for (let i = 0; i < a.length; ++i) {
-    if (a[i] !== b[i]) return false;
-  }
-
-  return true;
-}
-
-function test(test_name, expr) {
+function test(test_name, actual, expected) {
     let status;
-    if (expr) {
-      status = "PASSED";
+    if (util.isDeepStrictEqual(actual, expected)) {
+        status = "PASSED";
     } else {
-      status = "FAILED";
+        status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
     }
-  
+
     console.log(`${test_name}: ${status}`);
 }
 
-test("journeyPlanner function works - case 1",
-  arraysEqual(
-    journeyPlanner(londonLocations, "river boat"),
-    ["London Bridge", "Greenwich"]
-  )
-)
+test(
+  "journeyPlanner function works - case 1",
+  journeyPlanner(londonLocations, "river boat"),
+  ["Greenwich", "London Bridge"]
+);
 
-test("journeyPlanner function works - case 2",
-  arraysEqual(
-    journeyPlanner(londonLocations, "bus"),
-    ["Angel", "Tower Bridge", "Greenwich"]
-  )
-)
+test(
+  "journeyPlanner function works - case 2",
+  journeyPlanner(londonLocations, "bus"),
+  ["Angel", "Greenwich", "Tower Bridge"]
+);
 
-test("journeyPlanner function works - case 3",
-  arraysEqual(
-    journeyPlanner(londonLocations, "tube"),
-    ["Angel", "London Bridge", "Tower Bridge"]
-  )
-)
+test(
+  "journeyPlanner function works - case 3",
+  journeyPlanner(londonLocations, "tube"),
+  ["Angel", "Greenwich", "London Bridge", "Tower Bridge"]
+);
