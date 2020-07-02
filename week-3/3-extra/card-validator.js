@@ -13,19 +13,19 @@ function isBankCardValid(cardNumber){
     if (numberArray.length !== 16){
         return `The bank card number ${firstGroup} ${secondGroup} ${thirdGroup} ${fourthGroup} is not valid.length`;    
     }
-    if (numberArray.some(number =>  typeof number !== "number")){
-         return `The bank card number ${firstGroup} ${secondGroup} ${thirdGroup} ${fourthGroup} is not valid.nn`; 
+    if (numberArray.some(number =>  typeof Number(number) !== "number")){
+         return `The bank card number ${firstGroup} ${secondGroup} ${thirdGroup} ${fourthGroup} is not valid. There is non number characters.`; 
     }
     if(numberArray.reduce((accumulator, number) => accumulator + parseInt(number)) <= 16){
-        return `The bank card number ${firstGroup} ${secondGroup} ${thirdGroup} ${fourthGroup} is not valid 16.`; 
+        return `The bank card number ${firstGroup} ${secondGroup} ${thirdGroup} ${fourthGroup} is not valid. The summ of numbers is lower than 16`; 
     }
     if(numberArray[15] % 2 === 1){
-        return `The bank card number ${firstGroup} ${secondGroup} ${thirdGroup} ${fourthGroup} is not valid. even`; 
+        return `The bank card number ${firstGroup} ${secondGroup} ${thirdGroup} ${fourthGroup} is not valid. The last number is not even.`; 
     }
     if(numberArray.every((number, index, arr) => number === numberArray[0])){
-        return `The bank card number ${firstGroup} ${secondGroup} ${thirdGroup} ${fourthGroup} is not valid.9`; 
+        return `The bank card number ${firstGroup} ${secondGroup} ${thirdGroup} ${fourthGroup} is not valid. All numbers the same.`; 
     }
     return `The bank card number ${firstGroup} ${secondGroup} ${thirdGroup} ${fourthGroup} is valid.`;
    
 }
-console.log(isBankCardValid("888888888888n808"));
+console.log(isBankCardValid("0000000000000022"));
