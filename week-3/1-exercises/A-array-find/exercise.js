@@ -4,12 +4,16 @@
 */
 
 // write your code here
+function x(word){
+  return word.length>7 && word[0]==='A'
+}
+
+
 
 var names = ["Rakesh", "Antonio", "Alexandra", "Andronicus", "Annam", "Mikey", "Anastasia", "Karim", "Ahmed"];
 
-var longNameThatStartsWithA = findLongNameThatStartsWithA(names);
-
-console.log(longNameThatStartsWithA);
+var newArr = names.find(x);
+console.log(newArr);
 
 /* EXPECTED OUTPUT */
 // "Alexandra"
