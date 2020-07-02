@@ -21,6 +21,17 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
+function fiveOrMoreCharacters(password) {
+  return password.length >= 5;
+}
+
+function containsUpperCase(password) {
+  return password.includes(/^[A-Z]+$/);
+}
+
+function containsLowerCase(password) {
+  return password.includes(/^[a-z]+$/);
+}
 
 function validatePasswords(passwords) {
 
