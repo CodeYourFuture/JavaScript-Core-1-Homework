@@ -6,10 +6,16 @@
 
   NOTE: only the names should be returned, not the means of transport.
 */
-
-function journeyPlanner() {
+// return[0] index value if incudes string "transport"
+function journeyPlanner(arr, transport) {
+  let newArr =[];
+for(let i = 0; i < arr.length; i++) {
+  if (arr[i].includes(transport)) {
+    newArr.push(arr[i][0]);
+  } 
+  } return newArr;
+  
 }
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const londonLocations = [
