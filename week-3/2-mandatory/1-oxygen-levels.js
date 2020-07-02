@@ -9,6 +9,13 @@ To be safe, they need to land on the first unamed planet that has Oxygen levels 
 Write a function that finds the oxygen level of the first safe planet - Oxygen between 19.5% and 23.5%
 */
 
+/* NOTES
+filter() gives you a new array
+include() gives you a boolean
+every() gives you a boolean
+find() gives you the first value that meets the condition(s)
+*/
+
 function findRightPlanet(oxygenLevelOfPlanet) {
   if (parseFloat(oxygenLevelOfPlanet) > `${19.5}%` && parseFloat(oxygenLevelOfPlanet) < `${23.5}%`) {
     return `${oxygenLevelOfPlanet}%`;
@@ -18,9 +25,14 @@ function findRightPlanet(oxygenLevelOfPlanet) {
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-// find the first element that meets the condition and ends the test (different from filter)
+// find the first element that meets the condition and ends the test (different from filter which gives you a new array)
 function safeLevels(oxygenLevel) {
-  return oxygenLevel.find(findRightPlanet)
+  return oxygenLevel.find(findRightPlanet);
+}
+
+// EK's version - passed
+function safeLevels(oxygen) {
+  return oxygen.find(level => level > "19.5%" && level < "23.5%");
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

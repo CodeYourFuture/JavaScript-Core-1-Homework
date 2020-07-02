@@ -27,6 +27,13 @@ function bushChecker(allBushBerryColours) {
   }
 }
 
+// EK's version - .some function finds if any element is not 'pink'
+function bushChecker(berry) {
+  if (berry.some(color => color !== 'pink')) {
+    return "Toxic! Leave bush alone!";
+  } return "Bush is safe to eat from";
+}
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]

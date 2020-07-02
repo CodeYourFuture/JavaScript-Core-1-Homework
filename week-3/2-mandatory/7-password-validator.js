@@ -21,9 +21,9 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
-
+// https://stackoverflow.com/questions/36097097/password-validate-8-digits-contains-upper-lowercase-and-a-special-character
 function validatePasswords(passwords) {
-
+passwords.length >=5;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

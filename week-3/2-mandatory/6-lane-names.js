@@ -4,8 +4,21 @@
   Write a function that will return all street names which contain 'Lane' in their name.
 */
 
-function getLanes() {
+// https://www.youtube.com/watch?v=iOml7u_sAVk
+const streetNames = [
+    "Abchurch Lane",
+    "Adam's Court",
+    "Addle Hill",
+    "Addle Lane",
+    "Alban Highwalk"
+]
 
+function getLanes(streetNames) {
+  let result = streetNames.includes('Lane'); // returns boolean
+
+  if (result === true) {
+    return streetNames;
+  }
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

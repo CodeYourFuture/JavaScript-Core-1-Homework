@@ -8,8 +8,20 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
+// find elements that include "family" and starts with an "A"
+/* my version failed
+function colonisers(name) {
+  if (name.includes('family') && name.startsWith('A')) {
+  return name;
+  }
+}
 
+console.log(name.filter(colonisers));
+*/
+
+// EK's version modified
+function colonisers(voyagersArr) {
+  return voyagersArr.filter(voyager => voyager.includes('family') && voyager[0] === 'A');
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
