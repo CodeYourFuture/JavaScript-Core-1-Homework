@@ -7,8 +7,17 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function matchTransport(arr,tran){
+  return  arr.indexOf(tran) !== -1
+} 
 
+function journeyPlanner(arr,tran) {
+  const matchArrays= arr.filter(function (arr1){ 
+    return matchTransport(arr1,tran)
+  })
+  return matchArrays.map(function(firstItem) {
+    return firstItem[0]
+    })
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
