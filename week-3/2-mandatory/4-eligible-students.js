@@ -7,9 +7,18 @@
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
 
-function eligibleStudents() {
-
+function eligibleStudents(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      if (arr[i][j] >= 8) {
+        newArr.push(arr[i][0]);
+      }
+    }
+  } return newArr;
 }
+//console.log(newArr);
+//console.log(eligibleStudents(attendances));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -26,11 +35,11 @@ function arraysEqual(a, b) {
     if (a === b) return true;
     if (a == null || b == null) return false;
     if (a.length != b.length) return false;
-  
+
     for (let i = 0; i < a.length; ++i) {
       if (a[i] !== b[i]) return false;
     }
-  
+
     return true;
 }
 
@@ -41,7 +50,7 @@ function test(test_name, expr) {
     } else {
       status = "FAILED";
     }
-  
+
     console.log(`${test_name}: ${status}`);
 }
 

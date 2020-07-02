@@ -7,8 +7,14 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
-
+function journeyPlanner(locationsArr, transport) {
+  let newArr = [];
+  for(let i = 0; i < locationsArr.length; i++) {
+    if (locationsArr[i].includes(transport)) {
+      newArr.push(locationsArr[i][0]);
+    }
+  }
+  return newArr;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
