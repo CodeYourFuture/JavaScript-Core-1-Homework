@@ -5,20 +5,15 @@
 */
 
 // https://www.youtube.com/watch?v=iOml7u_sAVk
-const streetNames = [
-    "Abchurch Lane",
-    "Adam's Court",
-    "Addle Hill",
-    "Addle Lane",
-    "Alban Highwalk"
-]
 
 function getLanes(streetNames) {
-  let result = streetNames.includes('Lane'); // returns boolean
-
-  if (result === true) {
-    return streetNames;
+  let newArr = [];
+  for (let i = 0; i < streetNames.length; i++) {
+    if (streetNames[i].includes("Lane")) {
+      newArr.push(streetNames[i]);
+    }
   }
+  return newArr;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
