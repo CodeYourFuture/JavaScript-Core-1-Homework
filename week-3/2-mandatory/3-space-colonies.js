@@ -7,13 +7,16 @@
 
   NOTE: don't include any element that is not a "family".
 */
-let newArray = [];
 
-function colonisers(name) {
-if(name.includes("family") === true && name.startsWith("A")=== true) {
-  newArray.push(name);
+//filter to remove non family and non A start
+
+function colonisers(arr) {
+  return arr.filter(function(el) {
+    return el.startsWith("A") && el.includes("family");
+  })
 }
-}
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
