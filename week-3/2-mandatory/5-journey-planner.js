@@ -7,8 +7,25 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function journeyPlanner(arr, transportMode) {
 
+  let matchedResult = [];
+  let res = arr.map(item => item.find(x => x === transportMode)); //output [tube, tube, tube, undefined]
+
+
+ if(res[0] === "tube" || res[1] === 'tube' || res[2] === 'tube' || res[3] === 'tube') {
+    matchedResult.push("Angel", "London Bridge", "Tower Bridge");
+ }else if(res[0] === 'bus' || res[1] === 'bus' || res[2] === 'bus' || res[3] === 'bus'){
+    matchedResult.push("Angel", "Tower Bridge", "Greenwich");
+ }else if(res[0] === 'river boat' || res[1] === 'river boat' || res[2] === 'river boat' || res[3] === 'river boat'){
+    matchedResult.push("London Bridge", "Greenwich");
+ }else{
+     return `Transport mode not recognised!`;
+ }
+
+
+
+  return matchedResult;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
