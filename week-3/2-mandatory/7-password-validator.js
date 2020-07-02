@@ -21,21 +21,81 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
-function fiveOrMoreCharacters(password) {
-  return password.length >= 5;
+let test1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
+
+function fiveOrMoreCharacters(passwordString) {
+  if (passwordString.length >= 5) {
+    console.log(true);
+  } else {
+    console.log(false);
+    
+  };
 }
+  
 
 function containsUpperCase(password) {
-  return password.includes(/^[A-Z]+$/);
+  if (password.includes("A", "B", "C")) {
+    console.log(true);
+  } else {
+    console.log(false);
+
+  };
 }
 
 function containsLowerCase(password) {
-  return password.includes(/^[a-z]+$/);
+  if (password.includes("a", "b", "c")) {
+    console.log(true);
+  } else {
+    console.log(false);
+
+  };
 }
+
+function containsNumbers(password) {
+  if (password.includes("0", "1", 2, "3")) {
+    console.log(true);
+  } else {
+    console.log(false);
+
+  };
+}
+
+function containsSymbols(password) {
+  if (password.includes("!", "#", "$", "%", ".", "*", "&")) {
+    console.log(true);
+  } else {
+    console.log(false);
+
+  };
+}
+
+function allPass(password) {
+  if(fiveOrMoreCharacters === true) {
+    if(containsUpperCase === true) {
+      if(containsLowerCase === true) {
+        if(containsNumbers === true) {
+          if(containsSymbols === true) {
+  return true;
+} return false;
+        }
+      }
+    }
+  }
+}
+
 
 function validatePasswords(passwords) {
-
+  let returnArray = [];
+  for(let i =0; i < passwords.length; i++) {
+    if (fiveOrMoreCharacters === true && containsUpperCase === true && containsLowerCase === true && containsNumbers === true && containsSymbols === true) {
+     returnArray.push(true);
+    } else {
+      returnArray.push(false);
+    } 
+  } return returnArray;
 }
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
