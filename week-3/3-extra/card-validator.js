@@ -13,7 +13,7 @@ function isBankCardValid(cardNumber){
     if (numberArray.length !== 16){
         return `The bank card number ${firstGroup} ${secondGroup} ${thirdGroup} ${fourthGroup} is not valid.length`;    
     }
-    if (numberArray.some(number =>  parseInt(number)+"" === "")){
+    if (numberArray.some(number =>  typeof number !== "number")){
          return `The bank card number ${firstGroup} ${secondGroup} ${thirdGroup} ${fourthGroup} is not valid.nn`; 
     }
     if(numberArray.reduce((accumulator, number) => accumulator + parseInt(number)) <= 16){
