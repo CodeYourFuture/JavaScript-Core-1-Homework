@@ -9,9 +9,24 @@
 */
  
 function colonisers(item) {
-  return item.filter(x => x.includes('family') && x[0] == 'A');
+  return item.filter(x => x.includes('family') && x[0] === 'A');
 }
+const voyagers2 = [
+  "Adam family",
+  "Potter family",
+  "Eric",
+  "Aldous",
+  "Button family",
+  "Jude",
+  "Carmichael",
+  "Bunny",
+  "Asimov",
+  "Oscar family",
+  "Avery family",
+  "Archer family"
+]; 
 
+console.log(colonisers(voyagers2));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
