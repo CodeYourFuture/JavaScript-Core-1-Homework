@@ -13,9 +13,7 @@
 function bushChecker(berry) {
     if (berry.some(color => color !== "pink")){
       return "Toxic! Leave bush alone!";
-    } else {
-      return "Bush is safe to eat from";
-    }
+    } return "Bush is safe to eat from";
 }
 
 
