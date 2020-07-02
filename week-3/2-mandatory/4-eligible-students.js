@@ -23,6 +23,15 @@
 function eligibleStudents(item) {
   return item.filter(x => x[1] >= 8).map(x => x[0]);
 }
+/* let arr = [
+  ["Ahmed", 8],
+  ["Clement", 10],
+  ["Elamin", 6],
+  ["Adam", 7],
+  ["Tayoa", 11],
+  ["Nina", 10]
+ ] 
+console.log(eligibleStudents(arr)); */
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
