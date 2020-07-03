@@ -6,18 +6,11 @@
     (see tests to confirm how this data will be structured)
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
-const attendances = [
-  ["Ahmed", 8],
-  ["Clement", 10],
-  ["Elamin", 6],
-  ["Adam", 7],
-  ["Tayoa", 11],
-  ["Nina", 10]
-]
 
 
-function eligibleStudents() {
+function eligibleStudents(x) {
 
+  return  x.filter(y => (y[1] >= 8 ? y[1]:'')).map(a=>a[0])
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
