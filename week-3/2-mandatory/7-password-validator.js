@@ -23,8 +23,29 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
-
-}
+ //exclude the duplicate value
+  for(let i=0;i<passwords.length-1;i++){
+    for(let j=i+1;j<=passwords.length;j++){
+      if(passwords[i]===passwords[j]){
+        passwords[j]="AAA";
+      }
+    }
+  }
+  //console.log("dop=",passwords);
+  ////////////////////////
+  
+  const checkPassword = passwords.map(function(password){
+      if(password.length>=5 && password.match(/[A-Z]/) &&
+        password.match(/[a-z]/) && password.match(/[0-9]/) && password.match(/[!#$%.*&]/)){
+          return true;
+        } else {
+      return false;
+  }
+  }
+    );
+    //console.log(checkPassword);
+    return checkPassword;
+  } 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
