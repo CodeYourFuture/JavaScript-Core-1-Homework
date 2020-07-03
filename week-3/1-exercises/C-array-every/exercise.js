@@ -7,6 +7,14 @@ var group = ["Austine", "Dany", "Swathi", "Daniel"];
 
 var groupIsOnlyStudents; // complete this statement
 
+function election (newarr){
+  return (students.includes(newarr))
+
+}
+
+var groupIsOnlyStudents = group.every(election); // complete this statement
+
+
 if (groupIsOnlyStudents) {
   console.log("The group contains only students");
 } else {

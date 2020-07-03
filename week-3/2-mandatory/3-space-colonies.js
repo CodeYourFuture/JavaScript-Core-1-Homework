@@ -8,8 +8,8 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(x) {
+  return x.filter(x=>x[0] ==='A' && x.length >7);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

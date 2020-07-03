@@ -7,8 +7,10 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function journeyPlanner(a,b) {
+  return a.filter(x => x.includes(b)).map(x => x[0])
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

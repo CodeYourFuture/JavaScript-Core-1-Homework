@@ -21,15 +21,16 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
+let numbers = [0,1,2,3,4,5,6,7,8,9];
 
 function validatePasswords(passwords) {
-
+  return passwords.map(x => (x.length >= 5 && numbers.some(h => x.includes(h)) && x.toLowerCase() != x && x.toUpperCase() != x && (x.indexOf('!') != -1 || x.indexOf('#') != -1 || x.indexOf('$') != -1 || x.indexOf('%') != -1 || x.indexOf('.') != -1)) ? true : false)
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
-const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty"]
 
 const util = require('util');
 

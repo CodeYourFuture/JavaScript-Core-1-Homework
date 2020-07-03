@@ -9,9 +9,13 @@
 
   Use the tests to confirm which message to return
 */
-
-function bushChecker() {
-
+function pinkBerry(x){
+  return x ==="pink";
+}
+function bushChecker(x) {
+  if(x.every(pinkBerry))
+  return "Bush is safe to eat from"
+  return "Toxic! Leave bush alone!"
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
