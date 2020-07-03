@@ -18,29 +18,21 @@ const streetNames = [
     "Alban Highwalk"
 ]
 
-function arraysEqual(a, b) {
-    if (a === b) return true;
-    if (a == null || b == null) return false;
-    if (a.length != b.length) return false;
-    
-    for (let i = 0; i < a.length; ++i) {
-      if (a[i] !== b[i]) return false;
-    }
-   
-    return true;
-}
-  
-function test(test_name, expr) {
+const util = require('util');
+
+function test(test_name, actual, expected) {
     let status;
-    if (expr) {
+    if (util.isDeepStrictEqual(actual, expected)) {
         status = "PASSED";
     } else {
-        status = "FAILED";
+        status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
     }
-    
+
     console.log(`${test_name}: ${status}`);
 }
 
-test("getLanes function works",
-    arraysEqual(getLanes(streetNames), ["Abchurch Lane", "Addle Lane"])
-)
+test(
+  "getLanes function works",
+  getLanes(streetNames),
+  ["Abchurch Lane", "Addle Lane"]
+);
