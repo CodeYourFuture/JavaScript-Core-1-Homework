@@ -10,8 +10,8 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
-
+function bushChecker(bush) {
+  if 
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

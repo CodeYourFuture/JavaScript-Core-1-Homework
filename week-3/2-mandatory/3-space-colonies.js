@@ -8,10 +8,44 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(stayFamily) {
+  const stay = stayFamily.filter(function(name) {
+    if (name.split(" ")[1] === "family") {
+      return name[0] === "A";
+    }
+  });
+  return stay;
 }
 
+// function colonisers(stayFamily) {
+
+//   const stay = stayFamily.filter(function (name) {
+
+//     if (name.split(" ")[1] === "family") {
+
+//       return name[0] === "A";
+
+//     }
+
+//   });
+
+//   return stay;
+
+// }
+
+ 
+
+function colonisers(stayFamily) {
+
+  const stay = stayFamily.filter(function (name) {
+
+    return name[0] === "A" && name.split(" ")[1] === "family";
+
+  });
+
+  return stay;
+
+}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [

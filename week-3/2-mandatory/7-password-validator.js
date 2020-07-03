@@ -23,7 +23,15 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
-
+  const validate =  passwords.map(function(valid) {
+     valid.length >= 5 && 
+     valid.split("").find(letter => letter >= "A" && letter <= "Z") &&
+     valid.split("").find(letter => letter >= "a" && letter <= "z") &&
+     valid.split("").find(letter => letter >= 0 && letter <= 9) &&
+     valid.split("").find(letter => letter["!", "#", "$", "%", "."])
+  })
+    console.log(validate);
+     return validate;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
