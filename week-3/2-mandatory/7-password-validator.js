@@ -21,81 +21,43 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
-let test1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
 
 function fiveOrMoreCharacters(passwordString) {
-  if (passwordString.length >= 5) {
-    console.log(true);
-  } else {
-    console.log(false);
-    
-  };
+    return passwordString.length >= 5; 
 }
   
 
 function containsUpperCase(password) {
-  if (password.includes("A", "B", "C")) {
-    console.log(true);
-  } else {
-    console.log(false);
-
-  };
+  let regex = /[A-Z]/;
+  return regex.test(password);
 }
 
 function containsLowerCase(password) {
-  if (password.includes("a", "b", "c")) {
-    console.log(true);
-  } else {
-    console.log(false);
-
-  };
+  let regex = /[a-z]/;
+  return regex.test(password);
 }
 
 function containsNumbers(password) {
-  if (password.includes("0", "1", 2, "3")) {
-    console.log(true);
-  } else {
-    console.log(false);
-
-  };
+  let regex = /[0-9]/;
+  return regex.test(password);
 }
 
 function containsSymbols(password) {
-  if (password.includes("!", "#", "$", "%", ".", "*", "&")) {
-    console.log(true);
-  } else {
-    console.log(false);
-
-  };
+  let regex = /[!#$%.*&]/;
+  return regex.test(password);
 }
 
-function allPass(password) {
-  if(fiveOrMoreCharacters === true) {
-    if(containsUpperCase === true) {
-      if(containsLowerCase === true) {
-        if(containsNumbers === true) {
-          if(containsSymbols === true) {
-  return true;
-} return false;
-        }
-      }
-    }
-  }
-}
+function containsRepeat(passwords) {
 
+}
 
 function validatePasswords(passwords) {
-  let returnArray = [];
-  for(let i =0; i < passwords.length; i++) {
-    if (fiveOrMoreCharacters === true && containsUpperCase === true && containsLowerCase === true && containsNumbers === true && containsSymbols === true) {
-     returnArray.push(true);
-    } else {
-      returnArray.push(false);
-    } 
-  } return returnArray;
+  return passwords.map(password => fiveOrMoreCharacters(password) 
+  && containsUpperCase(password) 
+  && containsLowerCase(password) 
+  && containsNumbers(password)
+  && containsSymbols(password));
 }
-
-
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
