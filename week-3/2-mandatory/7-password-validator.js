@@ -21,15 +21,47 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
+//FUNCTION TO CHECK IF LOWERCASE LETTERS ARE FOUND
+ function isLowerCase(word){
+   let newWord = word.split(''); //output ["w", "o", "r", "d"]
+   let res = newWord.some(x => x >= 'a' && x <= 'z');
+   return res;
+ 
+}
+//FUNCTION TO CHECK IF UPPERCASE LETTERS ARE PRESENT
+function isUpperCase(word){
+    let newWord = word.split(''); //output ["w", "o", "r", "d"]
+    let res = newWord.some(x => x >= 'A' && x <= 'Z');
+    return res;
+  
+ }
+ //FUNCTION TO CHECK IF NUMBERS ARE PRESENT
+ function isNum(word){
+   let newWord = word.split(''); //output ["w", "o", "r", "d"]
+   let res = newWord.some(x => x >= 0 && x <= 9);
+   return res;
+ 
+}
+//FUNCTION TO CHECK IF SELECTED SYMBOLE ARE PRESENT
+function isSymbols(word){
+   let newWord = word.split(''); //output ["w", "o", "r", "d"]
+   let res = newWord.some(x => x === '!' || x === '#' || x === '.' || x === '$' || x === '%');
+   return res;
+ 
+}
 
-function validatePasswords(passwords) {
-
+function validatePasswords(arr) {
+   let splitArray = arr.map(element => element.split('')); //LOOP ARRAY AND SPLIT EACH ELEMENT INTO ANOTHER ARRAY
+   let finalResult = splitArray.map(item => item.some(isLowerCase) && item.some(isUpperCase)
+   && item.some(isNum) && item.some(isSymbols) && item.length >=5); //LOOP THROUGH EACH LETTER TO CONFIRM ALL CONDITIONS ARE MET
+   return finalResult;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
-const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
+ const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
+ const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty"]
+
 
 function arraysEqual(a, b) {
     if (a === b) return true;

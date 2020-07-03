@@ -10,13 +10,13 @@ var everyone = ["Daniel","Irina","Rares", "Rukmini", "Abdul", "Austine", "Swathi
 var firstFive = everyone.splice(0, 5); // complete this statement
 var everyone = firstFive.concat(everyone); // complete this statement
 var lastFive = everyone.splice(0, 2);
+var lastFive = everyone;
 
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 
 console.log(firstFive);
-console.log(everyone);
 console.log(lastFive);
 
 /* 

@@ -7,10 +7,11 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
+
 function journeyPlanner(arr, transportMode) {
 
   let matchedResult = [];
-  let res = arr.map(item => item.find(x => x === transportMode)); //output [tube, tube, tube, undefined]
+  let res = arr.map(b => b.find(x => x === transportMode)); //output [tube, tube, tube, undefined]
 
 
  if(res[0] === "tube" || res[1] === 'tube' || res[2] === 'tube' || res[3] === 'tube') {
@@ -27,7 +28,7 @@ function journeyPlanner(arr, transportMode) {
 
   return matchedResult;
 }
-
+//console.log(journeyPlanner(londonLocations, "bus"));
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const londonLocations = [
