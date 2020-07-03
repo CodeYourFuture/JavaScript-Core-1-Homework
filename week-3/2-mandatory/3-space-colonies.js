@@ -1,3 +1,4 @@
+
 /*
   The voyagers decide that they quite like this planet, and some of them want to settle there and colonise it.
   They call the planet "Alpha" and they decide that the FAMILIES whose last names start with 'A' should stay,
@@ -8,9 +9,17 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function landedFamily(element) {
+  if (element.split(" ")[1] === "family") {
+    return element[0] === "A";
+  }
 }
+
+function colonisers(voyagers) {
+
+  return voyagers.filter(landedFamily);
+};
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
