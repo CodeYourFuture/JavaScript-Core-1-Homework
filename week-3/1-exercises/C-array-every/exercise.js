@@ -1,18 +1,26 @@
 /*
-   This program should check if the array `group` contains only students
+  You are given a program that logs pairings between mentors and students
+  It fails because the array `pairsById` can contain different values that break the program
+  It is decided that array items which are not pairs should be filtered out
+  - Finish the statement on line 11 to produce an array with valid content
+  - Do not edit any of the existing code
 */
 
-var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
-var group = ["Austine", "Dany", "Swathi", "Daniel"];
+var pairsByIndexRaw = [ [ 0, 3 ], [ 1, 2 ], [ 2, 1 ], null, [ 1 ], false, 'whoops' ];
 
-var groupIsOnlyStudents; // complete this statement
+var pairsByIndex = pairsByIndexRaw.filter(function(pair) {
+	return Array.isArray(pair) && pair.length === 2;
+});
 
-if (groupIsOnlyStudents) {
-  console.log("The group contains only students");
-} else {
-  console.log("The group does not contain only students");
-}
+// Complete this statement
 
-/* EXPECTED RESULT */
+var students = [ 'Islam', 'Lesley', 'Harun', 'Rukmini' ];
+var mentors = [ 'Daniel', 'Irina', 'Mozafar', 'Luke' ];
 
-// The group does not contain only students
+var pairs = pairsByIndex.map(function(indexes) {
+	var student = students[indexes[0]];
+	var mentor = mentors[indexes[1]];
+	return [ student, mentor ];
+});
+
+console.log(pairs);
