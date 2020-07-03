@@ -6,17 +6,17 @@
 */
 
 var everyone = [
-  "Daniel",
-  "Irina",
-  "Rares",
-  "Rukmini",
-  "Abdul",
-  "Austine",
-  "Swathi"
+  'Daniel',
+  'Irina',
+  'Rares',
+  'Rukmini',
+  'Abdul',
+  'Austine',
+  'Swathi',
 ];
 
-var firstFive; // complete this statement
-var lastFive; // complete this statement
+var firstFive = everyone.slice(0, 5); // complete this statement
+var lastFive = everyone.slice(-5, everyone.length); // complete this statement
 
 /* 
   DO NOT EDIT BELOW THIS LINE

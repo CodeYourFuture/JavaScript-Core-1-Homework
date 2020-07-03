@@ -14,27 +14,45 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {}
+function sortAges(arr) {
+  const numbersArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === 'number') {
+      numbersArray.push(arr[i]);
+    }
+  }
+  for (let i = 0; i < numbersArray.length - 1; i++) {
+    for (let j = i + 1; j < numbersArray.length; j++) {
+      if (numbersArray[j] < numbersArray[i]) {
+        const temp = numbersArray[i];
+        numbersArray[i] = numbersArray[j];
+        numbersArray[j] = temp;
+      }
+    }
+  }
+
+  return numbersArray;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const agesCase1 = [
-  "🎹",
+  '🎹',
   100,
-  "💩",
+  '💩',
   55,
-  "🥵",
-  "🙈",
+  '🥵',
+  '🙈',
   45,
-  "🍕",
-  "Sanyia",
+  '🍕',
+  'Sanyia',
   66,
-  "James",
+  'James',
   23,
-  "🎖",
-  "Ismeal",
+  '🎖',
+  'Ismeal',
 ];
-const agesCase2 = ["28", 100, 60, 55, "75", "🍕", "Elamin"];
+const agesCase2 = ['28', 100, 60, 55, '75', '🍕', 'Elamin'];
 
 function arraysEqual(a, b) {
   if (a === b) return true;
@@ -51,20 +69,20 @@ function arraysEqual(a, b) {
 function test(test_name, expr) {
   let status;
   if (expr) {
-    status = "PASSED";
+    status = 'PASSED';
   } else {
-    status = "FAILED";
+    status = 'FAILED';
   }
 
   console.log(`${test_name}: ${status}`);
 }
 
 test(
-  "sortAges function works - case 1",
+  'sortAges function works - case 1',
   arraysEqual(sortAges(agesCase1), [23, 45, 55, 66, 100])
 );
 
 test(
-  "sortAges function works - case 2",
+  'sortAges function works - case 2',
   arraysEqual(sortAges(agesCase2), [55, 60, 100])
 );
