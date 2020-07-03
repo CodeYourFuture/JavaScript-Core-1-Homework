@@ -7,8 +7,16 @@
 var ukNations = ["Scotland", "Wales", "England", "Northern Ireland"];
 
 function isInUK(country) {
-  return; // complete this statement
-}
+  return ukNations.includes(country);
+  }; // complete this statement
+
+  function even_or_odd(num) {
+    if (num % 2 == 0)
+      return "Even";
+    else 
+      return "Odd";
+    }
+  console.log(even_or_odd(2));
 
 /* 
   DO NOT EDIT BELOW THIS LINE
