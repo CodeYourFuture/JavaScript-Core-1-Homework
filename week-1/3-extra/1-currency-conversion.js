@@ -12,8 +12,7 @@ function convertToUSD() {}
   ===================
   The business is now breaking into the Brazilian market
   Write a new function for converting to the Brazilian real (exchange rate is 5.7 BRL to £)
-  They have also decided that they should add a 1% fee to all foreign transactions
-  Find a way to add 1% to all currency conversions (think about the DRY principle)
+  They have also decided that they should add a 1% fee to all foreign transactions, which means you only convert 99% of the £ to BRL.
 */
 
 function convertToBRL() {}
@@ -24,16 +23,18 @@ There are some Tests in this file that will help you work out if your code is wo
 To run these tests type `node 1-currency-conversion` into your terminal
 */
 
-function test(test_name, expr) {
-  let status;
-  if (expr) {
-    status = "PASSED";
-  } else {
-    status = "FAILED";
-  }
+const util = require('util');
 
-  console.log(`${test_name}: ${status}`);
+function test(test_name, actual, expected) {
+    let status;
+    if (actual === expected) {
+        status = "PASSED";
+    } else {
+        status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
+    }
+
+    console.log(`${test_name}: ${status}`);
 }
 
-test("convertToUSD function works", convertToUSD(32) === 44.8);
-test("convertToBRL function works", convertToBRL(30) === 172.71);
+test("convertToUSD function works", convertToUSD(32), 44.8);
+test("convertToBRL function works", convertToBRL(30), 169.29);
