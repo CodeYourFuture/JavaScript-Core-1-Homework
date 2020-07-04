@@ -3,6 +3,7 @@
   Using .find(), we'd like to find the first name which starts with A and is longer than 7 letters.
 */
 
+
 // write your code here
 function findLongNameThatStartsWithA(names){
   let output=names.find(function(name){
