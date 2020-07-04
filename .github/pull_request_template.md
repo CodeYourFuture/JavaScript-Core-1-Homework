@@ -1,10 +1,8 @@
 # Your Details
 
-Your Name:
-Your City:
+Your Name:zubeda
+Your City:birminghan
 Your Slack Name:
-
 # Homework Details
-
 Module:
 Week:

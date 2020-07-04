@@ -7,7 +7,19 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function journeyPlanner(arr,transport) {
+  let output=arr.filter(function(rout){
+    if(rout.includes(transport)){
+      //console.log(rout[0])
+    return rout;
+    //return rout;
+    };
+  }).map(function(rout){
+    return rout[0];
+  })
+  
+  
+  return output;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -20,6 +32,7 @@ const londonLocations = [
 ]
 
 const util = require('util');
+const { runInContext } = require('vm');
 
 function test(test_name, actual, expected) {
     let status;
