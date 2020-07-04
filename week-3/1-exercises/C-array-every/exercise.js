@@ -8,7 +8,7 @@ var group = ["Austine", "Dany", "Swathi", "Daniel"];
 var groupIsOnlyStudents = group.every(studentsIncludeNames); // complete this statement
 
 function studentsIncludeNames (name){
- return students.includes(name)
+ return students.includes(name);
 }
 
 //let checkNames= group.every(groupIsOnlyStudents);

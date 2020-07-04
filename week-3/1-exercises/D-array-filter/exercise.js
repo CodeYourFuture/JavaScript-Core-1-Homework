@@ -11,8 +11,9 @@ var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 var pairsByIndex = pairsByIndexRaw.filter(filterOut); ; // Complete this statement
 
 function filterOut(index){
-  let i= [];
-  return index[i].length > 1;
+
+  let notFiltered = index.filter(a => a === "null" && a === "false" && a === "string");
+  return index.length > 1;
 }
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
