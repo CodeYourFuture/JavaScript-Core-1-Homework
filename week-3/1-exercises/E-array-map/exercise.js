@@ -3,3 +3,24 @@
 
 var numbers = [0.1, 0.2, 0.3, 0.4, 0.5];
 
+let multiplyByHundred = numbers.map(function multiplies(number) {
+  return number * 100;
+});
+
+console.log(multiplyByHundred);
+
+let multiplyByHundredSecond = numbers.map(function (number) {
+  return number * 100;
+});
+
+console.log(multiplyByHundredSecond);
+
+let multiplyByHundredThird = numbers.map((number) => {
+  return number * 100;
+});
+
+console.log(multiplyByHundredThird);
+
+let multiplyByHundredFourth = numbers.map((number) => number * 100);
+
+console.log(multiplyByHundredFourth);
