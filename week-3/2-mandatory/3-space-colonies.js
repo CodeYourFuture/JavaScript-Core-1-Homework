@@ -8,8 +8,14 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(voyagers) {
+  let families = [];
+  for (let i = 0; i < voyagers.length; ++i) {
+    if (voyagers[i].includes("family")  &&  voyagers[i][0] === "A") {
+      families.push(voyagers[i]);
+    }
+  }
+  return families;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

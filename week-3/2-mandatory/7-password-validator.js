@@ -23,7 +23,24 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
+  const lowerCase = /[a-z]/;
+  const upperCase = /[A-Z]/;
+  const numbers = /[0-9]/;
+  const nonAlphanum = /[!#\$%\.\*&]/;
 
+  let areValid = [];
+
+  for (let i = 0; i < passwords.length; ++i) {
+    areValid.push(
+      lowerCase.test(passwords[i])  &&
+      upperCase.test(passwords[i])  &&
+      numbers.test(passwords[i])  &&
+      nonAlphanum.test(passwords[i])  &&
+      passwords[i].length >= 5  &&
+      passwords.indexOf(passwords[i]) === i);
+  }
+
+  return areValid;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

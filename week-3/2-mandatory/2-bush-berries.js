@@ -10,8 +10,13 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
-
+function bushChecker(bush) {
+  for (let i = 0; i < bush.length; ++i) {
+    if (bush[i] !== "pink") {
+      return "Toxic! Leave bush alone!";
+    }
+  }
+  return "Bush is safe to eat from";
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

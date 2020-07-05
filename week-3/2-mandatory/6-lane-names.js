@@ -4,8 +4,15 @@
   Write a function that will return all street names which contain 'Lane' in their name.
 */
 
-function getLanes() {
+function getLanes(streets) {
+  let lanes = [];
 
+  for (let i = 0; i < streets.length; ++i) {
+    if (streets[i].includes("Lane")) {
+      lanes.push(streets[i]);
+    }
+  }
+  return lanes;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
