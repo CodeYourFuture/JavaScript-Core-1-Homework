@@ -25,15 +25,15 @@ Tip: use logical operators
 
 function validate(num) {
 
-if (num <= 100)
- {
- num = true;
+if (num <=100 && typeof num === "number" && num % 2 == 0)
+  {
+ return true;
 }
 else {
-  num =false;
+  return false;
 }
 }
-validate(20);
+console.log(validate(20));
 
 
 /* 
@@ -42,7 +42,11 @@ The function must NOT change the original array, arr.
 */
 
 function remove(arr, index) {
-return; // complete this statement
+  if (arr.length > index) {
+    return arr;
+    }
+   
+// complete this statement
 }
 
 
@@ -54,7 +58,11 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {}
+function formatPercentage(arr) {
+
+
+  
+}
   
 
 
