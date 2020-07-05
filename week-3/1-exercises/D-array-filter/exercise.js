@@ -6,17 +6,21 @@
   - Do not edit any of the existing code
 */
 
-var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
+var pairsByIndexRaw = [ [ 0, 3 ], [ 1, 2 ], [ 2, 1 ], null, [ 1 ], false, 'whoops' ];
 
-var pairsByIndex; // Complete this statement
+var pairsByIndex = pairsByIndexRaw.filter(function(pair) {
+	return Array.isArray(pair) && pair.length === 2;
+});
 
-var students = ["Islam", "Lesley", "Harun", "Rukmini"];
-var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
+// Complete this statement
+
+var students = [ 'Islam', 'Lesley', 'Harun', 'Rukmini' ];
+var mentors = [ 'Daniel', 'Irina', 'Mozafar', 'Luke' ];
 
 var pairs = pairsByIndex.map(function(indexes) {
-  var student = students[indexes[0]];
-  var mentor = mentors[indexes[1]];
-  return [student, mentor];
+	var student = students[indexes[0]];
+	var mentor = mentors[indexes[1]];
+	return [ student, mentor ];
 });
 
 console.log(pairs);
