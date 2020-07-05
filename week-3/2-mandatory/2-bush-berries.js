@@ -9,11 +9,20 @@
 
   Use the tests to confirm which message to return
 */
-
-function bushChecker() {
-
+function checkColourPink(berryColour) {
+if(berryColour === "pink") {
+  return true;
+}
 }
 
+function bushChecker(allBushBerryColours) {
+let colourResult = allBushBerryColours.every(checkColourPink);
+if(colourResult === true) {
+  return "Bush is safe to eat from";
+} else {
+ return "Toxic! Leave bush alone!";
+}
+}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]

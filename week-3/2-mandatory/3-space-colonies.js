@@ -8,9 +8,15 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
+//filter to remove non family and non A start
 
+function colonisers(voyagersArray) {
+  return voyagersArray.filter(function(voyagerName) {
+    return voyagerName.startsWith("A") && voyagerName.includes("family");
+  })
 }
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

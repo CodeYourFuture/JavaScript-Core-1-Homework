@@ -22,8 +22,53 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
+function fiveOrMoreCharacters(passwordString) {
+    return passwordString.length >= 5; 
+}
+  
 
+function containsUpperCase(passwordString) {
+  let regex = /[A-Z]/;
+  return regex.test(passwordString);
+}
+
+function containsLowerCase(passwordString) {
+  let regex = /[a-z]/;
+  return regex.test(passwordString);
+}
+
+function containsNumbers(passwordString) {
+  let regex = /[0-9]/;
+  return regex.test(passwordString);
+}
+
+function containsSymbols(passwordString) {
+  let regex = /[!#$%.*&]/;
+  return regex.test(passwordString);
+}
+
+function validatePasswords(passwordsArray) {
+  return passwordsArray.map((passwordString, index, passwordsArray) => {
+    let notRepeated = true;
+    for (let j = 0; j < passwordsArray.length; j++) {
+      if (index !== j) {
+        if (passwordsArray[index] === passwordsArray[j]) {
+          notRepeated = false;
+          if (index < j) { notRepeated = true }
+          break;
+        }
+      }
+      if (!notRepeated) {
+        break;
+      }
+    }
+    return fiveOrMoreCharacters(passwordString) 
+      && containsUpperCase(passwordString) 
+      && containsLowerCase(passwordString) 
+      && containsNumbers(passwordString)
+      && containsSymbols(passwordString)
+      && notRepeated
+  })
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

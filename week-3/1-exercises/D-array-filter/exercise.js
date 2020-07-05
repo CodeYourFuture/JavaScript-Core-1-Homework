@@ -8,7 +8,10 @@
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-var pairsByIndex; // Complete this statement
+function isNumber(obj) {
+  return obj !== undefined && typeof (obj) === 'number' && !isNaN(obj)
+}
+var pairsByIndex = pairsByIndexRaw.filter(isNumber); // Complete this statement
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
