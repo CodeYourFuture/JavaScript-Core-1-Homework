@@ -7,8 +7,16 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
 
+
+function journeyPlanner(location, transport) {
+  let avilabelLocations = [];
+for (i = 0; i < location.length; i++) {
+  if (location[i].includes(transport)) {
+    avilabelLocations.push(location[i][0]);
+  }
+}
+return avilabelLocations;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
