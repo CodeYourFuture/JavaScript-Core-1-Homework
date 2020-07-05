@@ -7,9 +7,17 @@
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
 
-function eligibleStudents() {
+function eligibleStudents(arr) {
+  let newArr=[]
+  for(let i=0;i<arr.length;i++){
+    if(arr[i][1]>=8){
+        newArr.push(arr[i][0])
+      }
+    }
+    return newArr
+  }
 
-}
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
