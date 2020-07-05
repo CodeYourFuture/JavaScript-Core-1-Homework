@@ -15,14 +15,16 @@ var everyone = [
   "Swathi"
 ];
 
-var firstFive; // complete this statement
-var lastFive; // complete this statement
-
+var firstFive= everyone.splice(0,5);
+var everyone= firstFive.concat(everyone);
+var lastFive= everyone.splice(0,2);
+var lastFive= everyone;
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 
 console.log(firstFive);
+console.log(everyone);
 console.log(lastFive);
 
 /* 

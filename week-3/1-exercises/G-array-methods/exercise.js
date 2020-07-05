@@ -4,7 +4,11 @@
 */
 
 var numbers = [3, 2, 1];
-var sortedNumbers; // complete this statement
+var sortedNumbers= numbers.sort(answer);
+function answer(num1,num2){
+ return num1-num2;
+}
+
 
 /* 
   DO NOT EDIT BELOW THIS LINE

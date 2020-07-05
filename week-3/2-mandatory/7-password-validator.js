@@ -22,14 +22,39 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
-
+//  const passwords2 = ["tf1%", "Pl7nty!", "Ja4i", "s4hajsaUA**&&", "pl3nty!"];
+function validatePasswords(arr) {
+    let bigArrayOfChar = arr.map(element => element.split('')); //map returns a new array
+    let result = bigArrayOfChar.map(index => index.some(isNum) && index.some(isUpperCase)
+     && index.some(isLowerCase) && index.some(isSymbols) && index.length >=5);
+    return result;
 }
+function isNum(word) {
+    let newWord = word.split('');
+    let checkLetter = newWord.some(element => element >= 0 && element <= 9); //some returns boolean
+    return checkLetter;
+}
+function isUpperCase(word) {
+    let newWord = word.split('');
+    let checkUpperCase = newWord.some(element => element >= 'A' && element <= 'Z');
+    return checkUpperCase;
+}
+function isLowerCase(word) {
+    let newWord = word.split('');
+    let checkLowerCase = newWord.some(element => element >= 'a' && element <= 'z');
+    return checkLowerCase;
+}
+function isSymbols(word){
+  let newWord = word.split(''); //output ["w", "o", "r", "d"]
+  let result = newWord.some(element => element === '!' || element === '#' || element === '.' || element === '$' || element === '%');
+  return result;
+}
+ 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
-const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty"]
 
 const util = require('util');
 

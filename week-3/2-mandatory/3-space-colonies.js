@@ -8,7 +8,9 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
+function colonisers(arr) {
+let safefamily =arr.filter(x=> x.length > 9 && x[0] ==="A");
+return safefamily;
 
 }
 
