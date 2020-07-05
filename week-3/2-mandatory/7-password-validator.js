@@ -21,10 +21,22 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
+// let meal  = ["eggs", "eggs", "banana", "orange", "eggs"]; 
+
+
 
 function validatePasswords(passwords) {
+  let newArray = [];
+  for (i=0; i<passwords.length;i++){
+    newArray[i]= passwords.indexOf(passwords[i]) === i && passwords[i].length>=5 && passwords[i].match(/[A-Z]/) !== null &&
+              passwords[i].match(/[a-z]/)!== null && passwords[i].match(/[0-9]/)!== null && passwords[i].match(/[!#$%.]/)!== null;
+  }
+  return newArray;
+  }
 
-}
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
