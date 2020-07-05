@@ -9,10 +9,28 @@
 
   Use the tests to confirm which message to return
 */
-
-function bushChecker() {
-
+/*function barriesCheck(barries) {
+ 
+    if (barries[j] === "pink") {
+      return "Bush is safe to eat from"
+    }
+    else {
+      return "Toxic! Leave bush alone!"
+    }
 }
+}*/
+
+//function bushChecker() {
+  function barriesColor(color) {
+    return color == "pink"
+  }
+  function bushChecker(arr) {
+
+    if (arr.every(barriesColor)) {
+      return "Bush is safe to eat from"
+    }
+    return "Toxic! Leave bush alone!"
+  }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
