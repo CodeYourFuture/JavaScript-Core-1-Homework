@@ -8,50 +8,53 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(arr) {
+	return arr.filter(function(members) {
+		return members[0] === 'A' && members.includes('family');
+	});
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [
-  "Adam family",
-  "Potter family",
-  "Eric",
-  "Aldous",
-  "Button family",
-  "Jude",
-  "Carmichael",
-  "Bunny",
-  "Asimov",
-  "Oscar family",
-  "Avery family",
-  "Archer family"
+	'Adam family',
+	'Potter family',
+	'Eric',
+	'Aldous',
+	'Button family',
+	'Jude',
+	'Carmichael',
+	'Bunny',
+	'Asimov',
+	'Oscar family',
+	'Avery family',
+	'Archer family'
 ];
 
 function arraysEqual(a, b) {
-  if (a === b) return true;
-  if (a == null || b == null) return false;
-  if (a.length != b.length) return false;
+	if (a === b) return true;
+	if (a == null || b == null) return false;
+	if (a.length != b.length) return false;
 
-  for (let i = 0; i < a.length; ++i) {
-    if (a[i] !== b[i]) return false;
-  }
+	for (let i = 0; i < a.length; ++i) {
+		if (a[i] !== b[i]) return false;
+	}
 
-  return true;
+	return true;
 }
 
 function test(test_name, expr) {
-  let status;
-  if (expr) {
-    status = "PASSED";
-  } else {
-    status = "FAILED";
-  }
+	let status;
+	if (expr) {
+		status = 'PASSED';
+	} else {
+		status = 'FAILED';
+	}
 
-  console.log(`${test_name}: ${status}`);
+	console.log(`${test_name}: ${status}`);
 }
 
-test("colonisers function works",
-  arraysEqual(colonisers(voyagers), ["Adam family", "Avery family", "Archer family"])
-)
+test(
+	'colonisers function works',
+	arraysEqual(colonisers(voyagers), [ 'Adam family', 'Avery family', 'Archer family' ])
+);
