@@ -6,9 +6,13 @@
 */
 
 function isEmpty(arr) {
-  return; // complete this statement
+  if( arr.length >= 1){
+  return false; // complete this statement
 }
-
+else {
+  return true;
+}
+}
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

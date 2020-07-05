@@ -64,3 +64,32 @@ $
 * Check the value of the variables
 
 Further reading on using the node console: https://hackernoon.com/know-node-repl-better-dbd15bca0af6
+
+some examples I tried on terminal :
+
+ali@DESKTOP-QSBNI26:/mnt/c/Users/ALI HAIDER/Documents/GitHub/JavaScript-Core-1-Homework$ node
+Welcome to Node.js v13.14.0.
+Type ".help" for more information.
+> 1+2
+3
+> "hello"
+'hello'
+> var greeting = "hello"
+undefined
+> greeting
+'hello'
+> console.log(greeting);
+hello
+undefined
+> .exit
+ali@DESKTOP-QSBNI26:/mnt/c/Users/ALI HAIDER/Documents/GitHub/JavaScript-Core-1-Homework$ node
+Welcome to Node.js v13.14.0.
+Type ".help" for more information.
+> 1+2
+3
+> a+b
+Uncaught ReferenceError: a is not defined
+> var a =2
+undefined
+> a
+2
