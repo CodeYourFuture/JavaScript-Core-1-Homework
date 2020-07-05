@@ -11,6 +11,25 @@ var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
 /* EXPECTED OUTPUT */
 
+arr.forEach(fizz)
+function fizz(number){
+  if (number %3 ==0 && number %5 ==0 ){
+    console.log("fizzBuzz");
+  
+  }
+  else if (number %3 ==0){
+    console.log("fizz");
+  }
+  else if (number %5 ==0){
+    console.log("buzz");
+  }
+  else {
+    console.log(number);
+  }
+
+  
+}
+
 /*
 1
 2

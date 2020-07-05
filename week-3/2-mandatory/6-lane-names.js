@@ -4,8 +4,16 @@
   Write a function that will return all street names which contain 'Lane' in their name.
 */
 
-function getLanes() {
+function getLanes(arr) {
 
+    let street= []; // create blank array
+    let result= arr.map(x => x.indexOf("Lane")); // indexOf 
+    for (let i = 0; i < arr.length; i++){ // create loop for checking every of them
+        if (result[i] !== -1 ) {
+        street.push(arr[i]);
+        }
+    }
+    return street;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
