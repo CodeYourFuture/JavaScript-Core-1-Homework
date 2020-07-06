@@ -8,24 +8,11 @@
 
   1. This program throws an error. Why? (If you can't find it, try executing it).
   2. Remove the line that throws the error.
-  // The error was console.log(b);
   3. What is printed to the console?
-  // 2
-     6
-     4
-     9
-     6
-     13
-     8
   4. How many times is "f1" called?
-  // f1 called three times.
   5. How many times is "f2" called?
-  //f2 called four times.
   6. What value does the "a" parameter take in the first "f1" call?
-    "a" is equal to 6 ;
-
   7. What is the value of the "a" outer variable when "f1" is called for the first time?
- "a" is equal to 7 ;
 */
 
 let x = 2;
@@ -53,3 +40,14 @@ for (let i = 0; i < 5; ++i) {
     console.log(e);
   }
 }
+
+
+
+/*  My asnwers 
+1. The error was console.log(b);
+2. The console print  out 2 6 4 9 6 13 8 ;
+3. f1 called three times.
+4. f2 called four times.
+5. "a" is equal to 6 ;
+6. "a" is equal to 7 ;
+*/

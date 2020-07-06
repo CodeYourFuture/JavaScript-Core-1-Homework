@@ -15,14 +15,13 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function sortAges(arr) {
-
+  if (arr !== Number){
+    return Number ;
+  } 
+  if()
 
   
 }
-
-
-
-
 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
