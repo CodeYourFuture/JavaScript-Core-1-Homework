@@ -10,7 +10,7 @@ Passwords must
 - Have English uppercase letters (A-Z)
 - Have English lowercase letters (a-z)
 - Have numbers (0-9)
-- Have non-alphanumeric symbols ("!", "#", "$", "%", ".")
+- Have non-alphanumeric symbols ("!", "#", "$", "%", ".", "*", "&")
 
 Passwords must not be any previous password in the passwords array. 
 
@@ -24,15 +24,18 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 function validatePasswords(passwords) {
   const validate =  passwords.map(function(valid) {
-     valid.length >= 5 && 
-     valid.split("").find(letter => letter >= "A" && letter <= "Z") &&
-     valid.split("").find(letter => letter >= "a" && letter <= "z") &&
-     valid.split("").find(letter => letter >= 0 && letter <= 9) &&
-     valid.split("").find(letter => letter["!", "#", "$", "%", "."])
+     return valid.length >= 5 &&
+     valid.split("").some(letter => letter >= "A" && letter <= "Z") &&
+     valid.split("").some(letter => letter >= "a" && letter <= "z") &&
+    valid.split("").some(letter => letter >= 0 && letter <= 9) && 
+    // valid.split("").some(letter => "!", "#", "$", "%", ".", "*", "&") 
+     valid.split("").some(function(c) {
+     !c.includes("!", "#", "$", "%", ".", "*", "&")
   })
-    console.log(validate);
-     return validate;
-}
+  })
+    
+   return validate;
+   }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
