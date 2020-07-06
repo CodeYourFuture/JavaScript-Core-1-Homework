@@ -18,7 +18,7 @@ Today, you'll be using a platform called [CodeWars](https://codewars.com) to hel
 - [bonus](https://www.codewars.com/kata/do-i-get-a-bonus/train/javascript)
 - [remove string spaces](https://www.codewars.com/kata/remove-string-spaces/train/javascript)
 - [remove first and last character](https://www.codewars.com/kata/remove-first-and-last-character/train/javascript)
-- [string repeat](https://www.codewars.com/kata/string-repeat/train/javascript)
+- [string repeat](https://www.codewars.com/kata/string-repeat/train/javascript) //
 - [mathematical operations](https://www.codewars.com/kata/basic-mathematical-operations/train/javascript)
 
 *Arrays*
@@ -31,3 +31,6 @@ Today, you'll be using a platform called [CodeWars](https://codewars.com) to hel
 - [sum without highest and lowest](https://www.codewars.com/kata/sum-without-highest-and-lowest-number/train/javascript)
 - [reveersed array of digits](https://www.codewars.com/kata/convert-number-to-reversed-array-of-digits/train/javascript)
 - [slash sum of negatives](https://www.codewars.com/kata/count-of-positives-slash-sum-of-negatives/train/javascript)
+
+
+LINK TO CODEWARS ACCOUNT: https://www.codewars.com/users/Denis-Andrei

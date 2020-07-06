@@ -8,8 +8,22 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
+function isFamily(arr){
+  let newArr = [];
+  arr.map(item => item.includes('family') ? newArr.push(item) : '');
+  return newArr;
+}
 
+function startsWithA(arr){
+  let newArr = [];
+  arr.map(item => item[0] === 'A' || item[0] === 'a' ? newArr.push(item) : '');
+  return newArr;
+}
+
+function colonisers(arr) {
+    let familyArray = isFamily(arr);
+    let colonisersFamilies = startsWithA(familyArray);
+    return colonisersFamilies;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

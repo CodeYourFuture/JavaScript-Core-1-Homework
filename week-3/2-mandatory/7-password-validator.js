@@ -22,8 +22,20 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
 
+
+function validatePasswords(passwords) {
+  let checkPass = passwords.map((pass, index, array) => {
+
+    
+    if(pass.length >= 5 && /[A-Z]/.test(pass) && /[a-z]/.test(pass)  && /[0-9]/.test(pass) &&  /[!#$%.*&]/.test(pass) && array.indexOf(pass) === index){
+      return true;
+    }else{
+      return false;
+    }
+  });
+
+  return checkPass;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
