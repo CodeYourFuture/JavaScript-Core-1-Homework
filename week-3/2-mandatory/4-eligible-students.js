@@ -7,16 +7,23 @@
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
 
-function eligibleStudents(studentWork) {
-  let studentWhoCanSitExam = [];
-for (let i = 0; i <= studentWork.length; i++); 
 
-  if (studentWork[i][1] >= 8 ){
-   studentWhoCanSitExam.push(studentWork[i][0]);
+
+function eligibleStudents(arr) {
+  let result = arr.filter(checkTheAtendace);
+  function checkTheAtendace(students) {
+    return students[1] >= 8;
   }
-
-return  studentWhoCanSitExam;
+console.log(result);
+  let getStudent = result.map(bringNames);
+  function bringNames(students) {
+ return students[0];
+  }
+console.log(getStudent);
+return getStudent;
 }
+
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const attendances = [
