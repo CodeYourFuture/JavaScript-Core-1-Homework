@@ -7,7 +7,8 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function journeyPlanner(location, transport) {
+  return location.filter((lt) => lt.includes(transport)).map((lt) => lt[0]);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -17,19 +18,21 @@ const londonLocations = [
   ["Greenwich", "bus", "river boat", "dlr", "air line", "tube"],
   ["London Bridge", "tube", "river boat"],
   ["Tower Bridge", "tube", "bus"],
-]
+];
 
-const util = require('util');
+const util = require("util");
 
 function test(test_name, actual, expected) {
-    let status;
-    if (util.isDeepStrictEqual(actual, expected)) {
-        status = "PASSED";
-    } else {
-        status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
-    }
+  let status;
+  if (util.isDeepStrictEqual(actual, expected)) {
+    status = "PASSED";
+  } else {
+    status = `FAILED: expected: ${util.inspect(
+      expected
+    )} but your function returned: ${util.inspect(actual)}`;
+  }
 
-    console.log(`${test_name}: ${status}`);
+  console.log(`${test_name}: ${status}`);
 }
 
 test(

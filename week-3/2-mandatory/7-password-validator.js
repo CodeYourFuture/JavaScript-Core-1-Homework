@@ -22,33 +22,70 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
+function validatePasswords(pws) {
+  function validity(pw) {
+    //at least 5 characters
+    function minFive(pw) {
+      return pw.length >= 5;
+    }
+    //least one English uppercase letter (A-Z)
+    function upperCase(pw) {
+      return /[A-Z]/.test(pw);
+    }
+    //least one English lowercase letter (a-z)
+    function lowerCase(pw) {
+      return /[a-z]/.test(pw);
+    }
+    //least one number (0-9)
+    function numbers(pw) {
+      return /[0-9]/.test(pw);
+    }
+    //least one non-alphanumeric symbol ("!", "#", "$", "%", ".", "*", "&")
+    function specialChara(pw) {
+      return /[!#$%.]/.test(pw);
+    }
 
+    return (
+      minFive(pw) &&
+      upperCase(pw) &&
+      lowerCase(pw) &&
+      numbers(pw) &&
+      specialChara(pw)
+    );
+  }
+  //when it first appears
+  function first(fullPw, pw, i) {
+    return fullPw.indexOf(pw) === i;
+  }
+
+  return pws.map((pw, i) => validity(pw) && first(pws, pw, i));
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
-const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"];
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"];
 
-const util = require('util');
+const util = require("util");
 
 function test(test_name, actual, expected) {
-    let status;
-    if (util.isDeepStrictEqual(actual, expected)) {
-        status = "PASSED";
-    } else {
-        status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
-    }
+  let status;
+  if (util.isDeepStrictEqual(actual, expected)) {
+    status = "PASSED";
+  } else {
+    status = `FAILED: expected: ${util.inspect(
+      expected
+    )} but your function returned: ${util.inspect(actual)}`;
+  }
 
-    console.log(`${test_name}: ${status}`);
+  console.log(`${test_name}: ${status}`);
 }
 
 test(
   "validatePasswords function works - case 1",
   validatePasswords(passwords1),
   [false, false, true, false, false]
- );
+);
 
 test(
   "validatePasswords function works - case 2",
