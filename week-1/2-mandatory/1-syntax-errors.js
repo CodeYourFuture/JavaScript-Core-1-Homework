@@ -14,15 +14,10 @@ return `Hello, my name is ${name} and I am ${age} years old`
 
 function getTotal(a, b) {
     total = a + b;
-}
-
-function getRemainder(a, b) {
-    let remainder = a % b;
-
-
     // Use string interpolation here
-    return `The remainder is ${remainder}` 
+    return `The total is ${total}` 
 }
+
 
 /* ======= TESTS - DO NOT MODIFY =====
 There are some Tests in this file that will help you work out if your code is working.

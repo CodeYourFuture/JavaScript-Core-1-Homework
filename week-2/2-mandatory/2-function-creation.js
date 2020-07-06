@@ -66,7 +66,7 @@ function formatPercentage(arr) {
   
 
 
-
+/* ======= TESTS - DO NOT MODIFY ===== */
 const util = require('util');
 
 function test(test_name, actual, expected) {
@@ -88,8 +88,6 @@ function test(test_name, actual, expected) {
   console.log(`${test_name}: ${status}`);
 }
 
-
-/* ======= TESTS - DO NOT MODIFY ===== */
 
 function arraysEqual(a, b) {
   if (a === b) return true;
