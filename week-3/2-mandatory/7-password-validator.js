@@ -22,8 +22,46 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 // https://stackoverflow.com/questions/36097097/password-validate-8-digits-contains-upper-lowercase-and-a-special-character
+// https://www.geeksforgeeks.org/validate-a-password-using-html-and-javascript/
+/* my version - BUG
+function validatePasswords(passwordsArr) {
+  let result = [];
+  for(let i = 0; i < passwordsArr; i++) {
+  if (passwordsArr[i].match(/[a-z]/g) &&
+    passwardsArr[i].match(/[A-Z]/g) &&
+    passwordsArr[i].match(/[0-9]/g) &&
+    passwordsArr[i].match(/[^a-zA-Z\w]/g) &&
+    //passwordsArr[i].match([\u0021-\u007E]/g) && // This checks all of the non alphanumeric characters.
+    passwordsArr[i].match(/^[!#$%.]+$) && // ^ and $ means from the start to the end of the password
+    passwordsArr[i].length >= 5) {
+      result.push(true);
+    } else {
+      result.push(false);
+    }
+  } return result;
+}
+
+console.log(validatePasswords(passwords2))
+*/
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+// GG's version
 function validatePasswords(passwords) {
-passwords.length >=5;
+  const lowerCase = /[a-z]/;
+  const upperCase = /[A-Z]/;
+  const numbers = /[0-9]/;
+  const nonAlphanum = /[!#\$%\.\*&]/; 
+  let areValid = [];
+  for (let i = 0; i < passwords.length; ++i) {
+    areValid.push(
+      lowerCase.test(passwords[i])  &&
+      upperCase.test(passwords[i])  &&
+      numbers.test(passwords[i])  &&
+      nonAlphanum.test(passwords[i])  &&
+      passwords[i].length >= 5  &&
+      passwords.indexOf(passwords[i]) === i);
+  }
+  return areValid;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
