@@ -4,12 +4,22 @@
   Create a function which:
   - Accepts an array which contains all the students' names and their attendance counts
     (see tests to confirm how this data will be structured)
-  - Returns an array containing only the names of the who have attended AT LEAST 8 classes
+  - Returns an array containing only the names of those who have attended AT LEAST 8 classes
 */
 
-function eligibleStudents() {
-
+ function eligibleStudents(attendances) {
+   let newAttendances =[];
+   for (i = 0; i < attendances.length; i++){
+     if (attendances[i][1] >= 8){
+      newAttendances.push(attendances[i][0]);
+     }
+   }
+ 
+   return newAttendances;
 }
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

@@ -21,9 +21,45 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
+function PasswordLength(inputPassword) {
+  return inputPassword.length >= 5;
+}
 
-function validatePasswords(passwords) {
+function containsUpperCase(inputPassword) {
+  let regex = /[A-Z]/;
+  return regex.test(inputPassword);
+}
+function containsLowerCase(inputPassword) {
+  let regex = /[a-z]/;
+  return regex.test(inputPassword);
+}
+function containsNumbers(inputPassword) {
+  let regex = /[0-9]/;
+  return regex.test(inputPassword);
+}
+function containsSymbols(inputPassword) {
+  let regex = /[!#$%.*&]/;
+  return regex.test(inputPassword);
+}
 
+function isThereADuplicate(inputPassword) {
+  
+  for (i = 0; i < inputPassword.length; i++){
+    if (inputPassword === inputPassword[i + 1]){
+      return false;
+    } return true;
+  }
+  
+}
+
+function validatePasswords(inputPassword) {
+  return inputPassword.map(inputPassword => PasswordLength(inputPassword)
+    && containsUpperCase(inputPassword)
+    && containsLowerCase(inputPassword)
+    && containsNumbers(inputPassword)
+    && containsSymbols(inputPassword)
+    && isThereADuplicate(inputPassword)
+    );
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

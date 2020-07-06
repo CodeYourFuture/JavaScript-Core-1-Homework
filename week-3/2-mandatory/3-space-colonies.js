@@ -7,10 +7,17 @@
 
   NOTE: don't include any element that is not a "family".
 */
-
-function colonisers() {
-
+function filteringNames(names){
+  return names.includes("family") && names.charAt(0) === "A";
 }
+
+
+function colonisers(voyagers) {
+  let result = voyagers.filter(filteringNames);
+  return result;
+  
+}
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
