@@ -3,23 +3,33 @@
 // There are syntax errors in this code - can you fix it to pass the tests?
 
 function addNumbers(a, b, c) {
+
     return a + b + c;
+
 }
+
 
 function introduceMe(name, age) {
-return `Hello, my name is ${name} and I am ${age} years old`;
+
+    return `Hello, my name is ${name} and I am ${age} years old`;
 }
+
+
 function getAddition(a, b) {
-    total = a + b;
 
+    add = a + b;
     // Use string interpolation here
-    return `The total is ${total}%`;
+
+    return `The total is ${add}%`;
 }
+
 function getRemainder(a, b) {
-    remainder = (a - b)/6;
+
+    let result = a % b;
 
     // Use string interpolation here
-    return `The remainder is 3`;
+
+    return `The remainder is ${result}`;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
