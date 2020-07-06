@@ -22,8 +22,66 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
+const IS_UPPER = 1
+const IS_LOWER = 2
+const IS_NUMBER = 4
+const IS_NON_APLHANUM = 8
+const IS_INVALID_CHAR = 16
+const VALID_PASSWD = 15
 
+/*
+ * validChars(char) - takes a character as input and tests whether it is lowercase, uppercase,
+ *                                a digit (0 - 9), or a strict set of alphanumerics ("!", "#", "$", "%", ".").
+ *                                All tests performed use regular expressions
+ */
+
+function isValidChar(char) {
+  if (/^[a-z]/.test(char))
+    return IS_LOWER
+
+  if (/^[A-Z]/.test(char))
+    return IS_UPPER
+  //    if (Number.isInteger(Number.parseInt(char)))
+  if (/^[0-9]/.test(char))
+    return IS_NUMBER
+  //    if (["!", "#", "$", "%", "."].includes(char))
+  if (/^[!#$%.]/.test(char))
+    return IS_NON_APLHANUM
+
+  return IS_INVALID_CHAR
+}
+
+
+/*
+ * isValidPassword(password, index, passwdArray) - 
+ *     password       - current password from array of passwords
+ *     index             - password's current array index
+ *     passwdArray - the array of passwords
+ * 
+ *     
+ */
+function isValidPassword(password, index, passwdArray) {
+  let flags = 0
+  if (password.length >= 5) {                                           // All valid passwords are at least 5 characters long
+    if (passwdArray.indexOf(password) === index) {     // filter out duplicates
+      /*     
+           use reduce() to store the result of  accumulated bit-wise OR operations on the flags variable
+           validChars(char) can return any of the following: 
+                  IS_LOWER
+                  IS_UPPER
+                  IS_NUMBER
+                  IS_NON_APLHANUM
+                  IS_INVALID_CHAR
+*/
+      return password.split("").reduce((flags, char) => flags | isValidChar(char), 0) === VALID_PASSWD
+    }
+  }
+
+  return false
+}
+
+function validatePasswords(passwords) {
+  return passwords.map(isValidPassword)
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
