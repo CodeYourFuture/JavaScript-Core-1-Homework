@@ -5,12 +5,12 @@
 */
 
 function getLanes(arr) {
-  let streetsWithLane = [];
-  let streetChecker = arr.includes("lane");
-  // if (streetChecker === true) {
-  //   streetsWithLane.push(streetChecker);
-  // }
-  console.log(streetChecker);
+  function streetChecker(street) {
+    return street.includes("Lane");
+  }
+  let streetsWithLane = arr.filter(streetChecker);
+
+  return streetsWithLane;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

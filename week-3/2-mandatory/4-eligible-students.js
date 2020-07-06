@@ -8,8 +8,8 @@
 */
 
 function eligibleStudents(arr) {
-  let students = arr.filter((student => student[1] >= 8));
-  return students;
+  let students = arr.filter((student) => student[1] >= 8);
+  return students.map((data) => data[0]);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

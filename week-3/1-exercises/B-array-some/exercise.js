@@ -15,7 +15,7 @@ var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
-let pairs = pairsByIndex.some((indexes) => {
+let pairs = pairsByIndex.map((indexes) => {
   if (indexes === null) {
     process.exit(1);
   }
