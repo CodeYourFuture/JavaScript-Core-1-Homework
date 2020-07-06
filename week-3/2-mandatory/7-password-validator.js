@@ -23,19 +23,15 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
-  const validate =  passwords.map(function(valid) {
-     return valid.length >= 5 &&
-     valid.split("").some(letter => letter >= "A" && letter <= "Z") &&
-     valid.split("").some(letter => letter >= "a" && letter <= "z") &&
-    valid.split("").some(letter => letter >= 0 && letter <= 9) && 
-    // valid.split("").some(letter => "!", "#", "$", "%", ".", "*", "&") 
-     valid.split("").some(function(c) {
-     !c.includes("!", "#", "$", "%", ".", "*", "&")
-  })
-  })
-    
-   return validate;
-   }
+  let passwordCheck = passwords.map((pass, index, array) => {
+    if(pass.length >= 5 && /[A-Z]/.test(pass) && /[a-z]/.test(pass)  && /[0-9]/.test(pass) &&  /[!#$%.*&]/.test(pass) && array.indexOf(pass) === index){
+      return true;
+    }else{
+      return false;
+    }
+  });
+  return passwordCheck;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
