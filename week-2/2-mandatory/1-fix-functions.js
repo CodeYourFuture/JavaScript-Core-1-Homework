@@ -40,7 +40,7 @@ function first5() {
 function get3rdIndex(arr) {
 	let index = 3;
 	let element = arr[index];
-
+	console.log(element);
 	return element;
 }
 
