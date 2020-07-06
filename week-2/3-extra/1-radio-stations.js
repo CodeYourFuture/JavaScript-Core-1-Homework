@@ -12,8 +12,11 @@
  * - Create an array  starting at 87 and ending in 108
  * - Should return this array to use in other functions
  */
-
+  
 // `getAllFrequencies` goes here
+function getAllFrequencies(array){
+  return array;
+}
 
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
@@ -25,7 +28,9 @@
  * - Return only the frequencies that are radio stations.
  */
 // `getStations` goes here
-
+function getStations(){
+  
+}
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 

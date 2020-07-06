@@ -10,25 +10,37 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
-
+function bushChecker(bush) {
+	if (bush.filter(color => color !== "pink").length > 0) {
+		return "Toxic! Leave bush alone!"
+	}
+	else{
+		return "Bush is safe to eat from"
+}
+	
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
-let bushBerryColours2 = ["pink", "pink", "pink", "pink"]
+let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"];
+let bushBerryColours2 = ["pink", "pink", "pink", "pink"];
 
 function test(test_name, expr) {
-  let status;
-  if (expr) {
-    status = "PASSED";
-  } else {
-    status = "FAILED";
-  }
+	let status;
+	if (expr) {
+		status = "PASSED";
+	} else {
+		status = "FAILED";
+	}
 
-  console.log(`${test_name}: ${status}`);
+	console.log(`${test_name}: ${status}`);
 }
 
-test("bushChecker funtion works - case 1", bushChecker(bushBerryColours1) === "Toxic! Leave bush alone!")
-test("bushChecker funtion works - case 1", bushChecker(bushBerryColours2) === "Bush is safe to eat from")
+test(
+	"bushChecker funtion works - case 1",
+	bushChecker(bushBerryColours1) === "Toxic! Leave bush alone!"
+);
+test(
+	"bushChecker funtion works - case 1",
+	bushChecker(bushBerryColours2) === "Bush is safe to eat from"
+);
