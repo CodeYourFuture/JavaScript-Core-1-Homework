@@ -3,9 +3,12 @@
   
   Write a function that will return all street names which contain 'Lane' in their name.
 */
-
-function getLanes() {
-
+function lane(input){
+  return input.includes("Lane");
+}
+function getLanes(streetNames) {
+  let result = streetNames.filter(lane);
+  return result;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

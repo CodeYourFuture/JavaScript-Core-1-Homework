@@ -7,8 +7,19 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function journeyPlanner(londonLocations, meansOfTransport ) {
+  let availableLocations = [];
+  for (i = 0; i < londonLocations.length; i++){
+    if (londonLocations[i].includes(meansOfTransport)){
+      availableLocations.push(londonLocations[i][0]);
+    }
+   
+  }
+ 
+  return availableLocations;
+  
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
