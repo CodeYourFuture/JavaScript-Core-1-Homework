@@ -22,9 +22,39 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
+// function validatePasswords(passwords) {
 
+// }
+
+function fiveOrMoreLetters(word) {
+  return word.length >= 5; 
 }
+function checkUpperCase(word) {
+let regex = /[A-Z]/;
+return regex.test(word);
+}
+function checkLowerCase(word) {
+let regex = /[a-z]/;
+return regex.test(word);
+}
+function checkNumbers(word) {
+let regex = /[0-9]/;
+return regex.test(word);
+}
+function checkSymbols(word) {
+let regex = /[!#$%.*&]/;
+return regex.test(word);
+}
+// function containsRepeat(word) {
+// }
+function validatePasswords(passwords) {
+return passwords.map(word => fiveOrMoreLetters(word) 
+&& checkUpperCase(word) 
+&& checkLowerCase(word) 
+&& checkNumbers(word)
+&& checkSymbols(word));
+}
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

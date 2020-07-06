@@ -9,9 +9,9 @@
 
 function eligibleStudents(studentWork) {
   let studentWhoCanSitExam = [];
-for (i = 0; i <= studentWork.length; i++) 
+for (let i = 0; i <= studentWork.length; i++); 
 
-  if (studentWork[i][1] >= 8){
+  if (studentWork[i][1] >= 8 ){
    studentWhoCanSitExam.push(studentWork[i][0]);
   }
 

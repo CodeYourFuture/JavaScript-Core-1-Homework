@@ -10,13 +10,13 @@ Write a function that finds the oxygen level of the first safe planet - Oxygen b
 */
 
 
-  function safeLevels(oxygenLevels) {
-    let safeLevels = oxygenLevels.find(oxygenLevel =>{
-      if (oxygenLevel > `19.5%` && oxygenLevel < `23.5%`){
-       return oxygenLevel;
+  function safeLevels(oxygen) {
+    let safety = oxygen.find(oxygen =>{
+      if (oxygen > `19.5%` && oxygen < `23.5%`){
+       return oxygen;
       }
     })
-    return safeLevels;
+    return safety;
     }
 
 
