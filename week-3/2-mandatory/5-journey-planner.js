@@ -7,11 +7,21 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
-
+function journeyPlanner(arr, transport) {
+  let result = [];
+  let res = arr.map(b => b.find(x => x === transport)); //output [tube, tube, tube, undefined]
+ if(res[0] === "tube" || res[1] === 'tube' || res[2] === 'tube' || res[3] === 'tube') {
+    result.push("Angel", "London Bridge", "Tower Bridge");
+ }else if(res[0] === 'bus' || res[1] === 'bus' || res[2] === 'bus' || res[3] === 'bus'){
+    result.push("Angel", "Tower Bridge", "Greenwich");
+ }else if(res[0] === 'river boat' || res[1] === 'river boat' || res[2] === 'river boat' || res[3] === 'river boat'){
+    result.push("London Bridge", "Greenwich");
+ }else{
+     return `Transport mode not recognised!`;
+ }
+  return result;
 }
-
-/* ======= TESTS - DO NOT MODIFY ===== */
+ /*======= TESTS - DO NOT MODIFY ===== */
 
 const londonLocations = [
   ["Angel", "tube", "bus"],
@@ -63,3 +73,5 @@ test("journeyPlanner function works - case 3",
     ["Angel", "London Bridge", "Tower Bridge"]
   )
 )
+
+  

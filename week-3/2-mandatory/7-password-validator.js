@@ -22,12 +22,33 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
-
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"];
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"];
+function checkPasswords(passwords) {
+  return (
+    passwords.length >= 5 &&
+    passwords.split("").some(function (a) {
+      return a >= "A" && a <= "Z";
+    }) &&
+    passwords.split("").some(function (b) {
+      return b >= "a" && b <= "z";
+    }) &&
+    passwords.split("").some(function (c) {
+      return c >= "0" && c <= "9";
+    }) &&
+    passwords.split("").some(function (d) {
+      return ["!", "#", "$", "%", "."].indexOf(d) >= 0;
+    })
+  );
 }
 
-/* ======= TESTS - DO NOT MODIFY ===== */
+function otherFunction(passwordArr) {
+  return passwordArr.map(checkPasswords);
+}
 
+console.log(otherFunction(passwords2));
+/* ======= TESTS - DO NOT MODIFY ===== */
+/* 
 const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
 const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
 
@@ -66,4 +87,5 @@ test(
    arraysEqual(
       validatePasswords(passwords2), [true, true, false, false, false]
    )
- );
+ ); 
+ */

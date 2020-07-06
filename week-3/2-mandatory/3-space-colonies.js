@@ -8,9 +8,17 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function doesItstartWithA(name) {
+  return name[0] === "A" && name.length > 9;
 }
+
+function colonisers(voyagerArr) {
+  return voyagerArr.filter(doesItstartWithA)
+}
+
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -26,7 +34,7 @@ const voyagers = [
   "Asimov",
   "Oscar family",
   "Avery family",
-  "Archer family"
+  "Archer family",
 ];
 
 function arraysEqual(a, b) {
@@ -52,6 +60,11 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
-test("colonisers function works",
-  arraysEqual(colonisers(voyagers), ["Adam family", "Avery family", "Archer family"])
-)
+test(
+  "colonisers function works",
+  arraysEqual(colonisers(voyagers), [
+    "Adam family",
+    "Avery family",
+    "Archer family",
+  ])
+);
