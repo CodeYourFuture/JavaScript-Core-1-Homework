@@ -9,27 +9,48 @@
 
   Use the tests to confirm which message to return
 */
+/*
+function checkPink(fruit) {
+  return fruit === "pink";
+}
+function bushChecker(arr) {
+  let tester = arr.every(checkPink);
+  let txt = "";
+  if (tester == true) {
+    txt = "Bush is safe to eat from";
+  } else {
+    txt = "Toxic! Leave bush alone!";
+  }
+  return txt;
+} */
 
-function bushChecker() {
-
+function bushChecker(arr) {
+  let testFruit = arr.every((item) => item === "pink");
+  if (testFruit === true) {
+    return "Bush is safe to eat from";
+  } else {
+    return "Toxic! Leave bush alone!";
+  }
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
-let bushBerryColours2 = ["pink", "pink", "pink", "pink"]
+let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"];
+let bushBerryColours2 = ["pink", "pink", "pink", "pink"];
 
-const util = require('util');
+const util = require("util");
 
 function test(test_name, actual, expected) {
-    let status;
-    if (actual === expected) {
-        status = "PASSED";
-    } else {
-        status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
-    }
+  let status;
+  if (actual === expected) {
+    status = "PASSED";
+  } else {
+    status = `FAILED: expected: ${util.inspect(
+      expected
+    )} but your function returned: ${util.inspect(actual)}`;
+  }
 
-    console.log(`${test_name}: ${status}`);
+  console.log(`${test_name}: ${status}`);
 }
 
 test(
