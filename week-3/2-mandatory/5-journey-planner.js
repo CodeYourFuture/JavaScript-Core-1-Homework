@@ -7,8 +7,21 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function journeyPlanner(locations, transportMode) {
 
+  const transportLoc = locations.filter(function (transport) {
+
+    return transport.includes(transportMode);
+
+  });
+
+  const locName = transportLoc.map(function (loc) {
+
+    return loc[0];
+
+  });
+
+  return locName;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
