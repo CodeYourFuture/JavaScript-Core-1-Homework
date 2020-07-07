@@ -1,4 +1,4 @@
-# Codewars Exercises
+# Codewars Exercises => Done.
 
 Today, you'll be using a platform called [CodeWars](https://codewars.com) to help you recap the materials you learnt in JS1. CodeWars is an excellent platform for going through interesting JavaScript exercises, and allows you to communicate with the wider community to learn about the best way of writing JavaScript code. 
 
