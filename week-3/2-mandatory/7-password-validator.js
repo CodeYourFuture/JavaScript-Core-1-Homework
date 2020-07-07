@@ -22,33 +22,68 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
+function fiveOrMoreCharacters(passwordString) {
+  return passwordString.length >= 5;
+}
 
+function containsUpperCase(password) {
+  let regex = /[A-Z]/;
+  return regex.test(password);
+}
+
+function containsLowerCase(password) {
+  let regex = /[a-z]/;
+  return regex.test(password);
+}
+
+function containsNumbers(password) {
+  let regex = /[0-9]/;
+  return regex.test(password);
+}
+
+function containsSymbols(password) {
+  let regex = /[^!#$%.*&]/;
+  return regex.test(password);
+}
+
+function containsRepeat(password) {
+  let regex = /[^password]/;
+  return regex.test(password);
+}
+
+function validatePasswords(passwords) {
+  return passwords.map(password => fiveOrMoreCharacters(password) 
+  && containsUpperCase(password) 
+  && containsLowerCase(password) 
+  && containsNumbers(password) 
+  && containsSymbols(password));
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
-const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"];
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"];
 
-const util = require('util');
+const util = require("util");
 
 function test(test_name, actual, expected) {
-    let status;
-    if (util.isDeepStrictEqual(actual, expected)) {
-        status = "PASSED";
-    } else {
-        status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
-    }
+  let status;
+  if (util.isDeepStrictEqual(actual, expected)) {
+    status = "PASSED";
+  } else {
+    status = `FAILED: expected: ${util.inspect(
+      expected
+    )} but your function returned: ${util.inspect(actual)}`;
+  }
 
-    console.log(`${test_name}: ${status}`);
+  console.log(`${test_name}: ${status}`);
 }
 
 test(
   "validatePasswords function works - case 1",
   validatePasswords(passwords1),
   [false, false, true, false, false]
- );
+);
 
 test(
   "validatePasswords function works - case 2",
