@@ -1,8 +1,8 @@
 // Write your function here
-function createGreeting() {
-  let name = "Daniel";
-  let greeting = "Hello, my name is ";
-  let fullGreeting = greeting + name;
+function createGreeting(name) {
+  // let greeting = "Hello, my name is ";
+  // let fullGreeting = greeting + name;
+  let fullGreeting = "Hello, my name is " + name;
   return fullGreeting;
 }
-console.log(createGreeting());
+console.log(createGreeting("Daniel"));
