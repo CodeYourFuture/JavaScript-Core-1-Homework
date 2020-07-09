@@ -10,7 +10,7 @@ function s(w1, w2) {
 
 function concatenate(firstword, secondWord, thirdWord) {
 
-   const join = firstword.concat(secondWord + thirdWord);
+   const join = firstword.concat(" "+secondWord +" " + thirdWord);
 
 
    return join;

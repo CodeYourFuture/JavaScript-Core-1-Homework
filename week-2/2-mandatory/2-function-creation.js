@@ -7,11 +7,13 @@ Write a function that:
 */
 
 function tidyUpString(strArr) {
-let tidU =["/Daniel ", "irina ", " Gordon", "ashleigh "];
+let tidU = strArr.to;
   
-  return ["daniel", "irina", "gordon","ashleigh"]
+  return;
 
 }
+
+console.log(tidyUpString(["/Daniel ", "irina ", " Gordon", "ashleigh "]));
 
 
 

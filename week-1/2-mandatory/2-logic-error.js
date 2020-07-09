@@ -2,7 +2,7 @@
 
 function trimWord(Word) {
   
-  return "CodeYourFuture";
+  return Word.trim();
 }
 
 console.log(trimWord(" CodeYourFuture "));
