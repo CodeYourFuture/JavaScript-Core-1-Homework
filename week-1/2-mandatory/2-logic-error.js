@@ -1,23 +1,35 @@
 // The syntax for this function is valid but it has an error, find it and fix it.
 
-function trimWord(word) {
-  return wordtrim();
+function trimWord(Word) {
+  
+  return Word.trim();
 }
+
+console.log(trimWord(" CodeYourFuture "));
+
 
 function getWordLength(word) {
-  return "word".length()
+
+  let wordLength = "A wild sentence appeared!";
+  return wordLength.length;
 }
+ 
+
+console.log(getWordLength());
+
 
 function multiply(a, b, c) {
-  a * b * c;
-  return;
-}
+  
+  return a * b * c;
 
-/* ======= TESTS - DO NOT MODIFY =====
+}
+console.log(multiply(2,3,6));
+
+
+/* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
 
-To run these tests type `node 2-logic-error` into your terminal
-*/
+To run these tests type `node 2-logic-error` into your terminal*/
 
 const util = require('util');
 

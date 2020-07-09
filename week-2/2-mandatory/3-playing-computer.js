@@ -28,7 +28,7 @@ const f2 = function(a, b) {
 
 console.log(x);
 console.log(a);
-console.log(b);
+
 
 for (let i = 0; i < 5; ++i) {
   a = a + 1;
@@ -40,3 +40,14 @@ for (let i = 0; i < 5; ++i) {
     console.log(e);
   }
 }
+
+
+
+/*  My asnwers 
+1. The error was console.log(b);
+2. The console print  out 2 6 4 9 6 13 8 ;
+3. f1 called three times.
+4. f2 called four times.
+5. "a" is equal to 6 ;
+6. "a" is equal to 7 ;
+*/

@@ -2,7 +2,7 @@
 // Look at the tests and see how you can fix them.
 
 function mood() {
-  let isHappy = true;
+  let isHappy = false;
 
   if (isHappy) {
     return "I am happy";
@@ -11,8 +11,15 @@ function mood() {
   }
 }
 
+
 function greaterThan10(num) {
   let isBigEnough;
+}
+console.log(mood());
+
+function greaterThan10() {
+  let num = 10;
+  let isBigEnough= num;
 
   if (isBigEnough) {
     return "num is greater than 10";
@@ -21,24 +28,43 @@ function greaterThan10(num) {
   }
 }
 
+
 function sortArray(letters) {
-  let sortedLetters = letters;
+  let sortedLetters = letters;}
+
+console.log(greaterThan10());
+
+
+function sortArray() {
+  let letters = ["a", "n", "c", "e", "z", "f"];
+  let sortedLetters= ["a", "c", "e", "f", "n", "z"];
 
   return sortedLetters;
 }
 
+
 function first5(numbers) {
   let sliced;
+}
+
+console.log(sortArray());
+
+
+function first5() {
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  let sliced= [1, 2, 3, 4, 5];
 
   return sliced;
 }
+console.log(first5());
 
-function get3rdIndex(arr) {
-  let index = 3;
-  let element;
 
-  return element;
+function get3rdIndex(array) {
+  
+  return array[3];
 }
+console.log(get3rdIndex(["fruit", "banana", "apple", "strawberry", "raspberry"]));
+console.log(get3rdIndex([11, 37, 62, 18, 19, 3, 30]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

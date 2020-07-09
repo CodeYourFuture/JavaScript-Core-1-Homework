@@ -8,9 +8,15 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(voyagers) {
+  var voyagers = voyagers.filter(chosenFamilies);
+ 
+  return voyagers;
 }
+ function chosenFamilies(familyLastName){
+   return familyLastName.includes("family") && familyLastName.charAt(0) === "A";
+ }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

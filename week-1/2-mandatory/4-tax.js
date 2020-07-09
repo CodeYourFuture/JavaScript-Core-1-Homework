@@ -5,7 +5,14 @@
   Sales tax is 20% of the price of the product
 */
 
-function calculateSalesTax() {}
+function calculateSalesTax(productPrice) {
+   saleTax= 20/100;
+  return productPrice*saleTax+productPrice ; 
+    
+}
+
+
+console.log(calculateSalesTax(15));
 
 /*
   CURRENCY FORMATTING
@@ -14,12 +21,27 @@ function calculateSalesTax() {}
   They must also start with the currency symbol
   Write a function that adds tax to a number, and then transforms the total into the format £0.00
 
-  Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
+  Remember that the prices must include the sales tax (hint: you already
+     wrote a function for this!)
 */
 
-function addTaxAndFormatCurrency() {}
 
-/* ======= TESTS - DO NOT MODIFY =====
+function addTaxAndFormatCurrency(productPrice) {
+
+    saleTax= 20/100;
+    currency=  "£" ;
+  
+  
+    salePrice= productPrice* saleTax+ productPrice;
+    return currency + salePrice.toFixed(2) ;
+  
+  }
+  
+  
+
+
+
+/* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
 To run these tests type `node 4-tax.js` into your terminal
 */
