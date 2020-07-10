@@ -5,7 +5,20 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(strArr) {
+  let trimString;
+  let removeSlash;
+  let convertToLowerCase;
+  for (let i = 0; i < strArr.length; i++) {
+    trimString = strArr[i].trim();
+    removeSlash = trimString.replace("/", "");
+    convertToLowerCase = removeSlash.toLowerCase();
+    strArr[i] = convertToLowerCase;
+  }
+  return strArr;
+}
+
+// used trim(), toLowerCase() and replace("/", "")
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,7 +28,12 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  if (typeof num === "number" && num % 2 == 0 && num <= 100) {
+    return true;
+  }
+  return false;
+}
 
 /* 
 Write a function that returns a copy of the given array arr, but with the element at the given index, index removed.
@@ -23,7 +41,8 @@ The function must NOT change the original array, arr.
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  arr.splice(index, 1);
+  return arr;
 }
 
 /*
@@ -35,12 +54,20 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      arr[i] = "100%"; // gives any number above 100 a value of "100%"
+    } else {
+      arr[i] = `${parseFloat(arr[i].toFixed(2))}%`;
+      // arr[i] = Math.round((arr[i] + Number.EPSILON) * 100) / 100 + "%" [alternative method]//
+    }
+  }
+  return arr;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const util = require('util');
+const util = require("util");
 
 function test(test_name, actual, expected) {
   let status;
@@ -55,7 +82,9 @@ function test(test_name, actual, expected) {
   if (isEqual) {
     status = "PASSED";
   } else {
-    status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
+    status = `FAILED: expected: ${util.inspect(
+      expected
+    )} but your function returned: ${util.inspect(actual)}`;
   }
 
   console.log(`${test_name}: ${status}`);
@@ -75,12 +104,8 @@ function arraysEqual(a, b) {
 
 test(
   "tidyUpString function works - case 1",
-  tidyUpString(["/Daniel ", "irina ", " Gordon", "ashleigh "]), [
-    "daniel",
-    "irina",
-    "gordon",
-    "ashleigh"
-  ]
+  tidyUpString(["/Daniel ", "irina ", " Gordon", "ashleigh "]),
+  ["daniel", "irina", "gordon", "ashleigh"]
 );
 test(
   "tidyUpString function works - case 2",
@@ -94,28 +119,20 @@ test("validate function works - case 3", validate(17), false);
 test("validate function works - case 4", validate("Ten"), false);
 test("validate function works - case 5", validate(108), false);
 
-test(
-  "remove function works - case 1",
-  remove([10, 293, 292, 176, 29], 3), [10, 293, 292, 29]
-);
+test("remove function works - case 1", remove([10, 293, 292, 176, 29], 3), [
+  10,
+  293,
+  292,
+  29,
+]);
 test(
   "remove function works - case 2",
-  remove(["a", "b", "c", "d", "e", "f", "g"], 6), [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f"
-  ]
+  remove(["a", "b", "c", "d", "e", "f", "g"], 6),
+  ["a", "b", "c", "d", "e", "f"]
 );
 
 test(
   "formatPercentage function works - case 1",
-  formatPercentage([23, 18.103, 187.2, 0.372]), [
-    "23%",
-    "18.1%",
-    "100%",
-    "0.37%"
-  ]
+  formatPercentage([23, 18.103, 187.2, 0.372]),
+  ["23%", "18.1%", "100%", "0.37%"]
 );

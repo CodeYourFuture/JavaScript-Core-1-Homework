@@ -14,7 +14,23 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {}
+function sortAges(arr) {
+  let result = [];
+  for (let age = 0; age < arr.length; age++) {
+    if (typeof arr[age] === "number") {
+      result.push(arr[age]); // filters only numbers and adds to the empty array (result)//
+    }
+  }
+  function sorting(a, b) {
+    return a - b;  
+}    
+  return sortAscending = result.sort(sorting); // sorts numbers in ascending order//
+}
+
+  
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
