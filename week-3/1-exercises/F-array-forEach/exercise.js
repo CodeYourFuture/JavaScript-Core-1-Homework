@@ -8,7 +8,23 @@
 */
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+ 
+var names = ["Daniel", "mozafar", "irina"];
+arr.forEach(function (name, index) {
+  if (name % 3 === 0 && name % 5 === 0) {
+    console.log(name + ": " + "FizzBuzz");
+  }
+  else if (name % 5 === 0) {
+    console.log(name + ": " + "Buzz");
+  }
+  else if (name % 3 === 0) {
+    console.log(name + ": " + "Fizz");
+  }
+  else  {
+    console.log(name + ": " + name);
+  }
 
+});
 /* EXPECTED OUTPUT */
 
 /*
