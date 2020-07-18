@@ -6,7 +6,7 @@ var numbers = [1, 3, -1, 5, 9];
 
 You know that the array is supposed to contain positive numbers, but you want to check if it also contains any negative numbers.
 
-We can write a function that checks this:
+We can write a function that checks this: 
 
 ```js
 function isNegative(number) {

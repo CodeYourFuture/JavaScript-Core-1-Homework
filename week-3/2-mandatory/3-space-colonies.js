@@ -8,8 +8,14 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(names) {
+  let newNames = [];
+  for (let i = 0; i < names.length; i++) {
+    if (names[i][0] === 'A' && names[i].includes('family')) {
+      newNames.push(names[i]); 
+    }
+  }
+  return newNames;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
