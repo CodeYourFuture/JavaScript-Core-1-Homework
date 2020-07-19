@@ -7,8 +7,17 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function journeyPlanner(arr,mode) {
+  let nameArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].includes(mode)) {
+      nameArr.push(arr[i][0]);
+    }
+  }
+  return nameArr;
 }
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

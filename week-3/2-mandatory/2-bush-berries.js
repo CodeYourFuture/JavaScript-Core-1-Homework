@@ -10,9 +10,25 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
-
+function colorCheck(color){
+   if (color ==="pink"){
+     return true;
+   }
 }
+
+function bushChecker(arr) {
+   let safeBerries = arr.every(colorCheck);
+     if (safeBerries === true){
+       return "Bush is safe to eat from";
+     }
+     else {
+       return "Toxic! Leave bush alone!";
+     }
+   }
+  
+    
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
