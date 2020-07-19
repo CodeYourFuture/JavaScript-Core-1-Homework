@@ -10,7 +10,7 @@ Write a function that finds the first safe oxygen level in the array - Oxygen be
 */
 
 function safeLevels(arr) {
-   var safeLevel = arr.find(function (value,index){
+   var safeLevel = arr.find(function (value){
       if( parseFloat(value) > 19.5 && parseFloat(value) < 23.5){
       return  true; 
       }
