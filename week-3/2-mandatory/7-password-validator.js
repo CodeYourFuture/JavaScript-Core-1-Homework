@@ -24,56 +24,51 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 function fiveOrMoreCharacters(passwordString) {
   if (passwordString.length >= 5) {
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+    return false;
   };
 }
 function containsUpperCase(password) {
-  if (password.includes("A", "B", "C")) {
-    console.log(true);
-  } else {
-    console.log(false);
-  };
+  let regex = /[A-Z]/;
+return regex.test(password);
+
 }
+
 function containsLowerCase(password) {
-  if (password.includes("a", "b", "c")) {
-    console.log(true);
-  } else {
-    console.log(false);
-  };
+let regex =/[a-z]/;
+return regex.test(password);
 }
+
 function containsNumbers(password) {
-  if (password.includes("0", "1", 2, "3")) {
-    console.log(true);
-  } else {
-    console.log(false);
-  };
+  let regex =/[0-9]/;
+  return regex.test(password)
 }
 function containsSymbols(password) {
-  if (password.includes("!", "#", "$", "%", ".", "*", "&")) {
-    console.log(true);
-  } else {
-    console.log(false);
-  };
+
+let regex =/[!#$%.*&]/;
+return regex.test(password); 
+    
+
 }
-function allPass(password) {
-  if(fiveOrMoreCharacters === true) {
-    if(containsUpperCase === true) {
-      if(containsLowerCase === true) {
-        if(containsNumbers === true) {
-          if(containsSymbols === true) {
-  return true;
-} return false;
-        }
+
+function hasDuplicates(array) {
+  var valuesSoFar = [];
+  for (var i = 0; i < array.length; ++i) {
+      var value = array[i];
+      if (valuesSoFar.indexOf(value) !== -1) {
+          return true;
       }
-    }
+      valuesSoFar.push(value);
   }
+  return false;
 }
+
 function validatePasswords(passwords) {
   let returnArray = [];
   for(let i =0; i < passwords.length; i++) {
-    if (fiveOrMoreCharacters === true && containsUpperCase === true && containsLowerCase === true && containsNumbers === true && containsSymbols === true) {
+    if (fiveOrMoreCharacters(passwords[i]) === true && containsUpperCase(passwords[i]) === true && containsLowerCase(passwords[i]) === true && containsNumbers(passwords[i])
+     === true && containsSymbols(passwords[i]) === true && hasDuplicates(passwords[i]) === true)  {
      returnArray.push(true);
     } else {
       returnArray.push(false);
