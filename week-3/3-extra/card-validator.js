@@ -34,3 +34,5 @@ console.log(isBankCardValid("a92332119c011112"));
 console.log(isBankCardValid("4444444444444444"));
 console.log(isBankCardValid("1111111111111110"));
 console.log(isBankCardValid("6666666666666661"));
+
+

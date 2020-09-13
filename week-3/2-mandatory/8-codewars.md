@@ -31,3 +31,5 @@ Today, you'll be using a platform called [CodeWars](https://codewars.com) to hel
 - [sum without highest and lowest](https://www.codewars.com/kata/sum-without-highest-and-lowest-number/train/javascript)
 - [reveersed array of digits](https://www.codewars.com/kata/convert-number-to-reversed-array-of-digits/train/javascript)
 - [slash sum of negatives](https://www.codewars.com/kata/count-of-positives-slash-sum-of-negatives/train/javascript)
+
+
